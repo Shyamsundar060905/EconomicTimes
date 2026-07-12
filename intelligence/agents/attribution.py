@@ -21,11 +21,13 @@ import numpy as np
 import pandas as pd
 
 from shared.config import DATA_RAW, DATA_OUT
-from shared.grid import cell_center, haversine_km, bearing_deg, wind_alignment
+from shared.grid import cell_center, haversine_km, bearing_deg, wind_alignment, circular_mean_deg
+from shared.wards import ward_frame
 from intelligence.agents.llm_gateway import complete_json
 
 CATEGORIES = ["industrial", "construction", "waste_burning", "traffic"]
 MAX_SOURCE_KM = 5.0
+WARDS = dict(zip(ward_frame().cell, ward_frame().ward_id))
 
 
 # ------------------------------------------------------------ evidence
@@ -33,7 +35,10 @@ def build_evidence(cell: str, ts: pd.Timestamp, panel_row: pd.Series,
                    osm: pd.DataFrame, sat_pct: dict,
                    wind_hist: list[float] | None = None) -> dict:
     lat, lon = cell_center(cell)
-    wind_from = float(panel_row.wind_from_deg)
+    # Bearings live on a circle: the arithmetic mean of 350 and 10 is 180, which
+    # points the evidence chain at exactly the wrong suspect. Chronic hotspots
+    # summarise a week of wind, so they must use the circular mean.
+    wind_from = circular_mean_deg(wind_hist) if wind_hist else float(panel_row.wind_from_deg)
     hour = int(panel_row.hour)
 
     def align(slat, slon):
@@ -61,7 +66,7 @@ def build_evidence(cell: str, ts: pd.Timestamp, panel_row: pd.Series,
                     "city_percentile": int(100 * np.searchsorted(pcts, v) / len(pcts))}
 
     return {
-        "cell": cell, "ts": str(ts),
+        "cell": cell, "ts": str(ts), "ward_id": WARDS.get(cell, "unassigned"),
         "pm25_estimate": round(float(panel_row.get("pm25_hat", np.nan)), 1),
         "candidates": candidates[:8],
         "pollutant_signature": sig,
@@ -158,7 +163,8 @@ def attribute_one(ev: dict) -> dict:
         result = llm_out
     else:
         result, provider = rule_based_reason(ev, scores, top), "rules"
-    return {"cell": ev["cell"], "ts": ev["ts"], "pm25_estimate": ev["pm25_estimate"],
+    return {"cell": ev["cell"], "ts": ev["ts"], "ward_id": ev["ward_id"],
+            "pm25_estimate": ev["pm25_estimate"],
             "primary_source": result["primary_source"], "confidence": conf,
             "scores": scores, "reason": result["reason"],
             "evidence_factors": result.get("evidence_factors", []),

@@ -15,6 +15,7 @@ import numpy as np
 import pandas as pd
 
 from shared.config import DATA_OUT
+from shared.wards import attach_wards
 
 REL_MARGIN = 1.25   # >= 25% above own baseline
 ABS_MARGIN = 15.0   # and >= 15 ug/m3 above it
@@ -54,6 +55,12 @@ def detect(field: pd.DataFrame | None = None, at: pd.Timestamp | None = None) ->
     now["ratio"] = (now.baseline + now.excess_local) / now.baseline
     hot = now[(now.ratio >= REL_MARGIN) & (now.excess_local >= ABS_MARGIN)].copy()
     hot["kind"] = "anomaly"
+    # anomaly severity: how far above its OWN baseline is this cell, right now
+    if len(hot):
+        hot["severity"] = (
+            0.5 * np.clip(hot.pm25_hat / 250.0, 0, 1) +
+            0.5 * np.clip(hot.excess_local / 80.0, 0, 1)
+        ).round(3)
     if city_shift >= ABS_MARGIN:
         print(f"[detect] citywide episode flag: median excess {city_shift:+.1f} ug/m3 "
               f"(meteorology-driven; reported separately from local hotspots)")
@@ -91,21 +98,25 @@ def detect(field: pd.DataFrame | None = None, at: pd.Timestamp | None = None) ->
                      0.4 * np.clip(fus_excess[chron_idx] / 10.0, 0, 1)).round(3),
         "kind": "chronic",
     })
+    # NOTE: chronic severity is computed in chron_df from the satellite percentile
+    # and must NOT be recomputed here. Chronic excess is small by construction (a
+    # chronically dirty cell sits a few ug/m3 above the CITY median, not 80 above
+    # its own baseline), so scoring it on the anomaly scale buries the very cells
+    # this detector exists to surface — chronic is the primary ENFORCEMENT target.
     hot = pd.concat([hot, chron_df], ignore_index=True) if len(chron_df) else hot
-    # severity in [0,1]: blend of absolute level and excess-over-baseline
     if len(hot):
-        hot["severity"] = (
-            0.5 * np.clip(hot.pm25_hat / 250.0, 0, 1) +
-            0.5 * np.clip(hot.excess_local / 80.0, 0, 1)
-        ).round(3)
         hot = hot.sort_values("severity", ascending=False)
     cols = ["cell", "ts", "pm25_hat", "baseline", "excess_local", "ratio", "severity", "kind"]
     out = hot[cols] if len(hot) else pd.DataFrame(columns=cols)
+    out = attach_wards(out) if len(out) else out.assign(ward_id=[], ward_name=[])
+    cols = cols + ["ward_id", "ward_name"]
     payload = [{**r, "ts": str(r["ts"]), **{k: round(float(r[k]), 2) for k in
                 ("pm25_hat", "baseline", "excess_local", "ratio")}}
-               for r in out.to_dict("records")]
+               for r in out[cols].to_dict("records")]
     (DATA_OUT / "hotspots.json").write_text(json.dumps(payload, indent=2))
-    print(f"[detect] {at}: {len(out)} hotspots (of {now.cell.nunique()} cells)")
+    n_chron = int((out.kind == "chronic").sum()) if len(out) else 0
+    print(f"[detect] {at}: {len(out)} hotspots ({len(out) - n_chron} anomaly, {n_chron} chronic) "
+          f"of {now.cell.nunique()} cells")
     return out
 
 

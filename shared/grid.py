@@ -66,6 +66,19 @@ def wind_alignment(src_lat, src_lon, dst_lat, dst_lon, wind_from_deg: float) -> 
     return max(0.0, cos_sim)
 
 
+def circular_mean_deg(degrees) -> float:
+    """Mean of a set of bearings, on the circle.
+
+    A plain arithmetic mean of 350 and 10 gives 180 — the exact opposite of the
+    right answer. Any time we summarise wind direction over a window (chronic
+    hotspots average a week of it) this is the only correct way to do it.
+    """
+    a = np.radians(np.asarray(list(degrees), dtype=float))
+    if a.size == 0:
+        return float("nan")
+    return float(np.degrees(np.arctan2(np.sin(a).mean(), np.cos(a).mean())) % 360.0)
+
+
 def cell_distance_km(c1: str, c2: str) -> float:
     a, b = cell_center(c1), cell_center(c2)
     return haversine_km(a[0], a[1], b[0], b[1])

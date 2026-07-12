@@ -123,10 +123,16 @@ def fetch_osm() -> pd.DataFrame:
         if lat is None:
             continue
         tags = el.get("tags", {})
+        # `traffic` = a named major corridor (an enforceable suspect); `road` =
+        # generic network density (a land-use feature, not something you can
+        # serve a notice on). The panel and the attribution scorer treat them
+        # differently — keep the synthetic schema in ingestion/synthetic.py in step.
+        hw = tags.get("highway")
         kind = ("industrial" if tags.get("landuse") == "industrial" else
                 "construction" if tags.get("landuse") == "construction" else
                 "waste_burning" if tags.get("man_made") == "kiln" or tags.get("landuse") == "landfill" else
-                "traffic" if "highway" in tags else
+                "traffic" if hw in ("motorway", "trunk") else
+                "road" if hw else
                 tags.get("amenity", "other"))
         rows.append({"name": tags.get("name", f'{kind}_{el["id"]}'), "kind": kind,
                      "tag": ";".join(f"{k}={v}" for k, v in list(tags.items())[:3]),

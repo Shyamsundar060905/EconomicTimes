@@ -9,12 +9,20 @@ import pandas as pd
 
 from shared.config import DATA_RAW, DATA_OUT
 from shared.grid import city_cells, cell_center, latlng_to_cell, haversine_km, neighbors
+from shared.wards import attach_wards
 
 
 def _landuse_features(cells: list[str], osm: pd.DataFrame) -> pd.DataFrame:
-    """Static per-cell context: counts of each source kind within ~1.5 km, school/hospital count."""
+    """Static per-cell context: counts of each source kind within ~1.5 km, road
+    density, school/hospital count.
+
+    `lu_road` (generic road network) is separate from `lu_traffic` (named major
+    corridors) on purpose: road density is the observable proxy for the diffuse
+    urban background, and it is the strongest spatial feature the fusion model
+    has in cells with no monitor. A road is a feature; a corridor is a suspect.
+    """
     centers = {c: cell_center(c) for c in cells}
-    kinds = ["industrial", "construction", "waste_burning", "traffic"]
+    kinds = ["industrial", "construction", "waste_burning", "traffic", "road"]
     rows = []
     for c in cells:
         lat, lon = centers[c]
@@ -53,9 +61,17 @@ def build_panel() -> pd.DataFrame:
     osm = pd.read_parquet(DATA_RAW / "osm.parquet")
 
     cells = city_cells()
-    stations["ts"] = pd.to_datetime(stations.ts, utc=True)
-    weather["ts"] = pd.to_datetime(weather.ts, utc=True)
+    # Floor to the hour before intersecting: OpenAQ stamps period-ends and
+    # Open-Meteo stamps hour-starts, so an exact-equality set intersection on
+    # raw timestamps can silently come back empty against live APIs.
+    stations["ts"] = pd.to_datetime(stations.ts, utc=True).dt.floor("h")
+    weather["ts"] = pd.to_datetime(weather.ts, utc=True).dt.floor("h")
     hours = pd.DatetimeIndex(sorted(set(stations.ts) & set(weather.ts)))
+    if len(hours) == 0:
+        raise ValueError(
+            f"No overlapping hours between stations ({stations.ts.min()} .. {stations.ts.max()}) "
+            f"and weather ({weather.ts.min()} .. {weather.ts.max()}). The panel would be empty; "
+            f"refusing to build it. Check the two collectors' time windows and timezones.")
 
     # spine: cell x hour
     panel = pd.MultiIndex.from_product([cells, hours], names=["cell", "ts"]).to_frame(index=False)
@@ -79,6 +95,9 @@ def build_panel() -> pd.DataFrame:
     panel = panel.merge(_fire_features(cells, fires, hours), on=["cell", "ts"], how="left")
     panel = panel.merge(_landuse_features(cells, osm), on="cell", how="left")
 
+    # ward: the administrative key every downstream contract carries
+    panel = attach_wards(panel)
+
     # time features
     panel["hour"] = panel.ts.dt.hour
     panel["dow"] = panel.ts.dt.dayofweek
@@ -86,7 +105,8 @@ def build_panel() -> pd.DataFrame:
     panel.to_parquet(DATA_OUT / "panel.parquet", index=False)
     n_st = panel.pm25_station.notna().sum()
     print(f"[panel] {len(panel):,} rows ({len(cells)} cells x {len(hours)} hours); "
-          f"{n_st:,} station-labeled rows ({panel[panel.pm25_station.notna()].cell.nunique()} station cells)")
+          f"{n_st:,} station-labeled rows ({panel[panel.pm25_station.notna()].cell.nunique()} station cells); "
+          f"{panel.ward_id.nunique()} wards")
     return panel
 
 

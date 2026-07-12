@@ -22,6 +22,7 @@ FEATURES = ["no2_col", "so2_col", "aai",                 # satellite
             "wind_from_deg", "wind_ms", "blh_m", "temp_c",  # meteorology
             "fires_6h", "frp_6h",                         # fire activity
             "lu_industrial", "lu_construction", "lu_waste_burning", "lu_traffic",  # land use
+            "lu_road",                                    # road density: the spatial background proxy
             "hour", "dow"]                                # time
 LABEL = "pm25_station"
 PARAMS = dict(objective="regression", metric="rmse", num_leaves=63,
