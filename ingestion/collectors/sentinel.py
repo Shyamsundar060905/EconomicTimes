@@ -60,6 +60,14 @@ PRODUCTS = {
 }
 S5P_SCALE_M = 1113.2   # the native L3 grid; asking for finer is asking for fiction
 
+# OFFL = "offline": the reprocessed, good product, published with a LAG of several
+# days. Querying the last few days returns literally nothing, which is not a bug in
+# the sky, it is a bug in the query. (There is an NRTI collection with ~3-hour
+# latency, but it is noisier and we do not need it: every window in the detector is
+# a 24 h / 7 d / 30 d median, so being a week behind costs us nothing and buys us
+# the better-calibrated product.)
+S5P_LAG_DAYS = 6
+
 
 def _init_ee():
     """Authenticate. Application Default Credentials first, key only as a fallback.
@@ -138,7 +146,7 @@ def fetch_satellite(days: int | None = None) -> pd.DataFrame:
     """
     ee = _init_ee()
     days = days or PANEL_HOURS // 24
-    end = pd.Timestamp.utcnow().normalize()
+    end = pd.Timestamp.utcnow().normalize() - pd.Timedelta(days=S5P_LAG_DAYS)
     start = end - pd.Timedelta(days=days)
 
     region = ee.Geometry.Rectangle(
@@ -154,15 +162,26 @@ def fetch_satellite(days: int | None = None) -> pd.DataFrame:
         d1 = d0 + pd.Timedelta(days=1)
 
         # One multi-band image per day: mean of whatever passed quality control.
+        #
+        # The empty case is NOT exotic — it is most days for some products. S5P
+        # passes once, clouds block it, and SO2/AAI in particular are often absent
+        # entirely. An empty ImageCollection's .mean() is an image with ZERO bands,
+        # and .multiply() on that throws. So we substitute a single FULLY MASKED
+        # band instead, which is the honest representation: the band exists, the
+        # instrument saw nothing, the value is null. reduceRegions then returns no
+        # property, pandas makes it NaN, and the panel forward-fills. Never
+        # zero-fill: 0.0 is a measurement, and "no observation" is not 0.
         bands = []
-        for coll, (band, out, scale) in PRODUCTS.items():
-            img = (ee.ImageCollection(coll)
-                   .filterDate(str(d0.date()), str(d1.date()))
-                   .filterBounds(region)
-                   .select(band)
-                   .mean()
-                   .multiply(scale)
-                   .rename(out))
+        for coll_id, (band, out, scale) in PRODUCTS.items():
+            coll = (ee.ImageCollection(coll_id)
+                    .filterDate(str(d0.date()), str(d1.date()))
+                    .filterBounds(region)
+                    .select(band))
+            nothing = ee.Image.constant(0).selfMask().rename(out)
+            img = ee.Image(ee.Algorithms.If(
+                coll.size().gt(0),
+                coll.mean().multiply(scale).rename(out),
+                nothing))
             bands.append(img)
         daily = ee.Image.cat(bands)
 
@@ -185,13 +204,17 @@ def fetch_satellite(days: int | None = None) -> pd.DataFrame:
             recs.append({"cell": p["cell"], "date": d0.normalize(),
                          **{out: p.get(out) for _, (_, out, _) in PRODUCTS.items()}})
         df = pd.DataFrame(recs)
-        got = int(df.no2_col.notna().sum()) if "no2_col" in df else 0
-        print(f"[s5p]   {d0.date()}: {got}/{len(cells)} cells with NO2 "
-              f"({'cloudy/no overpass' if got == 0 else 'ok'})")
+        counts = {out: int(df[out].notna().sum()) if out in df else 0
+                  for _, (_, out, _) in PRODUCTS.items()}
+        print(f"[s5p]   {d0.date()}: " + "  ".join(f"{k}={v}" for k, v in counts.items())
+              + f"  (of {len(cells)} cells)")
         frames.append(df)
 
     if not frames:
-        raise RuntimeError("S5P returned no data for any day in the window")
+        raise RuntimeError(
+            f"S5P returned no data for any day in {start.date()}..{end.date()}.\n"
+            f"Most likely the window is too recent: OFFL products lag by several "
+            f"days (we already back off {S5P_LAG_DAYS}). Try a window further back.")
 
     out = pd.concat(frames, ignore_index=True)
     cover = out.no2_col.notna().mean()
