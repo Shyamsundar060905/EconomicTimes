@@ -2,6 +2,7 @@ __pycache__/
 *.pyc
 data/raw/*.parquet
 data/outputs/*
+!data/samples/
 .env
 
 # Credentials. NEVER commit these.
