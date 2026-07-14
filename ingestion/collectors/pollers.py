@@ -14,7 +14,8 @@ import urllib.parse
 
 import pandas as pd
 
-from shared.config import BBOX, DATA_RAW, OPENAQ_URL, OPENMETEO_URL, FIRMS_URL, OVERPASS_URL
+from shared.config import (BBOX, DATA_RAW, OPENAQ_URL, OPENMETEO_URL, FIRMS_URL,
+                          OVERPASS_URL, PANEL_HOURS)
 from shared.grid import latlng_to_cell
 
 
@@ -25,11 +26,25 @@ def _get(url: str, headers: dict | None = None, timeout: int = 30) -> bytes:
 
 
 # ---------------------------------------------------------------- OpenAQ
-def fetch_stations() -> pd.DataFrame:
-    """Hourly PM2.5 per CPCB/CAAQMS station inside the bbox, last 14 days."""
+OPENAQ_PAGE = 1000   # API hard cap per page
+
+
+def fetch_stations(days: int | None = None) -> pd.DataFrame:
+    """Hourly PM2.5 per CPCB/CAAQMS station in the bbox, over the WHOLE panel window.
+
+    This used to ask for `limit=336` — 14 days — while the panel spans 60. Since
+    build_panel() takes the INTERSECTION of station hours and weather hours, that
+    silently truncated the entire panel to 14 days, which would have emptied the
+    30-day detection window and made every chronic source disappear. Same bug as
+    FIRMS' 2-day window, in a different collector.
+
+    OpenAQ caps a page at 1000 rows, so a 60-day (1440 h) pull needs paging.
+    """
     key = os.environ.get("OPENAQ_API_KEY")
     if not key:
-        raise RuntimeError("OPENAQ_API_KEY not set")
+        raise RuntimeError("OPENAQ_API_KEY not set — get one free at "
+                           "https://explore.openaq.org/register")
+    days = days or PANEL_HOURS // 24
     headers = {"X-API-Key": key}
     q = urllib.parse.urlencode({
         "bbox": f'{BBOX["lon_min"]},{BBOX["lat_min"]},{BBOX["lon_max"]},{BBOX["lat_max"]}',
@@ -37,36 +52,61 @@ def fetch_stations() -> pd.DataFrame:
         "limit": 1000,
     })
     locs = json.loads(_get(f"{OPENAQ_URL}/locations?{q}", headers))["results"]
+
+    end = pd.Timestamp.utcnow().floor("h")
+    start = end - pd.Timedelta(days=days)
     rows = []
     for loc in locs:
         sid = loc["id"]
         sens = [s for s in loc.get("sensors", []) if s["parameter"]["name"] == "pm25"]
         if not sens:
             continue
-        data = json.loads(_get(
-            f"{OPENAQ_URL}/sensors/{sens[0]['id']}/hours?limit=336", headers))["results"]
-        for d in data:
-            rows.append({
-                "station_id": str(sid),
-                "ts": pd.Timestamp(d["period"]["datetimeTo"]["utc"]),
-                "lat": loc["coordinates"]["latitude"],
-                "lon": loc["coordinates"]["longitude"],
-                "pm25": d["value"],
+        page = 1
+        while True:
+            sq = urllib.parse.urlencode({
+                "datetime_from": start.strftime("%Y-%m-%dT%H:%M:%SZ"),
+                "datetime_to": end.strftime("%Y-%m-%dT%H:%M:%SZ"),
+                "limit": OPENAQ_PAGE, "page": page,
             })
+            res = json.loads(_get(
+                f"{OPENAQ_URL}/sensors/{sens[0]['id']}/hours?{sq}", headers))["results"]
+            for d in res:
+                rows.append({
+                    "station_id": str(sid),
+                    "ts": pd.Timestamp(d["period"]["datetimeTo"]["utc"]),
+                    "lat": loc["coordinates"]["latitude"],
+                    "lon": loc["coordinates"]["longitude"],
+                    "pm25": d["value"],
+                })
+            if len(res) < OPENAQ_PAGE:
+                break
+            page += 1
+
     df = pd.DataFrame(rows)
+    if df.empty:
+        raise RuntimeError(f"OpenAQ returned no PM2.5 readings for {len(locs)} "
+                           f"locations in the bbox over {days} days")
     df["cell"] = [latlng_to_cell(a, b) for a, b in zip(df.lat, df.lon)]
+    print(f"[openaq] {df.station_id.nunique()} stations, {len(df):,} hourly readings "
+          f"over {days} days")
     return df
 
 
 # ------------------------------------------------------------ Open-Meteo
-def fetch_weather() -> pd.DataFrame:
-    """Hourly wind, temp, boundary layer height for the city center. Keyless."""
+def fetch_weather(days: int | None = None) -> pd.DataFrame:
+    """Hourly wind, temp, boundary layer height for the city centre. Keyless.
+
+    Must cover the SAME window as the stations: build_panel() intersects the two,
+    so whichever is shorter silently truncates the panel. `past_days` was 14 while
+    the panel spans 60. (Open-Meteo allows up to 92.)
+    """
+    days = days or PANEL_HOURS // 24
     lat = (BBOX["lat_min"] + BBOX["lat_max"]) / 2
     lon = (BBOX["lon_min"] + BBOX["lon_max"]) / 2
     q = urllib.parse.urlencode({
         "latitude": lat, "longitude": lon,
         "hourly": "wind_speed_10m,wind_direction_10m,temperature_2m,boundary_layer_height",
-        "past_days": 14, "forecast_days": 3, "wind_speed_unit": "ms",
+        "past_days": min(days, 92), "forecast_days": 3, "wind_speed_unit": "ms",
     })
     j = json.loads(_get(f"{OPENMETEO_URL}?{q}"))["hourly"]
     return pd.DataFrame({
@@ -79,21 +119,60 @@ def fetch_weather() -> pd.DataFrame:
 
 
 # ----------------------------------------------------------------- FIRMS
-def fetch_fires() -> pd.DataFrame:
-    """VIIRS thermal anomalies in bbox, last 2 days."""
+FIRMS_MAX_DAY_RANGE = 10   # hard cap in the FIRMS area API
+FIRMS_SOURCE = "VIIRS_SNPP_NRT"
+
+
+def fetch_fires(days: int | None = None) -> pd.DataFrame:
+    """VIIRS thermal anomalies in the bbox, over the WHOLE panel window.
+
+    This used to request 2 days, which would have quietly destroyed the detector on
+    real data. Fire PERSISTENCE is the signal — the fraction of a 24h/7d/30d window
+    that a cell was burning — and it is what separates a landfill that burns every
+    night (chronic; build a case file) from one bonfire (acute; send a truck). It is
+    also what locates the unregistered burning sources that are our headline result,
+    since they appear on no map at all.
+
+    With 2 days of history the 7d and 30d fire channels are empty, every chronic
+    burning source silently disappears, and nothing anywhere says why.
+
+    The FIRMS area API caps DAY_RANGE at 10, so we walk the window in chunks using
+    the /[DATE] form, which returns DATE .. DATE+DAY_RANGE-1.
+    """
+    from io import StringIO
+
     key = os.environ.get("FIRMS_KEY")
     if not key:
-        raise RuntimeError("FIRMS_KEY not set")
+        raise RuntimeError("FIRMS_KEY not set — get one free at "
+                           "https://firms.modaps.eosdis.nasa.gov/api/map_key/")
+    days = days or PANEL_HOURS // 24
     bbox = f'{BBOX["lon_min"]},{BBOX["lat_min"]},{BBOX["lon_max"]},{BBOX["lat_max"]}'
-    csv = _get(f"{FIRMS_URL}/{key}/VIIRS_SNPP_NRT/{bbox}/2").decode()
-    from io import StringIO
-    df = pd.read_csv(StringIO(csv))
-    if df.empty:
-        return pd.DataFrame(columns=["ts", "lat", "lon", "frp", "confidence"])
+    end = pd.Timestamp.utcnow().normalize()
+    start = end - pd.Timedelta(days=days)
+
+    frames, day = [], start
+    while day < end:
+        chunk = min(FIRMS_MAX_DAY_RANGE, (end - day).days)
+        url = f"{FIRMS_URL}/{key}/{FIRMS_SOURCE}/{bbox}/{chunk}/{day.date()}"
+        text = _get(url, timeout=60).decode()
+        # FIRMS returns a plain-text error body with HTTP 200 — an invalid key does
+        # NOT raise. Parsing that as CSV yields a garbage frame, so check first.
+        if not text.lstrip().lower().startswith("country_id,latitude"):
+            head = text.strip().splitlines()[0][:120] if text.strip() else "(empty)"
+            raise RuntimeError(f"FIRMS returned an error, not CSV: {head}")
+        part = pd.read_csv(StringIO(text))
+        if not part.empty:
+            frames.append(part)
+        print(f"[firms] {day.date()} +{chunk}d: {len(part)} detections")
+        day += pd.Timedelta(days=chunk)
+
+    cols = ["ts", "lat", "lon", "frp", "confidence"]
+    if not frames:
+        return pd.DataFrame(columns=cols)
+    df = pd.concat(frames, ignore_index=True)
     df["ts"] = pd.to_datetime(df.acq_date + " " + df.acq_time.astype(str).str.zfill(4),
                               format="%Y-%m-%d %H%M", utc=True)
-    return df.rename(columns={"latitude": "lat", "longitude": "lon"})[
-        ["ts", "lat", "lon", "frp", "confidence"]]
+    return df.rename(columns={"latitude": "lat", "longitude": "lon"})[cols]
 
 
 # ------------------------------------------------------------------- OSM
