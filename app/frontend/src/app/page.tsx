@@ -40,7 +40,7 @@ export default function LandingPage() {
           }}
         >
           <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--accent-blue)", display: "inline-block" }} />
-          Bengaluru · Live AQ Intelligence
+          Delhi · Live AQ Intelligence
         </div>
 
         <h1

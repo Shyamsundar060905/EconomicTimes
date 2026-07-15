@@ -107,7 +107,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           }}
         >
           <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#22c55e", display: "inline-block" }} />
-          Bengaluru · H3 Res-8
+          Delhi · H3 Res-8
           <Link
             href="/citizen"
             style={{

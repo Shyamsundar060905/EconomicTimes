@@ -2,10 +2,10 @@ import type { AgentName, HotspotKind, SourceCategory, ReportCategory, LayerId } 
 
 // ─── Map ──────────────────────────────────────────────────────────────────────
 
-/** Bengaluru initial viewport */
+/** Delhi initial viewport */
 export const INITIAL_VIEW_STATE = {
-  longitude: 77.60,
-  latitude: 12.975,
+  longitude: 77.15,
+  latitude: 28.60,
   zoom: 11,
   pitch: 30,
   bearing: 0,
@@ -14,10 +14,10 @@ export const INITIAL_VIEW_STATE = {
 /** Carto dark tiles (no token required) */
 export const MAP_STYLE = "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json";
 
-/** Bengaluru bounding box */
+/** Delhi bounding box */
 export const CITY_BBOX = {
-  lat_min: 12.85, lat_max: 13.10,
-  lon_min: 77.45, lon_max: 77.75,
+  lat_min: 28.45, lat_max: 28.75,
+  lon_min: 76.95, lon_max: 77.35,
 } as const;
 
 // ─── Layers ───────────────────────────────────────────────────────────────────

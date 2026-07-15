@@ -55,7 +55,7 @@ export default function CitizenLayout({ children }: { children: React.ReactNode 
           </div>
           <div>
             <div style={{ fontWeight: 700, fontSize: "0.9rem", lineHeight: 1.2 }}>My Ward Air Quality</div>
-            <div style={{ fontSize: "0.7rem", color: "var(--text-tertiary)", lineHeight: 1 }}>Bengaluru</div>
+            <div style={{ fontSize: "0.7rem", color: "var(--text-tertiary)", lineHeight: 1 }}>Delhi</div>
           </div>
         </Link>
 

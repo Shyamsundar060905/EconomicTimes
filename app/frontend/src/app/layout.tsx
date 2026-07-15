@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   description:
     "From AQI dashboards to enforcement dispatch — signal → attribution → action. " +
     "Names who is polluting, where, with what evidence, and what to do about it today.",
-  keywords: ["air quality", "AQI", "pollution", "enforcement", "Bengaluru", "CAAQMS"],
+  keywords: ["air quality", "AQI", "pollution", "enforcement", "Delhi", "CAAQMS"],
   authors: [{ name: "AQ Intelligence Team" }],
   openGraph: {
     title: "AQ Intelligence Platform",
-    description: "AI-powered urban air quality intelligence for Bengaluru",
+    description: "AI-powered urban air quality intelligence for Delhi",
     type: "website",
   },
 };

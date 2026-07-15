@@ -13,10 +13,10 @@ from pathlib import Path
 # Add project root to path so `shared` can be imported when run directly
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 
-from shared.config import DATA_OUT
+from shared.config import DATA_OUT, BBOX
 from shared.grid import cell_center, haversine_km
 
-COVER_RADIUS_KM = 0.4
+COVER_RADIUS_KM = 2.0
 
 
 def calculate_eps(zone_cells: List[Dict], attributions: Dict[str, Dict], panel: pd.DataFrame) -> Dict[str, Any]:
@@ -160,7 +160,8 @@ def run_dispatch(actions: List[Dict], all_hotspots: List[Dict], n_teams: int, st
         teams[i % n_teams]["stops"].append(stop)
         
     # Nearest-neighbour routing per team
-    DEPOT_LAT, DEPOT_LON = 28.6139, 77.2090 # New Delhi center
+    DEPOT_LAT = (BBOX["lat_min"] + BBOX["lat_max"]) / 2.0
+    DEPOT_LON = (BBOX["lon_min"] + BBOX["lon_max"]) / 2.0
     
     for team in teams:
         if not team["stops"]:
@@ -203,7 +204,7 @@ def run_dispatch(actions: List[Dict], all_hotspots: List[Dict], n_teams: int, st
     return teams
 
 
-def run(n_teams: int = 2, stop_budget: int = 10) -> None:
+def run(n_teams: int = 4, stop_budget: int = 10) -> None:
     try:
         hotspots = json.loads((DATA_OUT / "hotspots.json").read_text())
         attributions_list = json.loads((DATA_OUT / "attributions.json").read_text())
