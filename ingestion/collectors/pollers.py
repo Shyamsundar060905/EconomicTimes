@@ -63,15 +63,33 @@ def fetch_stations(days: int | None = None) -> pd.DataFrame:
         sens = [s for s in loc.get("sensors", []) if s["parameter"]["name"] == "pm25"]
         if not sens:
             continue
-        page = 1
+        # One flaky sensor must not sink the whole city. OpenAQ intermittently 500s on
+        # a single sensor's history; retry a few times, then SKIP that sensor rather
+        # than aborting the collector. A run with 25 of 27 stations is a degraded
+        # panel; a run with zero is a dead pipeline. (This was silently killing every
+        # live Delhi run — fetch_stations is the first thing ingest does.)
+        page, failed = 1, False
         while True:
             sq = urllib.parse.urlencode({
                 "datetime_from": start.strftime("%Y-%m-%dT%H:%M:%SZ"),
                 "datetime_to": end.strftime("%Y-%m-%dT%H:%M:%SZ"),
                 "limit": OPENAQ_PAGE, "page": page,
             })
-            res = json.loads(_get(
-                f"{OPENAQ_URL}/sensors/{sens[0]['id']}/hours?{sq}", headers))["results"]
+            res = None
+            for attempt in range(4):
+                try:
+                    res = json.loads(_get(
+                        f"{OPENAQ_URL}/sensors/{sens[0]['id']}/hours?{sq}", headers))["results"]
+                    break
+                except Exception as e:
+                    if attempt == 3:
+                        print(f"[openaq] sensor {sens[0]['id']} page {page} failed "
+                              f"({type(e).__name__}); skipping this sensor")
+                        failed = True
+                        break
+                    time.sleep(2 * (attempt + 1))
+            if res is None:
+                break
             for d in res:
                 rows.append({
                     "station_id": str(sid),
@@ -83,6 +101,7 @@ def fetch_stations(days: int | None = None) -> pd.DataFrame:
             if len(res) < OPENAQ_PAGE:
                 break
             page += 1
+        _ = failed
 
     df = pd.DataFrame(rows)
     if df.empty:

@@ -165,6 +165,13 @@ leakage before you assume success.
     *"satellite fire detections in 30 hours (18% of the window)"*. A real polluter,
     in a real city, from public satellite data, with an evidence chain anyone can
     check by googling "Bhalswa landfill fire November 2025".
+  - **Forecast (real Delhi, 24/48/72h, 14-day held-out test).** The honest, nuanced
+    result, not a clean sweep: at **24h persistence WINS** (model 95.8 vs 87.1 RMSE,
+    -10%) — in a regional smog episode "same value yesterday" is brutal to beat
+    short-term. At **48h/72h the model WINS** (+16% / +9%), because persistence
+    collapses at range and that is the actionable enforcement-scheduling window. It
+    beats the tougher diurnal-climatology baseline at **every** horizon (+23-32%).
+    Report all three; do not cherry-pick 48h.
   - Okhla -> `traffic` (it genuinely sits on Mathura Road; defensible, incomplete).
     Ghazipur -> not detected (no fires in the window).
   - ❌ **The fusion exposure claim is WITHDRAWN.** On real Delhi it is **14% worse

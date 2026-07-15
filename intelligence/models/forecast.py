@@ -27,6 +27,16 @@ diurnal met cycle). We do not feed the model the actual boundary-layer height at
 T+h — that would be grading it with tomorrow's answer sheet. A real deployment could
 add the Open-Meteo met FORECAST here and would likely do better; we leave that gain
 on the table rather than fake it in the eval.
+
+REAL DELHI RESULT (26 CPCB stations, Nov 2025, last 14 days held out):
+    horizon   model   persistence   diurnal    vs persist   vs diurnal
+    24h        95.8      87.1        125.0        -10%          +23%
+    48h        88.7     106.1        130.1        +16%          +32%
+    72h        91.0      99.9        125.8         +9%          +28%
+Persistence WINS at 24h (regional episode = massive short-term autocorrelation); the
+model wins at 48h/72h where persistence decays, and beats climatology everywhere.
+That is the honest shape of a real forecast, and 48-72h is the horizon enforcement
+scheduling actually cares about.
 """
 import json
 
