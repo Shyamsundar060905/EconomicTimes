@@ -37,7 +37,7 @@ from functools import lru_cache
 import numpy as np
 import pandas as pd
 
-from shared.config import BBOX, PANEL_HOURS, SAT_BLUR_SIGMA_KM, SYNTHETIC_ANCHOR
+from shared.config import BBOX, PANEL_HOURS, SAT_BLUR_SIGMA_KM, SYNTHETIC_ANCHOR, CITY
 from shared.grid import city_cells, cell_center, bearing_deg
 
 WORLD_SEED = 42
@@ -353,8 +353,36 @@ def _osm_layer() -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def _assert_bbox_matches_sources() -> None:
+    """The synthetic world is ANCHORED to its 9 hidden sources' coordinates.
+
+    Those sources sit around Bengaluru. Point config.BBOX at another city and every
+    one of them falls ~1700 km outside the grid, so the world emits NOTHING — and it
+    does so SILENTLY: the pipeline runs to completion, exits 0, and the evaluation
+    cheerfully scores a world with no sources in it (measured: recall 0/2, 0/4, 0/3,
+    zero enforceable cells, CI green). That is the exact failure class this project
+    exists to prevent, so it now raises.
+
+    If you want the synthetic world in another city, move SOURCES to that city's
+    coordinates. If you want another city's REAL data, drop --synthetic.
+    """
+    inside = [s for s in SOURCES
+              if BBOX["lat_min"] <= s[2] <= BBOX["lat_max"]
+              and BBOX["lon_min"] <= s[3] <= BBOX["lon_max"]]
+    if len(inside) < len(SOURCES):
+        raise ValueError(
+            f"The synthetic world's hidden sources are not inside config.BBOX "
+            f"(only {len(inside)}/{len(SOURCES)} land in it).\n"
+            f"BBOX is currently AQ_CITY={CITY!r} = {BBOX}.\n"
+            f"The synthetic sources are anchored around Bengaluru, so this world would "
+            f"emit nothing and every evaluation would silently score 0.\n"
+            f"Fix: run synthetic mode with AQ_CITY=bengaluru (or unset it), or drop "
+            f"--synthetic to use {CITY}'s real data.")
+
+
 def generate_all(n_hours: int = PANEL_HOURS):
     """Emit synthetic versions of every raw source, matching real ingestor schemas."""
+    _assert_bbox_matches_sources()   # fail LOUDLY, never silently emit an empty world
     _reset_rng()          # the world must be a pure function of WORLD_SEED
     truth, wx = truth_field(n_hours)
     cells = city_cells()
