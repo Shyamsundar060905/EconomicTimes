@@ -18,6 +18,8 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from ingestion.collectors.pollers import run as ingest_run
 from ingestion.preprocessing.panel import build_panel
 from intelligence.models.fusion import run as fusion_run
+from intelligence.agents.prioritise import run as prioritise_run
+
 
 RULE = "=" * 62
 
@@ -54,6 +56,8 @@ def main():
     attribute_run()
     print(RULE)
     forecast_run()
+    print(RULE)
+    prioritise_run()
     print(RULE)
     memo_run()
     print(RULE)

@@ -30,6 +30,14 @@ _load_dotenv()
 # ---- City ----
 # Override with AQ_CITY=delhi. Everything downstream is city-agnostic; only the
 # bbox and the ward layer change.
+#
+# The DEFAULT MUST STAY bengaluru. The synthetic world's 9 hidden sources are
+# anchored to Bengaluru coordinates, and the zero-setup quickstart + CI both run
+# `run_pipeline.py --synthetic --full` with no AQ_CITY set. Default this to delhi and
+# every source lands ~1700 km outside the grid, the world emits nothing, and the
+# evaluation scores 0/2, 0/4, 0/3 with a GREEN build (measured). Delhi is reached by
+# setting AQ_CITY=delhi, as documented — it is not the default, and the demo does not
+# need it to be. synthetic.py now raises on the mismatch rather than going quiet.
 CITIES = {
     "bengaluru": {"lat_min": 12.85, "lat_max": 13.10, "lon_min": 77.45, "lon_max": 77.75},
     "delhi":     {"lat_min": 28.45, "lat_max": 28.75, "lon_min": 76.95, "lon_max": 77.35},

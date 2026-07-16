@@ -1,562 +1,562 @@
 [
- {
-  "cell": "883da111dbfffff",
-  "ward_id": "W016",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.5,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
- },
- {
-  "cell": "883da110e1fffff",
-  "ward_id": "W016",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.5,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
- },
- {
-  "cell": "883da110e5fffff",
-  "ward_id": "W016",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.5,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
- },
- {
-  "cell": "883da110e9fffff",
-  "ward_id": "W016",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.5,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
- },
- {
-  "cell": "883da110edfffff",
-  "ward_id": "W016",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.5,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
- },
- {
-  "cell": "883da111d3fffff",
-  "ward_id": "W016",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.5,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
- },
- {
-  "cell": "883da111d1fffff",
-  "ward_id": "W016",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.5,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
- },
- {
-  "cell": "883da111d9fffff",
-  "ward_id": "W016",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.5,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
- },
- {
-  "cell": "883da111d7fffff",
-  "ward_id": "W016",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.5,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
- },
- {
-  "cell": "883da11013fffff",
-  "ward_id": "W016",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.5,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
- },
- {
-  "cell": "883da11033fffff",
-  "ward_id": "W016",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.5,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
- },
- {
-  "cell": "883da1103bfffff",
-  "ward_id": "W016",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.5,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
- },
- {
-  "cell": "883da11031fffff",
-  "ward_id": "W016",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.5,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
- },
- {
-  "cell": "883da11037fffff",
-  "ward_id": "W016",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.5,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
- },
- {
-  "cell": "883da11017fffff",
-  "ward_id": "W016",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.5,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
- },
- {
-  "cell": "883da1046dfffff",
-  "ward_id": "W010",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.52,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da10733fffff",
-  "ward_id": "W010",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.52,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da10703fffff",
-  "ward_id": "W010",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.52,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da10723fffff",
-  "ward_id": "W010",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.52,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da1072bfffff",
-  "ward_id": "W010",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.52,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da10717fffff",
-  "ward_id": "W010",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.52,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da10707fffff",
-  "ward_id": "W010",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.52,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da10739fffff",
-  "ward_id": "W010",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.52,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da1073bfffff",
-  "ward_id": "W010",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.52,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da10731fffff",
-  "ward_id": "W010",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.52,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da10715fffff",
-  "ward_id": "W010",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.52,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da1073dfffff",
-  "ward_id": "W010",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.52,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da10711fffff",
-  "ward_id": "W010",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.52,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da10465fffff",
-  "ward_id": "W010",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.52,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da1071dfffff",
-  "ward_id": "W010",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.52,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da1070bfffff",
-  "ward_id": "W010",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.52,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da10757fffff",
-  "ward_id": "W010",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.52,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da10719fffff",
-  "ward_id": "W010",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.52,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da10701fffff",
-  "ward_id": "W010",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.52,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da10727fffff",
-  "ward_id": "W010",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.52,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da10721fffff",
-  "ward_id": "W010",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.52,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da18cd7fffff",
-  "ward_id": "W057",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.76,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da18c91fffff",
-  "ward_id": "W057",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.76,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da18c83fffff",
-  "ward_id": "W057",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.76,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da18c9dfffff",
-  "ward_id": "W057",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.76,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da18c8bfffff",
-  "ward_id": "W057",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.76,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da18c95fffff",
-  "ward_id": "W057",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.76,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da18c99fffff",
-  "ward_id": "W057",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.76,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da18cd3fffff",
-  "ward_id": "W057",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.76,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da18cd5fffff",
-  "ward_id": "W057",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "waste_burning",
-  "confidence": 0.76,
-  "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions."
- },
- {
-  "cell": "883da1050dfffff",
-  "ward_id": "W011",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.78,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. DND KMP Expressway is 0.99 km away, wind alignment 0.92; NO2 column at p93 citywide; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da11a97fffff",
-  "ward_id": "W045",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.14,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da1036dfffff",
-  "ward_id": "W045",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.14,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da11abbfffff",
-  "ward_id": "W045",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.14,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da10369fffff",
-  "ward_id": "W045",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.14,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da10367fffff",
-  "ward_id": "W045",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.14,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da10329fffff",
-  "ward_id": "W045",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.14,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da10361fffff",
-  "ward_id": "W045",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.14,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da1030dfffff",
-  "ward_id": "W045",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.14,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da1036bfffff",
-  "ward_id": "W045",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.14,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da10363fffff",
-  "ward_id": "W045",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.14,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da10305fffff",
-  "ward_id": "W045",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.14,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da10365fffff",
-  "ward_id": "W045",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.14,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da10347fffff",
-  "ward_id": "W045",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.14,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da10209fffff",
-  "ward_id": "W004",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.1,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da1020dfffff",
-  "ward_id": "W004",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.1,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da10241fffff",
-  "ward_id": "W004",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.1,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da1024dfffff",
-  "ward_id": "W004",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.1,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da10247fffff",
-  "ward_id": "W004",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.1,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da10245fffff",
-  "ward_id": "W004",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.1,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da1026dfffff",
-  "ward_id": "W004",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.1,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da10261fffff",
-  "ward_id": "W004",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.1,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da10269fffff",
-  "ward_id": "W004",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.1,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da1026bfffff",
-  "ward_id": "W004",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.1,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions."
- },
- {
-  "cell": "883da11193fffff",
-  "ward_id": "W004",
-  "ts": "2025-11-29 23:00:00+00:00",
-  "primary_source": "traffic",
-  "confidence": 0.1,
-  "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions."
- }
+  {
+    "cell": "883da111dbfffff",
+    "ward_id": "W016",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.5,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
+  },
+  {
+    "cell": "883da110e1fffff",
+    "ward_id": "W016",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.5,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
+  },
+  {
+    "cell": "883da110e5fffff",
+    "ward_id": "W016",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.5,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
+  },
+  {
+    "cell": "883da110e9fffff",
+    "ward_id": "W016",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.5,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
+  },
+  {
+    "cell": "883da110edfffff",
+    "ward_id": "W016",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.5,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
+  },
+  {
+    "cell": "883da111d3fffff",
+    "ward_id": "W016",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.5,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
+  },
+  {
+    "cell": "883da111d1fffff",
+    "ward_id": "W016",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.5,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
+  },
+  {
+    "cell": "883da111d9fffff",
+    "ward_id": "W016",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.5,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
+  },
+  {
+    "cell": "883da111d7fffff",
+    "ward_id": "W016",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.5,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
+  },
+  {
+    "cell": "883da11013fffff",
+    "ward_id": "W016",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.5,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
+  },
+  {
+    "cell": "883da11033fffff",
+    "ward_id": "W016",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.5,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
+  },
+  {
+    "cell": "883da1103bfffff",
+    "ward_id": "W016",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.5,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
+  },
+  {
+    "cell": "883da11031fffff",
+    "ward_id": "W016",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.5,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
+  },
+  {
+    "cell": "883da11037fffff",
+    "ward_id": "W016",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.5,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
+  },
+  {
+    "cell": "883da11017fffff",
+    "ward_id": "W016",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.5,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. traffic_25524703 is 1.31 km away, wind alignment 0.67; shallow boundary layer (130 m) trapping emissions."
+  },
+  {
+    "cell": "883da1046dfffff",
+    "ward_id": "W010",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.52,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da10733fffff",
+    "ward_id": "W010",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.52,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da10703fffff",
+    "ward_id": "W010",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.52,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da10723fffff",
+    "ward_id": "W010",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.52,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da1072bfffff",
+    "ward_id": "W010",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.52,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da10717fffff",
+    "ward_id": "W010",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.52,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da10707fffff",
+    "ward_id": "W010",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.52,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da10739fffff",
+    "ward_id": "W010",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.52,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da1073bfffff",
+    "ward_id": "W010",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.52,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da10731fffff",
+    "ward_id": "W010",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.52,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da10715fffff",
+    "ward_id": "W010",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.52,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da1073dfffff",
+    "ward_id": "W010",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.52,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da10711fffff",
+    "ward_id": "W010",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.52,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da10465fffff",
+    "ward_id": "W010",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.52,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da1071dfffff",
+    "ward_id": "W010",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.52,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da1070bfffff",
+    "ward_id": "W010",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.52,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da10757fffff",
+    "ward_id": "W010",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.52,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da10719fffff",
+    "ward_id": "W010",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.52,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da10701fffff",
+    "ward_id": "W010",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.52,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da10727fffff",
+    "ward_id": "W010",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.52,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da10721fffff",
+    "ward_id": "W010",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.52,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da18cd7fffff",
+    "ward_id": "W057",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.76,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da18c91fffff",
+    "ward_id": "W057",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.76,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da18c83fffff",
+    "ward_id": "W057",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.76,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da18c9dfffff",
+    "ward_id": "W057",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.76,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da18c8bfffff",
+    "ward_id": "W057",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.76,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da18c95fffff",
+    "ward_id": "W057",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.76,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da18c99fffff",
+    "ward_id": "W057",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.76,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da18cd3fffff",
+    "ward_id": "W057",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.76,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da18cd5fffff",
+    "ward_id": "W057",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "waste_burning",
+    "confidence": 0.76,
+    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions."
+  },
+  {
+    "cell": "883da1050dfffff",
+    "ward_id": "W011",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.78,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. DND KMP Expressway is 0.99 km away, wind alignment 0.92; NO2 column at p93 citywide; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da11a97fffff",
+    "ward_id": "W045",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.14,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da1036dfffff",
+    "ward_id": "W045",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.14,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da11abbfffff",
+    "ward_id": "W045",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.14,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da10369fffff",
+    "ward_id": "W045",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.14,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da10367fffff",
+    "ward_id": "W045",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.14,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da10329fffff",
+    "ward_id": "W045",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.14,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da10361fffff",
+    "ward_id": "W045",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.14,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da1030dfffff",
+    "ward_id": "W045",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.14,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da1036bfffff",
+    "ward_id": "W045",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.14,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da10363fffff",
+    "ward_id": "W045",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.14,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da10305fffff",
+    "ward_id": "W045",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.14,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da10365fffff",
+    "ward_id": "W045",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.14,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da10347fffff",
+    "ward_id": "W045",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.14,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da10209fffff",
+    "ward_id": "W004",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.1,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da1020dfffff",
+    "ward_id": "W004",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.1,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da10241fffff",
+    "ward_id": "W004",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.1,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da1024dfffff",
+    "ward_id": "W004",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.1,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da10247fffff",
+    "ward_id": "W004",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.1,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da10245fffff",
+    "ward_id": "W004",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.1,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da1026dfffff",
+    "ward_id": "W004",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.1,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da10261fffff",
+    "ward_id": "W004",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.1,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da10269fffff",
+    "ward_id": "W004",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.1,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da1026bfffff",
+    "ward_id": "W004",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.1,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions."
+  },
+  {
+    "cell": "883da11193fffff",
+    "ward_id": "W004",
+    "ts": "2025-11-29 23:00:00+00:00",
+    "primary_source": "traffic",
+    "confidence": 0.1,
+    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions."
+  }
 ]

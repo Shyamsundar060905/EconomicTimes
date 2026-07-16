@@ -168,3 +168,12 @@ def fires():
              "frp": round(float(r.frp), 2), "confidence": str(r.confidence),
              "ts": str(r.ts)}
             for r in df.sort_values("ts").itertuples()]
+
+@app.get("/actions")
+def actions():
+    """Ranked enforceable hotspots."""
+    return _json("actions.json")
+@app.get("/dispatch")
+def dispatch():
+    """Team routes for maximum-coverage dispatch."""
+    return _json("dispatch.json")

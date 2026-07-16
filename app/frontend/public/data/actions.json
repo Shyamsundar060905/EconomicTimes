@@ -1,0 +1,222 @@
+[
+  {
+    "action_id": "A03",
+    "zone_id": "Z05",
+    "ward_id": "W057",
+    "ward_name": "Ward 057",
+    "cells": [
+      "883da18cd7fffff",
+      "883da18c91fffff",
+      "883da18c83fffff",
+      "883da18c9dfffff",
+      "883da18c8bfffff",
+      "883da18c95fffff",
+      "883da18c99fffff",
+      "883da18cd3fffff",
+      "883da18cd5fffff"
+    ],
+    "centroid": {
+      "lat": 28.7293,
+      "lon": 77.1572
+    },
+    "eps": 60.8,
+    "components": {
+      "severity": 0.738,
+      "attribution_conf": 0.76,
+      "actionability": 0.8,
+      "vulnerability": 0.0
+    },
+    "kind": "emerging",
+    "source": "waste_burning",
+    "confidence": 0.76,
+    "n_cells": 9,
+    "pm25_med": 260.6,
+    "status": "pending"
+  },
+  {
+    "action_id": "A04",
+    "zone_id": "Z03",
+    "ward_id": "W011",
+    "ward_name": "Ward 011",
+    "cells": [
+      "883da1050dfffff"
+    ],
+    "centroid": {
+      "lat": 28.4815,
+      "lon": 77.3272
+    },
+    "eps": 60.6,
+    "components": {
+      "severity": 0.602,
+      "attribution_conf": 0.78,
+      "actionability": 1.0,
+      "vulnerability": 0.0
+    },
+    "kind": "acute",
+    "source": "traffic",
+    "confidence": 0.78,
+    "n_cells": 1,
+    "pm25_med": 249.7,
+    "status": "pending"
+  },
+  {
+    "action_id": "A02",
+    "zone_id": "Z02",
+    "ward_id": "W010",
+    "ward_name": "Ward 010",
+    "cells": [
+      "883da1046dfffff",
+      "883da10733fffff",
+      "883da10703fffff",
+      "883da10723fffff",
+      "883da1072bfffff",
+      "883da10717fffff",
+      "883da10707fffff",
+      "883da10739fffff",
+      "883da1073bfffff",
+      "883da10731fffff",
+      "883da10715fffff",
+      "883da1073dfffff",
+      "883da10711fffff",
+      "883da10465fffff",
+      "883da1071dfffff",
+      "883da1070bfffff",
+      "883da10757fffff",
+      "883da10719fffff",
+      "883da10701fffff",
+      "883da10727fffff",
+      "883da10721fffff"
+    ],
+    "centroid": {
+      "lat": 28.5248,
+      "lon": 77.3139
+    },
+    "eps": 55.4,
+    "components": {
+      "severity": 0.755,
+      "attribution_conf": 0.52,
+      "actionability": 0.8,
+      "vulnerability": 0.0
+    },
+    "kind": "emerging",
+    "source": "waste_burning",
+    "confidence": 0.52,
+    "n_cells": 21,
+    "pm25_med": 125.7,
+    "status": "pending"
+  },
+  {
+    "action_id": "A01",
+    "zone_id": "Z04",
+    "ward_id": "W016",
+    "ward_name": "Ward 016",
+    "cells": [
+      "883da111dbfffff",
+      "883da110e1fffff",
+      "883da110e5fffff",
+      "883da110e9fffff",
+      "883da110edfffff",
+      "883da111d3fffff",
+      "883da111d1fffff",
+      "883da111d9fffff",
+      "883da111d7fffff",
+      "883da11013fffff",
+      "883da11033fffff",
+      "883da1103bfffff",
+      "883da11031fffff",
+      "883da11037fffff",
+      "883da11017fffff"
+    ],
+    "centroid": {
+      "lat": 28.5496,
+      "lon": 77.0906
+    },
+    "eps": 51.3,
+    "components": {
+      "severity": 0.765,
+      "attribution_conf": 0.5,
+      "actionability": 0.6,
+      "vulnerability": 0.0
+    },
+    "kind": "chronic",
+    "source": "traffic",
+    "confidence": 0.5,
+    "n_cells": 15,
+    "pm25_med": 193.9,
+    "status": "pending"
+  },
+  {
+    "action_id": "A05",
+    "zone_id": "Z01",
+    "ward_id": "W045",
+    "ward_name": "Ward 045",
+    "cells": [
+      "883da11a97fffff",
+      "883da1036dfffff",
+      "883da11abbfffff",
+      "883da10369fffff",
+      "883da10367fffff",
+      "883da10329fffff",
+      "883da10361fffff",
+      "883da1030dfffff",
+      "883da1036bfffff",
+      "883da10363fffff",
+      "883da10305fffff",
+      "883da10365fffff",
+      "883da10347fffff"
+    ],
+    "centroid": {
+      "lat": 28.4595,
+      "lon": 77.1089
+    },
+    "eps": 44.3,
+    "components": {
+      "severity": 0.595,
+      "attribution_conf": 0.14,
+      "actionability": 1.0,
+      "vulnerability": 0.0
+    },
+    "kind": "acute",
+    "source": "traffic",
+    "confidence": 0.14,
+    "n_cells": 13,
+    "pm25_med": 200.9,
+    "status": "pending"
+  },
+  {
+    "action_id": "A06",
+    "zone_id": "Z00",
+    "ward_id": "W004",
+    "ward_name": "Ward 004",
+    "cells": [
+      "883da10209fffff",
+      "883da1020dfffff",
+      "883da10241fffff",
+      "883da1024dfffff",
+      "883da10247fffff",
+      "883da10245fffff",
+      "883da1026dfffff",
+      "883da10261fffff",
+      "883da10269fffff",
+      "883da1026bfffff",
+      "883da11193fffff"
+    ],
+    "centroid": {
+      "lat": 28.5213,
+      "lon": 77.1387
+    },
+    "eps": 42.4,
+    "components": {
+      "severity": 0.57,
+      "attribution_conf": 0.1,
+      "actionability": 1.0,
+      "vulnerability": 0.0
+    },
+    "kind": "acute",
+    "source": "traffic",
+    "confidence": 0.1,
+    "n_cells": 11,
+    "pm25_med": 151.6,
+    "status": "pending"
+  }
+]

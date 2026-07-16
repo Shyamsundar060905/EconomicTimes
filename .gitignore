@@ -4,6 +4,7 @@ data/raw/*.parquet
 data/outputs/*
 !data/samples/
 .env
+.venv/
 
 # Credentials. NEVER commit these.
 # The GCP service-account JSON is a live private key: leaking it lets anyone bill
