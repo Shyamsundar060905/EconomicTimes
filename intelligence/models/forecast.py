@@ -28,15 +28,28 @@ T+h — that would be grading it with tomorrow's answer sheet. A real deployment
 add the Open-Meteo met FORECAST here and would likely do better; we leave that gain
 on the table rather than fake it in the eval.
 
-REAL DELHI RESULT (26 CPCB stations, Nov 2025, last 14 days held out):
-    horizon   model   persistence   diurnal    vs persist   vs diurnal
-    24h        95.8      87.1        125.0        -10%          +23%
-    48h        88.7     106.1        130.1        +16%          +32%
-    72h        91.0      99.9        125.8         +9%          +28%
-Persistence WINS at 24h (regional episode = massive short-term autocorrelation); the
-model wins at 48h/72h where persistence decays, and beats climatology everywhere.
-That is the honest shape of a real forecast, and 48-72h is the horizon enforcement
-scheduling actually cares about.
+REAL RESULT — THREE CITIES, and the DIRECTION is the finding, not the number.
+
+Measured on real CPCB/TNPCB stations, Nov 2025, last 14 days held out:
+
+    horizon   Delhi    Chennai   Bengaluru      verdict
+    24h       -23%      -6%        -0%     persistence WINS, 3/3 cities
+    48h       +12%      -5%        +3%     mixed — this is the crossover
+    72h        +2%     +14%       +10%     model WINS, 3/3 cities
+
+(skill vs persistence; positive = we beat it)
+
+Persistence is brutal at 24h — in an urban episode "the same value as yesterday" is
+an excellent guess — and it DECAYS with horizon while a model that has learned the
+diurnal cycle and the met does not. The crossover is around 48h. That is the honest
+shape of a real forecast, and 48-72h is precisely the horizon enforcement scheduling
+cares about ("stagnant winds Thursday — act before, not after").
+
+QUOTE THE DIRECTION, NOT THE DECIMAL. The exact percentage moves with how many
+stations OpenAQ happens to serve that day (we have seen the same Delhi window return
+26, 22 and 20 stations across sessions as their backend flakes). Within a session it
+is byte-reproducible; across days it drifts. Three cities agreeing on the direction is
+the robust claim; "+12.4% at 48h" is not.
 """
 import json
 

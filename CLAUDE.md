@@ -165,13 +165,18 @@ leakage before you assume success.
     *"satellite fire detections in 30 hours (18% of the window)"*. A real polluter,
     in a real city, from public satellite data, with an evidence chain anyone can
     check by googling "Bhalswa landfill fire November 2025".
-  - **Forecast (real Delhi, 24/48/72h, 14-day held-out test).** The honest, nuanced
-    result, not a clean sweep: at **24h persistence WINS** (model 95.8 vs 87.1 RMSE,
-    -10%) — in a regional smog episode "same value yesterday" is brutal to beat
-    short-term. At **48h/72h the model WINS** (+16% / +9%), because persistence
-    collapses at range and that is the actionable enforcement-scheduling window. It
-    beats the tougher diurnal-climatology baseline at **every** horizon (+23-32%).
-    Report all three; do not cherry-pick 48h.
+  - **Forecast — THREE real cities, and the DIRECTION is the finding.** Skill vs
+    persistence (Nov 2025, 14-day held-out tail, real CPCB/TNPCB stations):
+    | horizon | Delhi | Chennai | Bengaluru | verdict |
+    |---|---|---|---|---|
+    | 24h | -23% | -6% | -0% | **persistence WINS, 3/3** |
+    | 48h | +12% | -5% | +3% | mixed — the crossover |
+    | 72h | +2% | +14% | +10% | **model WINS, 3/3** |
+    Persistence is excellent short-term and DECAYS with horizon; the model does not.
+    48-72h is the enforcement-scheduling window ("stagnant winds Thursday, act
+    before"). **Quote the direction, not the decimal** — the exact % moves with how
+    many stations OpenAQ serves that day (same Delhi window has returned 26/22/20
+    stations across sessions). Byte-reproducible within a session; drifts across days.
   - Okhla -> `traffic` (it genuinely sits on Mathura Road; defensible, incomplete).
     Ghazipur -> not detected (no fires in the window).
   - ❌ **The fusion exposure claim is WITHDRAWN.** On real Delhi it is **14% worse
