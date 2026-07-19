@@ -300,7 +300,8 @@ export type AgentName =
   | "forecast"
   | "prioritisation"
   | "memo"
-  | "advisory";
+  | "advisory"
+  | "ledger";
 
 export type AgentStatus = "idle" | "running" | "done" | "error";
 

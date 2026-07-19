@@ -55,6 +55,7 @@ export const AGENT_LABELS: Record<AgentName, string> = {
   prioritisation: "Prioritisation",
   memo:           "Enforcement Memo",
   advisory:       "Advisory",
+  ledger:         "Ledger",
 };
 
 export const AGENT_DESCRIPTIONS: Record<AgentName, string> = {
@@ -73,6 +74,7 @@ export const AGENT_ORDER: AgentName[] = [
   "prioritisation",
   "memo",
   "advisory",
+  "ledger",
 ];
 
 // ─── Hotspot / Source ─────────────────────────────────────────────────────────

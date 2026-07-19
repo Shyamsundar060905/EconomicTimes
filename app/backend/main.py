@@ -154,6 +154,23 @@ def ward_summary(ward_id: str):
     raise HTTPException(404, f"no advisory for ward {ward_id}")
 
 
+@app.post("/run/agent")
+def run_agent(body: dict):
+    """Execute the agent chain (or one agent) via the LangGraph orchestrator.
+
+    The ONE sanctioned exception to "serving never computes" (the architecture
+    doc's Layer 8 trigger endpoint, in the request/response form the frontend's
+    useAgentRun.ts actually calls). Safe because the graph covers AGENTS ONLY —
+    deterministic re-scoring of artifacts already on disk (~seconds). Ingestion,
+    the panel and fusion/LOSO are unreachable from here by construction.
+    """
+    from intelligence.orchestrator import run_chain, AGENT_NAMES
+    agent = (body or {}).get("agent", "all")
+    if agent != "all" and agent not in AGENT_NAMES:
+        raise HTTPException(400, f"unknown agent {agent!r}; choose from {AGENT_NAMES} or 'all'")
+    return run_chain(agent)
+
+
 @app.get("/ledger")
 def ledger():
     """Intervention ledger: response-time reduction (real) + frozen counterfactuals

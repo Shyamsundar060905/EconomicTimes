@@ -18,7 +18,6 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from ingestion.collectors.pollers import run as ingest_run
 from ingestion.preprocessing.panel import build_panel
 from intelligence.models.fusion import run as fusion_run
-from intelligence.agents.prioritise import run as prioritise_run
 
 
 RULE = "=" * 62
@@ -43,29 +42,13 @@ def main():
         print("      may be stale. Re-run with --full, or run detect.py + attribution.py.")
         return
 
-    # Imported here, not at module top: these read data/outputs/panel.parquet at
-    # import time via the ward layer, which does not exist on a cold checkout.
-    from intelligence.agents.detect import detect
-    from intelligence.agents.attribution import run as attribute_run
-    from intelligence.models.forecast import run as forecast_run
-    from intelligence.agents.memo import run as memo_run
-    from intelligence.agents.advisory import run as advisory_run
-    from intelligence.agents.ledger import run as ledger_run
+    # The agent chain is defined ONCE, in intelligence/orchestrator.py — the same
+    # LangGraph graph the API's POST /run/agent executes, so chain order cannot
+    # drift between the pipeline and the serving layer (a drift bit us once).
+    from intelligence.orchestrator import run_chain
 
     print(RULE)
-    detect()
-    print(RULE)
-    attribute_run()
-    print(RULE)
-    forecast_run()
-    print(RULE)
-    prioritise_run()
-    print(RULE)
-    memo_run()
-    print(RULE)
-    advisory_run()
-    print(RULE)
-    ledger_run()   # reads actions + forecast + memos, so it runs last
+    run_chain()
     print(RULE)
     print("Full pipeline complete. Evaluate with:")
     print("  python scripts/eval_detection.py     # the headline stat: sources found vs missed")
