@@ -66,6 +66,7 @@ import type {
   LOSOResponse,
   AuditResponse,
   LedgerEntry,
+  Ledger,
   ForecastCell,
   Action,
   DispatchRoute,
@@ -98,7 +99,7 @@ export const api = {
   getDispatch: () =>
     apiFetch<DispatchRoute[]>("/dispatch").catch(() => [] as DispatchRoute[]),
   getLedger: () =>
-    apiFetch<LedgerEntry[]>("/ledger").catch(() => [] as LedgerEntry[]),
+    apiFetch<Ledger>("/ledger").catch(() => null),
   getAudit: () =>
     apiFetch<AuditResponse>("/audit").catch(() => ({
       blind_spots: [],

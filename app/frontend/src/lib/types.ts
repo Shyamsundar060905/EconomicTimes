@@ -183,13 +183,43 @@ export interface ForecastCell {
 // ─── Ledger ───────────────────────────────────────────────────────────────────
 
 export interface LedgerEntry {
-  memo_id: string;
-  dispatched_at: string;
-  actioned_at: string;
-  counterfactual: number;
-  realized: number;
-  impact: number;         // realized - counterfactual (negative = improvement)
-  response_hours: number;
+  action_id: string;
+  zone_id: string;
+  ward_id: string;
+  ward_name?: string;
+  source?: string;
+  eps?: number;
+  response: {
+    signal_at?: string | null;
+    memo_drafted_at?: string | null;
+    dispatched_at?: string | null;
+    actioned_at?: string | null;
+    response_hours?: number | null;   // dispatch -> actioned, only once the inspector loop reports
+    manual_baseline?: string;
+    automated?: string;
+  };
+  counterfactual: {
+    horizon_h: number;
+    pm25_counterfactual: number;
+    aqi_counterfactual: number;
+    band_counterfactual: string;
+    frozen_at?: string | null;
+  } | null;
+  // deliberately null until a real intervention sits between forecast and outcome
+  observed_change: number | null;
+  our_impact: number | null;
+  status: "actioned" | "dispatched" | "awaiting_outcome";
+}
+
+// The /ledger endpoint returns this envelope, not a bare array.
+export interface Ledger {
+  generated_at: string;
+  response_time_claim: string;
+  effectiveness_claim: string;
+  n_actions: number;
+  n_actioned: number;
+  counterfactual_horizon_h: number;
+  entries: LedgerEntry[];
 }
 
 // ─── Audit ────────────────────────────────────────────────────────────────────
