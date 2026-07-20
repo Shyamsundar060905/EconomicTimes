@@ -72,8 +72,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           </span>
         </div>
 
-        {/* Nav tabs */}
-        <nav style={{ display: "flex", gap: 4 }}>
+        {/* Nav tabs — scroll horizontally on narrow screens rather than overflow */}
+        <nav className="scroll-x" style={{ display: "flex", gap: 4, flexShrink: 1, minWidth: 0 }}>
           {[
             { href: "/admin", label: "Map" },
             { href: "/admin/compare", label: "Cities" },
@@ -107,13 +107,15 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             gap: 6,
             fontSize: "0.75rem",
             color: "var(--text-tertiary)",
+            flexShrink: 0,
           }}
         >
           <CitySwitcher />
-          <span style={{ fontSize: "0.68rem", color: "var(--text-tertiary)" }}>H3 Res-8</span>
+          <span className="hide-mobile" style={{ fontSize: "0.68rem", color: "var(--text-tertiary)" }}>H3 Res-8</span>
           <ThemeToggle />
           <Link
             href="/citizen"
+            className="hide-mobile"
             style={{
               marginLeft: 8,
               padding: "3px 10px",

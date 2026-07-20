@@ -76,7 +76,7 @@ export default function MyReportsPage() {
   const { reports, isLoading, error } = useReports();
 
   return (
-    <div style={{ padding: "var(--space-xl)", maxWidth: 680, margin: "0 auto", width: "100%" }}>
+    <div className="page-pad" style={{ padding: "var(--space-xl)", maxWidth: 680, margin: "0 auto", width: "100%" }}>
       {/* Header */}
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "var(--space-xl)" }}>
         <div>

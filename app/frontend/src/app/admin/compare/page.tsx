@@ -15,7 +15,7 @@ import type { CityComparison } from "@/lib/types";
  * shows "—", it is not invented.
  *
  * The load-bearing claim for the judges: ONE platform, ANY Indian city, ZERO new
- * code — point AQ_CITY at a real bbox and the same eight agents run.
+ * code — point AQ_CITY at a real bbox and the same nine agents run.
  */
 
 const CITY_LABEL: Record<string, string> = {
@@ -200,7 +200,7 @@ export default function ComparePage() {
   const rows = data ?? [];
 
   return (
-    <div style={{ padding: "var(--space-xl)", maxWidth: 1100, margin: "0 auto" }}>
+    <div className="page-pad" style={{ padding: "var(--space-xl)", maxWidth: 1100, margin: "0 auto" }}>
       <div style={{ marginBottom: "var(--space-lg)" }}>
         <h1 style={{ marginBottom: 8 }}>Multi-City Intelligence</h1>
         <p style={{ maxWidth: 760 }}>

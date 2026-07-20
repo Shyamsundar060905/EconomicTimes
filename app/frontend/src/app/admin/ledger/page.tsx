@@ -136,7 +136,7 @@ export default function LedgerPage() {
   const actioned = entries.filter((e) => e.status === "actioned").length;
 
   return (
-    <div style={{ padding: "var(--space-xl)", maxWidth: 1200, margin: "0 auto" }}>
+    <div className="page-pad" style={{ padding: "var(--space-xl)", maxWidth: 1200, margin: "0 auto" }}>
       <div style={{ marginBottom: "var(--space-lg)" }}>
         <h1 style={{ marginBottom: 8 }}>Intervention Ledger</h1>
         <p style={{ maxWidth: 720 }}>

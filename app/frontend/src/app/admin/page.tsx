@@ -12,6 +12,7 @@ import { useCity } from "@/lib/CityContext";
 import { useFilters }  from "@/hooks/useFilters";
 import { filterHotspots } from "@/hooks/useHotspots";
 import { useAgentRun } from "@/hooks/useAgentRun";
+import { useIsMobile } from "@/hooks/useMediaQuery";
 
 // All WebGL/heavy components are dynamically imported — no SSR
 const MapContainer    = dynamic(() => import("@/components/map/MapContainer"),                { ssr: false, loading: () => <MapPlaceholder /> });
@@ -37,9 +38,11 @@ function MapPlaceholder() {
 }
 
 export default function AdminPage() {
+  const isMobile = useIsMobile();
   const [panelOpen, setPanelOpen]   = useState(true);
   const [hourOffset, setHourOffset] = useState(0);
   const [selectedCell, setSelectedCell] = useState<string | null>(null);
+  const [mobileControls, setMobileControls] = useState(false);
 
   // ── Filters & layers ────────────────────────────────────────────────────────
   const {
@@ -81,7 +84,8 @@ export default function AdminPage() {
       {/* ── Map area ─────────────────────────────────────────────────────────── */}
       <div style={{ flex: 1, position: "relative", overflow: "hidden", minWidth: 0 }}>
 
-        {/* Agent bar + progress strip — floats above map */}
+        {/* Agent bar + progress strip — floats above map. On mobile the strip
+            scrolls horizontally instead of wrapping. */}
         <div className="glass" style={{
           position: "absolute",
           top: 0, left: 0, right: 0,
@@ -89,36 +93,52 @@ export default function AdminPage() {
           display: "flex", flexDirection: "column",
           borderBottom: "1px solid var(--border-subtle)",
         }}>
-          <AgentControlBar agents={agents} running={running} onRun={runAgent} onReset={resetAgents} />
-          <AgentProgressStrip agents={agents} />
+          <div className={isMobile ? "scroll-x" : undefined}>
+            <AgentControlBar agents={agents} running={running} onRun={runAgent} onReset={resetAgents} />
+          </div>
+          {!isMobile && <AgentProgressStrip agents={agents} />}
         </div>
 
-        {/* Left sidebar controls — layer toggle + filter bar */}
-        <div style={{
-          position: "absolute",
-          top: 80, left: 12,
-          zIndex: "var(--z-overlay)",
-          display: "flex", flexDirection: "column",
-          gap: "var(--space-sm)",
-          maxWidth: 188,
-        }}>
-          <LayerToggle layers={layers} onToggle={toggleLayer} />
-          <FilterBar
-            filters={filters}
-            onWards={setWards}
-            onSources={setSources}
-            onPersistence={setPersistence}
-            onReset={resetFilters}
-          />
-        </div>
+        {/* Layer/filter controls. Desktop: always-visible left rail. Mobile: behind
+            a floating "Layers" button so they don't cover the map. */}
+        {isMobile && (
+          <button
+            className="btn btn-ghost btn-sm glass"
+            onClick={() => setMobileControls((s) => !s)}
+            style={{ position: "absolute", top: 56, left: 12, zIndex: "var(--z-panel)" }}
+          >
+            {mobileControls ? "✕ Close" : "☰ Layers & filters"}
+          </button>
+        )}
+        {(!isMobile || mobileControls) && (
+          <div style={{
+            position: "absolute",
+            top: isMobile ? 96 : 80, left: 12,
+            zIndex: "var(--z-overlay)",
+            display: "flex", flexDirection: "column",
+            gap: "var(--space-sm)",
+            maxWidth: isMobile ? "calc(100vw - 24px)" : 188,
+            maxHeight: isMobile ? "60vh" : undefined,
+            overflowY: isMobile ? "auto" : undefined,
+          }}>
+            <LayerToggle layers={layers} onToggle={toggleLayer} />
+            <FilterBar
+              filters={filters}
+              onWards={setWards}
+              onSources={setSources}
+              onPersistence={setPersistence}
+              onReset={resetFilters}
+            />
+          </div>
+        )}
 
-        {/* Time slider — centered at bottom */}
+        {/* Time slider — centered at bottom, lifted above the mobile sheet handle */}
         <div style={{
           position: "absolute",
-          bottom: 24, left: "50%",
+          bottom: isMobile ? 80 : 24, left: "50%",
           transform: "translateX(-50%)",
           zIndex: "var(--z-overlay)",
-          width: "min(480px, 80%)",
+          width: isMobile ? "92%" : "min(480px, 80%)",
         }}>
           <TimeSlider value={hourOffset} onChange={setHourOffset} />
         </div>
@@ -141,47 +161,84 @@ export default function AdminPage() {
         />
       </div>
 
-      {/* ── Right panel — Action Queue ──────────────────────────────────────── */}
-      <div className="glass" style={{
-        width: panelOpen ? 360 : 0,
-        minWidth: panelOpen ? 320 : 0,
-        maxWidth: 420,
-        overflow: "hidden",
-        transition: "width var(--transition-slow), min-width var(--transition-slow)",
-        display: "flex", flexDirection: "column",
-        borderLeft: "1px solid var(--border-subtle)",
-        zIndex: "var(--z-panel)",
-        position: "relative",
-      }}>
-        {/* Collapse tab */}
-        <button
-          onClick={() => setPanelOpen((p) => !p)}
-          className="btn btn-ghost btn-icon"
-          style={{
-            position: "absolute", left: -36, top: "50%",
-            transform: "translateY(-50%)",
-            width: 28, height: 52,
-            borderRadius: "var(--radius-sm) 0 0 var(--radius-sm)",
-            background: "var(--bg-secondary)",
-            border: "1px solid var(--border-default)",
-            borderRight: "none",
-            display: "flex", alignItems: "center", justifyContent: "center",
-            fontSize: "0.7rem", zIndex: 1,
-          }}
-          title={panelOpen ? "Collapse panel" : "Expand panel"}
-        >
-          {panelOpen ? "›" : "‹"}
-        </button>
+      {/* ── Action Queue — right panel (desktop) / bottom sheet (mobile) ──────── */}
+      {isMobile ? (
+        <div className="glass" style={{
+          position: "fixed", left: 0, right: 0, bottom: 0,
+          height: panelOpen ? "62vh" : 44,
+          transition: "height var(--transition-slow)",
+          borderTop: "1px solid var(--border-default)",
+          borderTopLeftRadius: "var(--radius-lg)", borderTopRightRadius: "var(--radius-lg)",
+          zIndex: "var(--z-panel)",
+          display: "flex", flexDirection: "column",
+          boxShadow: "var(--shadow-lg)",
+        }}>
+          {/* Drag handle / toggle */}
+          <button
+            onClick={() => setPanelOpen((p) => !p)}
+            style={{
+              height: 44, flexShrink: 0, border: "none", background: "transparent",
+              display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
+              gap: 4, cursor: "pointer", color: "var(--text-secondary)",
+            }}
+          >
+            <span style={{ width: 36, height: 4, borderRadius: 2, background: "var(--border-strong)" }} />
+            <span style={{ fontSize: "0.72rem", fontWeight: 600 }}>
+              {panelOpen ? "▾ Hide" : `▴ Action Queue (${hotspots.length ? "view" : "…"})`}
+            </span>
+          </button>
+          {panelOpen && (
+            <div style={{ flex: 1, overflow: "hidden" }}>
+              <ActionQueue
+                hotspots={hotspots}
+                loading={hotspotsLoading}
+                selectedCell={selectedCell}
+                onSelectCell={setSelectedCell}
+              />
+            </div>
+          )}
+        </div>
+      ) : (
+        <div className="glass" style={{
+          width: panelOpen ? 360 : 0,
+          minWidth: panelOpen ? 320 : 0,
+          maxWidth: 420,
+          overflow: "hidden",
+          transition: "width var(--transition-slow), min-width var(--transition-slow)",
+          display: "flex", flexDirection: "column",
+          borderLeft: "1px solid var(--border-subtle)",
+          zIndex: "var(--z-panel)",
+          position: "relative",
+        }}>
+          <button
+            onClick={() => setPanelOpen((p) => !p)}
+            className="btn btn-ghost btn-icon"
+            style={{
+              position: "absolute", left: -36, top: "50%",
+              transform: "translateY(-50%)",
+              width: 28, height: 52,
+              borderRadius: "var(--radius-sm) 0 0 var(--radius-sm)",
+              background: "var(--bg-secondary)",
+              border: "1px solid var(--border-default)",
+              borderRight: "none",
+              display: "flex", alignItems: "center", justifyContent: "center",
+              fontSize: "0.7rem", zIndex: 1,
+            }}
+            title={panelOpen ? "Collapse panel" : "Expand panel"}
+          >
+            {panelOpen ? "›" : "‹"}
+          </button>
 
-        {panelOpen && (
-          <ActionQueue
-            hotspots={hotspots}
-            loading={hotspotsLoading}
-            selectedCell={selectedCell}
-            onSelectCell={setSelectedCell}
-          />
-        )}
-      </div>
+          {panelOpen && (
+            <ActionQueue
+              hotspots={hotspots}
+              loading={hotspotsLoading}
+              selectedCell={selectedCell}
+              onSelectCell={setSelectedCell}
+            />
+          )}
+        </div>
+      )}
     </div>
   );
 }

@@ -65,7 +65,7 @@ export default function WardDashboardPage({ params }: { params: Promise<Params> 
   const adviceIndex = category ? Math.max(0, AQI_CATEGORIES.indexOf(category)) : 0;
 
   return (
-    <div style={{ padding: "var(--space-xl)", maxWidth: 680, margin: "0 auto", width: "100%" }}>
+    <div className="page-pad" style={{ padding: "var(--space-xl)", maxWidth: 680, margin: "0 auto", width: "100%" }}>
       {/* Back */}
       <Link
         href="/citizen"

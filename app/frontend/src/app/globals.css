@@ -438,3 +438,27 @@ hr {
 .text-muted { color: var(--text-secondary); }
 .text-mono { font-family: var(--font-mono); }
 .truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* ─── Responsive ─────────────────────────────────────────────────────────────────
+   Phone-width tuning. Component-level restructuring (the admin panel becoming a
+   drawer) is done in TS via useIsMobile; this handles the global chrome. */
+@media (max-width: 768px) {
+  html { font-size: 15px; }
+
+  /* Nothing should force the page to scroll sideways. */
+  body { overflow-x: hidden; }
+
+  /* Comfortable thumb targets. */
+  .btn { min-height: 40px; }
+  .btn-sm { min-height: 34px; }
+
+  /* Tighten the generous desktop page padding on the content pages (the admin map
+     is full-bleed and opts out with .no-mobile-pad on its own wrapper). */
+  .page-pad { padding: var(--space-md) !important; }
+
+  /* Decorative chrome that isn't worth the width on a phone. */
+  .hide-mobile { display: none !important; }
+}
+
+/* Never let a table or wide block push the page sideways. */
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }

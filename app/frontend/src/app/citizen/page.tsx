@@ -97,7 +97,7 @@ export default function CitizenHomePage() {
   }, [cells]);
 
   return (
-    <div style={{ padding: "var(--space-xl)", maxWidth: 720, margin: "0 auto", width: "100%" }}>
+    <div className="page-pad" style={{ padding: "var(--space-xl)", maxWidth: 720, margin: "0 auto", width: "100%" }}>
       <div style={{ textAlign: "center", marginBottom: "var(--space-lg)" }}>
         <h1 style={{ marginBottom: 8 }}>Your air, your ward</h1>
         <p style={{ color: "var(--text-secondary)" }}>
