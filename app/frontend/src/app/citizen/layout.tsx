@@ -56,8 +56,8 @@ export default function CitizenLayout({ children }: { children: React.ReactNode 
           >
             🌿
           </div>
-          <div>
-            <div style={{ fontWeight: 700, fontSize: "0.9rem", lineHeight: 1.2 }}>My Ward Air Quality</div>
+          <div className="hide-mobile">
+            <div style={{ fontWeight: 700, fontSize: "0.9rem", lineHeight: 1.2, whiteSpace: "nowrap" }}>My Ward Air Quality</div>
             <CityLabel style={{ fontSize: "0.7rem", color: "var(--text-tertiary)", lineHeight: 1 }} />
           </div>
         </Link>
@@ -65,6 +65,7 @@ export default function CitizenLayout({ children }: { children: React.ReactNode 
         <nav style={{ display: "flex", gap: 4, alignItems: "center" }}>
           <Link
             href="/citizen/reports"
+            className="hide-mobile"
             style={{
               padding: "6px 14px",
               borderRadius: "var(--radius-full)",

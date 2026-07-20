@@ -20,8 +20,7 @@ const LayerToggle     = dynamic(() => import("@/components/map/controls/LayerTog
 const TimeSlider      = dynamic(() => import("@/components/map/controls/TimeSlider"),         { ssr: false });
 const FilterBar       = dynamic(() => import("@/components/filters/FilterBar"),               { ssr: false });
 const ActionQueue     = dynamic(() => import("@/components/panels/ActionQueue"),              { ssr: false });
-const AgentControlBar = dynamic(() => import("@/components/agents/AgentControlBar"),          { ssr: false });
-const AgentProgressStrip = dynamic(() => import("@/components/agents/AgentProgressStrip"),   { ssr: false });
+const AgentPipelinePanel = dynamic(() => import("@/components/agents/AgentPipelinePanel"),   { ssr: false });
 
 function MapPlaceholder() {
   return (
@@ -43,6 +42,7 @@ export default function AdminPage() {
   const [hourOffset, setHourOffset] = useState(0);
   const [selectedCell, setSelectedCell] = useState<string | null>(null);
   const [mobileControls, setMobileControls] = useState(false);
+  const [pipelineOpen, setPipelineOpen] = useState(false);
 
   // ── Filters & layers ────────────────────────────────────────────────────────
   const {
@@ -84,41 +84,43 @@ export default function AdminPage() {
       {/* ── Map area ─────────────────────────────────────────────────────────── */}
       <div style={{ flex: 1, position: "relative", overflow: "hidden", minWidth: 0 }}>
 
-        {/* Agent bar + progress strip — floats above map. On mobile the strip
-            scrolls horizontally instead of wrapping. */}
-        <div className="glass" style={{
-          position: "absolute",
-          top: 0, left: 0, right: 0,
-          zIndex: "var(--z-overlay)",
-          display: "flex", flexDirection: "column",
-          borderBottom: "1px solid var(--border-subtle)",
+        {/* Top-left control stack: Pipeline trigger + layer/filter controls. The
+            agent pipeline lives in a side drawer (AgentPipelinePanel), not smeared
+            across the top of the map. */}
+        <div style={{
+          position: "absolute", top: 12, left: 12, zIndex: "var(--z-panel)",
+          display: "flex", flexDirection: "column", gap: "var(--space-sm)", alignItems: "flex-start",
         }}>
-          <div className={isMobile ? "scroll-x" : undefined}>
-            <AgentControlBar agents={agents} running={running} onRun={runAgent} onReset={resetAgents} />
-          </div>
-          {!isMobile && <AgentProgressStrip agents={agents} />}
+          <button
+            className="btn btn-primary btn-sm"
+            onClick={() => setPipelineOpen(true)}
+            style={{ boxShadow: "var(--shadow-md)" }}
+          >
+            {running
+              ? <><span className="animate-spin" style={{ display: "inline-block" }}>⬡</span> Pipeline {agents.filter((a) => a.status === "done").length}/9</>
+              : <>⚡ Agent Pipeline</>}
+          </button>
+          {isMobile && (
+            <button
+              className="btn btn-ghost btn-sm glass"
+              onClick={() => setMobileControls((s) => !s)}
+            >
+              {mobileControls ? "✕ Close layers" : "☰ Layers & filters"}
+            </button>
+          )}
         </div>
 
-        {/* Layer/filter controls. Desktop: always-visible left rail. Mobile: behind
-            a floating "Layers" button so they don't cover the map. */}
-        {isMobile && (
-          <button
-            className="btn btn-ghost btn-sm glass"
-            onClick={() => setMobileControls((s) => !s)}
-            style={{ position: "absolute", top: 56, left: 12, zIndex: "var(--z-panel)" }}
-          >
-            {mobileControls ? "✕ Close" : "☰ Layers & filters"}
-          </button>
-        )}
+        {/* Layer/filter controls. Desktop: always-visible left rail below the
+            Pipeline button. Mobile: toggled open. */}
         {(!isMobile || mobileControls) && (
           <div style={{
             position: "absolute",
-            top: isMobile ? 96 : 80, left: 12,
+            top: isMobile ? 96 : 56, left: 12,
             zIndex: "var(--z-overlay)",
             display: "flex", flexDirection: "column",
             gap: "var(--space-sm)",
             maxWidth: isMobile ? "calc(100vw - 24px)" : 188,
-            maxHeight: isMobile ? "60vh" : undefined,
+            maxHeight: isMobile ? "56vh" : undefined,
             overflowY: isMobile ? "auto" : undefined,
           }}>
             <LayerToggle layers={layers} onToggle={toggleLayer} />
@@ -240,6 +242,16 @@ export default function AdminPage() {
           )}
         </div>
       )}
+
+      {/* Agent pipeline — a side drawer, opened from the Pipeline button. */}
+      <AgentPipelinePanel
+        open={pipelineOpen}
+        onClose={() => setPipelineOpen(false)}
+        agents={agents}
+        running={running}
+        onRun={runAgent}
+        onReset={resetAgents}
+      />
     </div>
   );
 }
