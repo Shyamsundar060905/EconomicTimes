@@ -86,12 +86,18 @@ def snapshot() -> None:
     dest = SNAP_ROOT / CITY
     dest.mkdir(parents=True, exist_ok=True)
     n = 0
-    for p in DATA_OUT.glob("*.json"):
-        if p.name == "city_comparison.json":
-            continue
-        shutil.copy2(p, dest / p.name)
-        n += 1
-    print(f"[snapshot] {n} outputs -> {dest.relative_to(DATA_OUT.parent.parent)}")
+    # BOTH json AND parquet: the map's fusion choropleth reads fusion_field.parquet,
+    # and the backend derives several endpoints from the parquets. A json-only
+    # snapshot leaves the parquet on whatever city ran last, so a "restore" would
+    # serve one city's hotspots over another city's fusion field. Snapshot all.
+    for pattern in ("*.json", "*.parquet"):
+        for p in DATA_OUT.glob(pattern):
+            if p.name == "city_comparison.json":
+                continue
+            shutil.copy2(p, dest / p.name)
+            n += 1
+    print(f"[snapshot] {n} outputs (json+parquet) -> "
+          f"{dest.relative_to(DATA_OUT.parent.parent)}")
 
 
 def append_comparison(row: dict) -> None:

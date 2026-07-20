@@ -4,10 +4,11 @@
  * Composes all toggleable layers from layer builder functions.
  * Layers are rebuilt only when their data or visibility changes.
  */
-import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo, useEffect, useRef } from "react";
 import Map from "react-map-gl/maplibre";
 import DeckGL from "@deck.gl/react";
 import { H3HexagonLayer } from "@deck.gl/geo-layers";
+import { cellToLatLng } from "h3-js";
 import "maplibre-gl/dist/maplibre-gl.css";
 
 import { INITIAL_VIEW_STATE, MAP_STYLE } from "@/lib/constants";
@@ -60,8 +61,35 @@ export default function MapContainer({
   selectedCell,
   onCellClick,
 }: Props) {
-  const [viewState, setViewState] = useState(INITIAL_VIEW_STATE);
+  const [viewState, setViewState] = useState<{
+    longitude: number; latitude: number; zoom: number; pitch: number; bearing: number;
+  }>({ ...INITIAL_VIEW_STATE });
   const [tooltip, setTooltip] = useState<TooltipState | null>(null);
+
+  // Auto-center on whatever city the loaded data actually belongs to. The pipeline's
+  // "current city" is whatever ran last (Delhi/Chennai/Bengaluru); the map must not be
+  // hardcoded to one, or hotspots render ~1700 km off-screen (Bengaluru data under a
+  // Delhi viewport looks like an empty map). Fit once, to the first dataset that loads.
+  const didAutoFit = useRef(false);
+  useEffect(() => {
+    if (didAutoFit.current) return;
+    const cells =
+      (hotspots.length && hotspots.map((h) => h.cell)) ||
+      (wardCells.length && wardCells.map((w) => w.cell)) ||
+      (fusionCells.length && fusionCells.map((f) => f.cell)) ||
+      [];
+    if (!cells.length) return;
+    let sumLat = 0, sumLon = 0, n = 0;
+    for (const c of cells) {
+      try {
+        const [lat, lon] = cellToLatLng(c);
+        sumLat += lat; sumLon += lon; n++;
+      } catch { /* skip a malformed cell id */ }
+    }
+    if (!n) return;
+    didAutoFit.current = true;
+    setViewState((vs) => ({ ...vs, latitude: sumLat / n, longitude: sumLon / n }));
+  }, [hotspots, wardCells, fusionCells]);
 
   const setTip = useCallback(
     (info: { x: number; y: number; content: React.ReactNode } | null) => setTooltip(info),
@@ -193,9 +221,10 @@ export default function MapContainer({
     <div className="map-container" style={{ background: "#06090f" }}>
       <DeckGL
         viewState={viewState}
-        onViewStateChange={({ viewState: vs }) =>
-          setViewState(vs as typeof INITIAL_VIEW_STATE)
-        }
+        onViewStateChange={({ viewState: vs }) => {
+          const v = vs as { longitude: number; latitude: number; zoom: number; pitch: number; bearing: number };
+          setViewState({ longitude: v.longitude, latitude: v.latitude, zoom: v.zoom, pitch: v.pitch, bearing: v.bearing });
+        }}
         controller={true}
         layers={deckLayers}
         getCursor={({ isDragging }) => (isDragging ? "grabbing" : "crosshair")}

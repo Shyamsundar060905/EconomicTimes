@@ -1,1 +1,154 @@
-[]
+{
+  "generated_at": "2026-07-20T10:11:43.953722+00:00",
+  "response_time_claim": "Signal-to-memo is automated and deterministic: a cited enforcement memo and dispatch route are produced in seconds. The manual baseline — correlating a satellite signal to a served notice across agencies — is measured in weeks. This is the response-time reduction.",
+  "effectiveness_claim": "NOT yet measured. Intervention effectiveness requires a real intervention between the frozen counterfactual and a realized outcome. The ledger freezes the counterfactual and awaits actioned outcomes from the inspector loop; it does not attribute natural change to itself.",
+  "n_actions": 6,
+  "n_actioned": 0,
+  "counterfactual_horizon_h": 48,
+  "entries": [
+    {
+      "action_id": "A03",
+      "zone_id": "Z05",
+      "ward_id": "W219",
+      "ward_name": "SAMAYPUR BADLI",
+      "source": "waste_burning",
+      "eps": 80.8,
+      "response": {
+        "signal_at": "2025-11-29 23:00:00+00:00",
+        "memo_drafted_at": "2026-07-20T10:07:39.631415+00:00",
+        "manual_baseline": "weeks (manual cross-agency signal->notice correlation, CAG 2024)",
+        "automated": "one batch run: satellite signal -> attribution -> cited memo -> dispatch route, no human correlation step"
+      },
+      "counterfactual": {
+        "horizon_h": 48,
+        "pm25_counterfactual": 220.9,
+        "aqi_counterfactual": 378,
+        "band_counterfactual": "Very Poor",
+        "frozen_at": "2025-11-29 23:00:00+00:00"
+      },
+      "observed_change": null,
+      "our_impact": null,
+      "status": "awaiting_outcome"
+    },
+    {
+      "action_id": "A04",
+      "zone_id": "Z03",
+      "ward_id": "unassigned",
+      "ward_name": "Outside city limits",
+      "source": "traffic",
+      "eps": 80.6,
+      "response": {
+        "signal_at": "2025-11-29 23:00:00+00:00",
+        "memo_drafted_at": "2026-07-20T10:07:39.982906+00:00",
+        "manual_baseline": "weeks (manual cross-agency signal->notice correlation, CAG 2024)",
+        "automated": "one batch run: satellite signal -> attribution -> cited memo -> dispatch route, no human correlation step"
+      },
+      "counterfactual": {
+        "horizon_h": 48,
+        "pm25_counterfactual": 191.3,
+        "aqi_counterfactual": 355,
+        "band_counterfactual": "Very Poor",
+        "frozen_at": "2025-11-29 23:00:00+00:00"
+      },
+      "observed_change": null,
+      "our_impact": null,
+      "status": "awaiting_outcome"
+    },
+    {
+      "action_id": "A02",
+      "zone_id": "Z02",
+      "ward_id": "W110",
+      "ward_name": "MADANPUR KHADAR",
+      "source": "waste_burning",
+      "eps": 75.4,
+      "response": {
+        "signal_at": "2025-11-29 23:00:00+00:00",
+        "memo_drafted_at": "2026-07-20T10:07:40.586203+00:00",
+        "manual_baseline": "weeks (manual cross-agency signal->notice correlation, CAG 2024)",
+        "automated": "one batch run: satellite signal -> attribution -> cited memo -> dispatch route, no human correlation step"
+      },
+      "counterfactual": {
+        "horizon_h": 48,
+        "pm25_counterfactual": 184.8,
+        "aqi_counterfactual": 350,
+        "band_counterfactual": "Very Poor",
+        "frozen_at": "2025-11-29 23:00:00+00:00"
+      },
+      "observed_change": null,
+      "our_impact": null,
+      "status": "awaiting_outcome"
+    },
+    {
+      "action_id": "A05",
+      "zone_id": "Z01",
+      "ward_id": "unassigned",
+      "ward_name": "Outside city limits",
+      "source": "traffic",
+      "eps": 64.3,
+      "response": {
+        "signal_at": "2025-11-29 23:00:00+00:00",
+        "memo_drafted_at": "2026-07-20T10:07:40.874506+00:00",
+        "manual_baseline": "weeks (manual cross-agency signal->notice correlation, CAG 2024)",
+        "automated": "one batch run: satellite signal -> attribution -> cited memo -> dispatch route, no human correlation step"
+      },
+      "counterfactual": {
+        "horizon_h": 48,
+        "pm25_counterfactual": 181.4,
+        "aqi_counterfactual": 348,
+        "band_counterfactual": "Very Poor",
+        "frozen_at": "2025-11-29 23:00:00+00:00"
+      },
+      "observed_change": null,
+      "our_impact": null,
+      "status": "awaiting_outcome"
+    },
+    {
+      "action_id": "A06",
+      "zone_id": "Z00",
+      "ward_id": "W248",
+      "ward_name": "KISHANGARH",
+      "source": "traffic",
+      "eps": 62.5,
+      "response": {
+        "signal_at": "2025-11-29 23:00:00+00:00",
+        "memo_drafted_at": "2026-07-20T10:07:41.455061+00:00",
+        "manual_baseline": "weeks (manual cross-agency signal->notice correlation, CAG 2024)",
+        "automated": "one batch run: satellite signal -> attribution -> cited memo -> dispatch route, no human correlation step"
+      },
+      "counterfactual": {
+        "horizon_h": 48,
+        "pm25_counterfactual": 158.7,
+        "aqi_counterfactual": 330,
+        "band_counterfactual": "Very Poor",
+        "frozen_at": "2025-11-29 23:00:00+00:00"
+      },
+      "observed_change": null,
+      "our_impact": null,
+      "status": "awaiting_outcome"
+    },
+    {
+      "action_id": "A01",
+      "zone_id": "Z04",
+      "ward_id": "W223",
+      "ward_name": "KAPASHERA",
+      "source": "traffic",
+      "eps": 59.3,
+      "response": {
+        "signal_at": "2025-11-29 23:00:00+00:00",
+        "memo_drafted_at": "2026-07-20T10:07:41.739089+00:00",
+        "manual_baseline": "weeks (manual cross-agency signal->notice correlation, CAG 2024)",
+        "automated": "one batch run: satellite signal -> attribution -> cited memo -> dispatch route, no human correlation step"
+      },
+      "counterfactual": {
+        "horizon_h": 48,
+        "pm25_counterfactual": 200.5,
+        "aqi_counterfactual": 362,
+        "band_counterfactual": "Very Poor",
+        "frozen_at": "2025-11-29 23:00:00+00:00"
+      },
+      "observed_change": null,
+      "our_impact": null,
+      "status": "awaiting_outcome"
+    }
+  ]
+}
