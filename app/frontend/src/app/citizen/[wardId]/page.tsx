@@ -135,8 +135,20 @@ export default function WardDashboardPage({ params }: { params: Promise<Params> 
             </div>
             {/* Details */}
             <div style={{ flex: 1 }}>
-              <div style={{ fontSize: "1.2rem", fontWeight: 600, marginBottom: 4 }}>
-                {category?.label ?? "No data"}
+              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
+                <span style={{ fontSize: "1.2rem", fontWeight: 600 }}>{category?.label ?? "No data"}</span>
+                {(() => {
+                  const now = forecast[0].aqi, next = forecast[1].aqi;
+                  if (now == null || next == null) return null;
+                  const d = next - now;
+                  if (Math.abs(d) < 3) return <span style={{ fontSize: "0.72rem", color: "var(--text-tertiary)" }}>→ steady</span>;
+                  const worse = d > 0;
+                  return (
+                    <span style={{ fontSize: "0.72rem", fontWeight: 600, color: worse ? "var(--accent-red)" : "var(--accent-emerald)" }}>
+                      {worse ? "↑" : "↓"} {worse ? "worsening" : "improving"} (24h)
+                    </span>
+                  );
+                })()}
               </div>
               <div style={{ fontSize: "0.875rem", color: "var(--text-secondary)", marginBottom: 8 }}>
                 PM2.5: <span style={{ fontFamily: "var(--font-mono)", color: "var(--text-primary)" }}>

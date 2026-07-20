@@ -12,6 +12,7 @@ import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import useSWR from "swr";
 import { api } from "@/lib/api";
+import { pm25ToAqi, getAqiCategory } from "@/lib/colors";
 import { useCitizenWard } from "@/hooks/useReports";
 import { useWardLocator } from "@/hooks/useWardLocator";
 import { useCity } from "@/lib/CityContext";
@@ -75,6 +76,26 @@ export default function CitizenHomePage() {
     [wards, search]
   );
 
+  // Live city snapshot — the citywide median AQI, and its worst wards right now.
+  const cityAqi = useMemo(() => {
+    if (!cells.length) return null;
+    const vals = cells.map((c) => c.pm25).sort((a, b) => a - b);
+    return pm25ToAqi(vals[Math.floor(vals.length / 2)]);
+  }, [cells]);
+  const cityCat = cityAqi != null ? getAqiCategory(cityAqi) : null;
+
+  const worstWards = useMemo(() => {
+    const byWard = new Map<string, number[]>();
+    for (const c of cells) {
+      if (!c.ward_id || c.ward_id === "unassigned") continue;
+      (byWard.get(c.ward_id) ?? byWard.set(c.ward_id, []).get(c.ward_id)!).push(c.pm25);
+    }
+    return [...byWard.entries()]
+      .map(([wid, v]) => ({ wid, pm25: v.sort((a, b) => a - b)[Math.floor(v.length / 2)] }))
+      .sort((a, b) => b.pm25 - a.pm25)
+      .slice(0, 6);
+  }, [cells]);
+
   return (
     <div style={{ padding: "var(--space-xl)", maxWidth: 720, margin: "0 auto", width: "100%" }}>
       <div style={{ textAlign: "center", marginBottom: "var(--space-lg)" }}>
@@ -83,6 +104,37 @@ export default function CitizenHomePage() {
           Find your area to see live air quality, a 72-hour forecast, and to report pollution.
         </p>
       </div>
+
+      {/* Live city AQI band — substance before you even pick a ward */}
+      {cityCat && (
+        <div
+          className="card"
+          style={{
+            display: "flex", alignItems: "center", gap: "var(--space-md)",
+            marginBottom: "var(--space-md)", padding: "var(--space-md) var(--space-lg)",
+            borderLeft: `4px solid ${cityCat.color}`,
+            background: `${cityCat.color}0d`,
+          }}
+        >
+          <div style={{
+            width: 56, height: 56, borderRadius: "50%", flexShrink: 0,
+            background: cityCat.color, color: cityCat.textColor,
+            display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
+            boxShadow: `0 0 24px ${cityCat.color}55`,
+          }}>
+            <div style={{ fontSize: "1.15rem", fontWeight: 700, lineHeight: 1 }}>{cityAqi}</div>
+            <div style={{ fontSize: "0.5rem", opacity: 0.85 }}>AQI</div>
+          </div>
+          <div>
+            <div style={{ fontSize: "1.05rem", fontWeight: 600, color: "var(--text-primary)" }}>
+              Citywide air is {cityCat.label}
+            </div>
+            <div style={{ fontSize: "0.8rem", color: "var(--text-secondary)" }}>
+              Median across every ward, live now. Find yours below.
+            </div>
+          </div>
+        </div>
+      )}
 
       {savedWard && (
         <button
@@ -115,6 +167,48 @@ export default function CitizenHomePage() {
 
       {/* Tappable map */}
       <CitizenMap cells={cells} onPickWard={(wardId) => go(wardId)} height={360} />
+
+      {/* Worst wards right now — live, tappable, fills the space with substance */}
+      {worstWards.length > 0 && (
+        <div style={{ marginTop: "var(--space-lg)" }}>
+          <div style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.05em", textTransform: "uppercase", color: "var(--text-tertiary)", marginBottom: "var(--space-sm)" }}>
+            Worst air right now
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: "var(--space-sm)" }}>
+            {worstWards.map((w) => {
+              const aqi = pm25ToAqi(w.pm25);
+              const cat = getAqiCategory(aqi);
+              const name = wards.find((x) => x.ward_id === w.wid)?.ward_name ?? w.wid;
+              return (
+                <button
+                  key={w.wid}
+                  onClick={() => go(w.wid)}
+                  className="card card-hover"
+                  style={{
+                    display: "flex", alignItems: "center", gap: 10, padding: "10px 12px",
+                    cursor: "pointer", textAlign: "left", borderLeft: `3px solid ${cat.color}`,
+                  }}
+                >
+                  <div style={{
+                    minWidth: 40, height: 40, borderRadius: "var(--radius-sm)", flexShrink: 0,
+                    background: cat.color, color: cat.textColor,
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                    fontWeight: 700, fontSize: "0.95rem",
+                  }}>
+                    {aqi}
+                  </div>
+                  <div style={{ minWidth: 0 }}>
+                    <div style={{ fontSize: "0.82rem", fontWeight: 600, color: "var(--text-primary)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                      {name}
+                    </div>
+                    <div style={{ fontSize: "0.68rem", color: "var(--text-tertiary)" }}>{cat.label}</div>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       {/* Search fallback (collapsed) */}
       <div style={{ marginTop: "var(--space-md)", textAlign: "center" }}>

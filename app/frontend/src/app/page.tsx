@@ -163,37 +163,40 @@ export default function LandingPage() {
         </Link>
       </div>
 
-      {/* Stats strip */}
+      {/* Stats — bold cards, not a gray footnote */}
       <div
         style={{
-          display: "flex",
-          gap: "var(--space-xl)",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          color: "var(--text-tertiary)",
-          fontSize: "0.8rem",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
+          gap: "var(--space-md)",
+          width: "100%",
+          maxWidth: 820,
         }}
       >
         {[
-          ["3", "Real cities · live"],
-          ["H3 · 8", "~460m grid"],
-          ["6", "Data sources"],
-          ["9", "AI agents"],
-          ["4", "Languages"],
-        ].map(([val, label]) => (
-          <div key={label} style={{ textAlign: "center" }}>
-            <div
-              style={{
-                fontFamily: "var(--font-mono)",
-                fontSize: "1.1rem",
-                fontWeight: 600,
-                color: "var(--text-primary)",
-                marginBottom: 2,
-              }}
-            >
-              {val}
+          { icon: "🌏", val: "3", label: "Real cities", sub: "live, not synthetic", accent: "var(--accent-emerald)" },
+          { icon: "🛰️", val: "6", label: "Data sources", sub: "satellite to citizen", accent: "var(--accent-blue)" },
+          { icon: "🤖", val: "9", label: "AI agents", sub: "detect → dispatch", accent: "var(--accent-purple)" },
+          { icon: "🗣️", val: "4", label: "Languages", sub: "EN · HI · TA · KN", accent: "var(--accent-amber)" },
+          { icon: "⬡", val: "460m", label: "Grid", sub: "H3 res-8 hexes", accent: "var(--accent-blue)" },
+        ].map((s) => (
+          <div
+            key={s.label}
+            className="card"
+            style={{
+              padding: "var(--space-md)",
+              display: "flex",
+              flexDirection: "column",
+              gap: 2,
+              borderTop: `2px solid ${s.accent}`,
+            }}
+          >
+            <div style={{ fontSize: "1.1rem", marginBottom: 2 }}>{s.icon}</div>
+            <div style={{ fontSize: "1.9rem", fontWeight: 700, color: s.accent, lineHeight: 1, letterSpacing: "-0.02em" }}>
+              {s.val}
             </div>
-            <div>{label}</div>
+            <div style={{ fontSize: "0.82rem", fontWeight: 600, color: "var(--text-primary)" }}>{s.label}</div>
+            <div style={{ fontSize: "0.7rem", color: "var(--text-tertiary)" }}>{s.sub}</div>
           </div>
         ))}
       </div>
