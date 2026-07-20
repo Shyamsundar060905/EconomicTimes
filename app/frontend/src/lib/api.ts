@@ -3,7 +3,10 @@
  * If the FastAPI backend is unreachable, reads from /data/*.json (demo insurance).
  */
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+// `??` not `||`: an explicit empty string means "no backend — use relative paths
+// and fall straight through to the committed static JSON". That is the clean
+// no-backend deploy (Vercel). Unset (local dev) keeps the localhost default.
+const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
 
 // Citizen reports do NOT go to the read-only FastAPI backend. They go to the n8n
 // channel layer (live, HTTPS), which validates, canonicalises the ward against the
