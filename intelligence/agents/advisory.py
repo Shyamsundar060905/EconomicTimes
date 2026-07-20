@@ -269,6 +269,15 @@ def _texts(sit: dict, langs: list[str]) -> tuple[dict, str]:
     baseline = {l: TEMPLATES[l][band].format(ward=ward, aqi=aqi)
                 for l in langs if l in TEMPLATES}
 
+    # Only WARM the wards that need it. A 'low'-tier advisory (good/satisfactory air)
+    # reads fine from the template — warming it is not worth an LLM call, and firing
+    # one per ward across a whole city (227 here) blows the Gemini per-minute quota
+    # after ~6 calls, so the rest 429 and fall back anyway. Gate on the deterministic
+    # risk tier: template for 'low', LLM warming for moderate/high/critical. Uniform
+    # output, no quota burn, and the LLM still touches every advisory that matters.
+    if sit.get("risk_tier", "low") == "low":
+        return baseline, "rules"
+
     out, provider = complete_json(PROMPT.format(
         ward=ward, aqi=aqi, band=band, impact=CPCB_HEALTH[band],
         baseline=json.dumps(baseline, ensure_ascii=False),
