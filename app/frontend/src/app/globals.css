@@ -1,64 +1,106 @@
 /* ─────────────────────────────────────────────────────────────────────────────
-   AirCase — Global Design System
-   Dark-first, uses CSS custom properties throughout.
+   AirCase — Design System
+   ─────────────────────────────────────────────────────────────────────────────
+
+   ONE place defines colour. Pages compose tokens and the component classes
+   below; they do not invent hexes. If you find yourself typing "#" inside a
+   .tsx file, the token is missing — add it here instead.
+
+   Palette discipline (this replaced a rainbow of saturated Tailwind-500s):
+   · ONE accent hue. Everything interactive is that hue; nothing else is.
+   · Three semantic hues — positive / caution / critical — desaturated so they
+     read as *state*, not decoration.
+   · Data colours (AQI, source category, persistence) live in their own scale
+     and are the ONLY place strong colour is allowed, because there the colour
+     carries the meaning.
+   Chrome is near-achromatic. Colour is information, not personality.
+
+   Fonts are loaded by next/font in layout.tsx (self-hosted, preloaded) and
+   arrive here as --font-inter / --font-mono-jb. Do NOT reintroduce an @import
+   from fonts.googleapis.com: it blocks first paint on a third-party request.
    ───────────────────────────────────────────────────────────────────────────── */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
-
-/* ─── Custom Properties ──────────────────────────────────────────────────────── */
+/* ─── Tokens: dark (default) ─────────────────────────────────────────────────── */
 
 :root {
-  /* Background layers */
-  --bg-base:        #06090f;
-  --bg-primary:     #0a0e1a;
-  --bg-secondary:   #111827;
-  --bg-tertiary:    #1a2235;
-  --bg-glass:       rgba(17, 24, 39, 0.88);
-  --bg-glass-light: rgba(26, 34, 53, 0.72);
-  --bg-hover:       rgba(255, 255, 255, 0.04);
-  --bg-active:      rgba(59, 130, 246, 0.12);
+  /* Surfaces — a single near-neutral ramp, faintly cool */
+  --bg-base:        #0b0c0e;
+  --bg-primary:     #111316;
+  --bg-secondary:   #17191d;
+  --bg-tertiary:    #1e2126;
+  --bg-elevated:    #23272d;
+  --bg-glass:       rgba(17, 19, 22, 0.82);
+  --bg-glass-light: rgba(30, 33, 38, 0.72);
+  --bg-hover:       rgba(255, 255, 255, 0.045);
+  --bg-active:      rgba(122, 156, 224, 0.12);
+  --scrim:          rgba(0, 0, 0, 0.5);
 
   /* Text */
-  --text-primary:   #f0f4ff;
-  --text-secondary: #94a3b8;
-  --text-tertiary:  #64748b;
-  --text-inverse:   #0a0e1a;
+  --text-primary:   #e7e9ec;
+  --text-secondary: #a0a6ae;
+  --text-tertiary:  #6d737b;
+  --text-inverse:   #0b0c0e;
 
-  /* Accent */
-  --accent-blue:    #3b82f6;
-  --accent-blue-dim: #1d4ed8;
-  --accent-amber:   #f59e0b;
-  --accent-emerald: #10b981;
-  --accent-red:     #ef4444;
-  --accent-purple:  #8b5cf6;
+  /* The one accent */
+  --accent:         #7a9ce0;
+  --accent-strong:  #93b0ea;
+  --accent-muted:   #5b7cb8;
+  --accent-soft:    rgba(122, 156, 224, 0.12);
+  --accent-line:    rgba(122, 156, 224, 0.30);
+  --accent-ink:     #0b0c0e;   /* text on a filled accent surface */
+
+  /* Semantic state */
+  --positive:       #5ea88a;
+  --positive-soft:  rgba(94, 168, 138, 0.12);
+  --positive-line:  rgba(94, 168, 138, 0.28);
+  --caution:        #c99a4e;
+  --caution-soft:   rgba(201, 154, 78, 0.12);
+  --caution-line:   rgba(201, 154, 78, 0.28);
+  --critical:       #d06a62;
+  --critical-soft:  rgba(208, 106, 98, 0.12);
+  --critical-line:  rgba(208, 106, 98, 0.28);
 
   /* Borders */
-  --border-subtle:  rgba(148, 163, 184, 0.10);
-  --border-default: rgba(148, 163, 184, 0.18);
-  --border-strong:  rgba(148, 163, 184, 0.30);
+  --border-subtle:  rgba(255, 255, 255, 0.07);
+  --border-default: rgba(255, 255, 255, 0.12);
+  --border-strong:  rgba(255, 255, 255, 0.22);
 
-  /* AQI colors (India NAQI) */
-  --aqi-good:         #00b050;
-  --aqi-satisfactory: #92d050;
-  --aqi-moderate:     #ffff00;
-  --aqi-poor:         #ff9900;
-  --aqi-very-poor:    #ff0000;
-  --aqi-severe:       #99004c;
+  /* ── Data scales ───────────────────────────────────────────────────────────
+     AQI keeps the CPCB hue ORDER (green → yellow → orange → red → maroon) so a
+     citizen still reads it correctly, at ~60% of the saturation. The original
+     used pure #ffff00 / #ff0000 / #00b050 — a signage palette, not a screen
+     palette, and the single loudest reason the UI read as a toy. */
+  --aqi-1: #5a9e72;  --aqi-1-ink: #0d1710;   /* Good         */
+  --aqi-2: #94af63;  --aqi-2-ink: #131707;   /* Satisfactory */
+  --aqi-3: #d3b155;  --aqi-3-ink: #1a1508;   /* Moderate     */
+  --aqi-4: #d08e51;  --aqi-4-ink: #1b1006;   /* Poor         */
+  --aqi-5: #c2635a;  --aqi-5-ink: #ffffff;   /* Very Poor    */
+  --aqi-6: #8e4a67;  --aqi-6-ink: #ffffff;   /* Severe       */
 
-  /* Source colors */
-  --source-industrial:    #f87171;
-  --source-waste-burning: #fb923c;
-  --source-construction:  #facc15;
-  --source-traffic:       #60a5fa;
+  /* Source category — categorical, distinguishable, none of them shouty */
+  --source-industrial:    #c0705b;
+  --source-waste-burning: #ce9a4a;
+  --source-construction:  #9a9382;
+  --source-traffic:       #6e8fc0;
 
-  /* Persistence colors */
-  --persist-chronic:  #ef4444;
-  --persist-emerging: #f59e0b;
-  --persist-acute:    #f97316;
+  /* Persistence — one warm family, separated by hue not by neon */
+  --persist-chronic:  #c05c55;
+  --persist-emerging: #c99a4e;
+  --persist-acute:    #d3813f;
 
-  /* Typography */
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  /* Deprecated aliases. The old palette exposed five independent "accent"
+     hues; everything now maps onto the accent + three semantic tokens above.
+     Kept so a stray reference degrades to the right colour instead of to
+     nothing — do not use these in new code. */
+  --accent-blue:    var(--accent);
+  --accent-emerald: var(--positive);
+  --accent-amber:   var(--caution);
+  --accent-red:     var(--critical);
+  --accent-purple:  var(--accent-muted);
+
+  /* Typography — families are injected by next/font in layout.tsx */
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-mono-jb), ui-monospace, "SFMono-Regular", monospace;
 
   /* Spacing */
   --space-xs:  4px;
@@ -68,25 +110,25 @@
   --space-xl:  32px;
   --space-2xl: 48px;
 
-  /* Radius */
-  --radius-sm:  6px;
-  --radius-md:  10px;
-  --radius-lg:  16px;
-  --radius-xl:  24px;
+  /* Radius — halved from the original. A 24px corner on a data console reads
+     as a consumer toy; 6–10px reads as an instrument. */
+  --radius-sm:   4px;
+  --radius-md:   6px;
+  --radius-lg:  10px;
+  --radius-xl:  14px;
   --radius-full: 9999px;
 
-  /* Shadows */
-  --shadow-sm:  0 1px 3px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,0.3);
-  --shadow-md:  0 4px 12px rgba(0,0,0,0.5), 0 2px 4px rgba(0,0,0,0.3);
-  --shadow-lg:  0 12px 32px rgba(0,0,0,0.6), 0 4px 8px rgba(0,0,0,0.4);
-  --shadow-glow-blue:   0 0 20px rgba(59, 130, 246, 0.25);
-  --shadow-glow-red:    0 0 16px rgba(239, 68, 68, 0.30);
-  --shadow-glow-amber:  0 0 16px rgba(245, 158, 11, 0.25);
+  /* Elevation — soft and short-throw. The old set went to 32px blur at 60%
+     opacity, which made every card look like it was floating off the page. */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.30);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.34), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.40), 0 2px 6px rgba(0, 0, 0, 0.28);
 
-  /* Transitions */
-  --transition-fast:   150ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow:   400ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* Motion */
+  --ease:              cubic-bezier(0.32, 0.72, 0, 1);
+  --transition-fast:   120ms var(--ease);
+  --transition-normal: 200ms var(--ease);
+  --transition-slow:   320ms var(--ease);
 
   /* Z-indices */
   --z-map:     0;
@@ -99,38 +141,49 @@
   color-scheme: dark;
 }
 
-/* ─── Light theme ────────────────────────────────────────────────────────────────
-   Only the tokens that must change are overridden. Accents and AQI colours are
-   deliberately kept — they are the platform's identity and read fine on light.
-   Applied via [data-theme="light"] on <html>; the toggle stamps it and persists
-   the choice, defaulting to the OS preference. */
+/* ─── Tokens: light ──────────────────────────────────────────────────────────
+   Only what must change. Data scales are shared: they encode meaning, and a band
+   that changes colour with the theme is a band you cannot learn. */
 :root[data-theme="light"] {
-  --bg-base:        #f5f7fb;
+  --bg-base:        #f7f8f9;
   --bg-primary:     #ffffff;
-  --bg-secondary:   #eef1f6;
-  --bg-tertiary:    #e2e7f0;
-  --bg-glass:       rgba(255, 255, 255, 0.85);
-  --bg-glass-light: rgba(238, 241, 246, 0.75);
-  --bg-hover:       rgba(15, 23, 42, 0.04);
-  --bg-active:      rgba(59, 130, 246, 0.10);
+  --bg-secondary:   #f2f3f5;
+  --bg-tertiary:    #e9ebee;
+  --bg-elevated:    #ffffff;
+  --bg-glass:       rgba(255, 255, 255, 0.86);
+  --bg-glass-light: rgba(247, 248, 249, 0.78);
+  --bg-hover:       rgba(16, 19, 24, 0.045);
+  --bg-active:      rgba(47, 95, 168, 0.09);
 
-  --text-primary:   #0f172a;
-  --text-secondary: #475569;
-  --text-tertiary:  #94a3b8;
+  --text-primary:   #16181c;
+  --text-secondary: #575d66;
+  --text-tertiary:  #868d97;
   --text-inverse:   #ffffff;
 
-  --accent-blue-dim: #2563eb;
+  --accent:         #2f5fa8;
+  --accent-strong:  #24487f;
+  --accent-muted:   #5f83bb;
+  --accent-soft:    rgba(47, 95, 168, 0.08);
+  --accent-line:    rgba(47, 95, 168, 0.26);
+  --accent-ink:     #ffffff;
 
-  --border-subtle:  rgba(15, 23, 42, 0.08);
-  --border-default: rgba(15, 23, 42, 0.14);
-  --border-strong:  rgba(15, 23, 42, 0.24);
+  --positive:       #37785d;
+  --positive-soft:  rgba(55, 120, 93, 0.09);
+  --positive-line:  rgba(55, 120, 93, 0.24);
+  --caution:        #8c631d;
+  --caution-soft:   rgba(140, 99, 29, 0.09);
+  --caution-line:   rgba(140, 99, 29, 0.24);
+  --critical:       #ab4139;
+  --critical-soft:  rgba(171, 65, 57, 0.09);
+  --critical-line:  rgba(171, 65, 57, 0.24);
 
-  --shadow-sm:  0 1px 3px rgba(15,23,42,0.08), 0 1px 2px rgba(15,23,42,0.05);
-  --shadow-md:  0 4px 12px rgba(15,23,42,0.10), 0 2px 4px rgba(15,23,42,0.06);
-  --shadow-lg:  0 12px 32px rgba(15,23,42,0.14), 0 4px 8px rgba(15,23,42,0.08);
-  --shadow-glow-blue:  0 0 20px rgba(59, 130, 246, 0.18);
-  --shadow-glow-red:   0 0 16px rgba(239, 68, 68, 0.18);
-  --shadow-glow-amber: 0 0 16px rgba(245, 158, 11, 0.18);
+  --border-subtle:  rgba(16, 19, 24, 0.08);
+  --border-default: rgba(16, 19, 24, 0.14);
+  --border-strong:  rgba(16, 19, 24, 0.26);
+
+  --shadow-sm: 0 1px 2px rgba(16, 19, 24, 0.06);
+  --shadow-md: 0 2px 6px rgba(16, 19, 24, 0.08), 0 1px 2px rgba(16, 19, 24, 0.05);
+  --shadow-lg: 0 8px 24px rgba(16, 19, 24, 0.10), 0 2px 6px rgba(16, 19, 24, 0.06);
 
   color-scheme: light;
 }
@@ -147,6 +200,7 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
 }
 
@@ -157,113 +211,187 @@ body {
   line-height: 1.5;
   min-height: 100vh;
   overflow-x: hidden;
+  font-feature-settings: "cv11", "ss01";
+  font-variant-numeric: tabular-nums;
 }
 
 /* ─── Typography ─────────────────────────────────────────────────────────────── */
 
-h1 { font-size: 2rem;   font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
-h2 { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.015em; line-height: 1.3; }
-h3 { font-size: 1.25rem;font-weight: 600; letter-spacing: -0.01em; }
-h4 { font-size: 1rem;   font-weight: 600; }
-h5 { font-size: 0.875rem; font-weight: 600; letter-spacing: 0.02em; text-transform: uppercase; }
+h1 { font-size: 1.6rem;  font-weight: 650; letter-spacing: -0.021em; line-height: 1.25; }
+h2 { font-size: 1.25rem; font-weight: 620; letter-spacing: -0.016em; line-height: 1.3;  }
+h3 { font-size: 1.05rem; font-weight: 600; letter-spacing: -0.011em; }
+h4 { font-size: 0.925rem;font-weight: 600; letter-spacing: -0.006em; }
+h5 {
+  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.07em;
+  text-transform: uppercase; color: var(--text-tertiary);
+}
 
 p  { line-height: 1.6; color: var(--text-secondary); }
 small { font-size: 0.75rem; }
+strong { font-weight: 600; color: var(--text-primary); }
 
 code, pre {
   font-family: var(--font-mono);
-  font-size: 0.85em;
+  font-size: 0.86em;
 }
+
+/* Landing-scale type. Deliberately opt-in: the console never uses it. */
+.display {
+  font-size: clamp(2rem, 4.5vw, 2.9rem);
+  font-weight: 640;
+  letter-spacing: -0.032em;
+  line-height: 1.05;
+}
+.lede {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+/* The uppercase micro-label used above nearly every group in the app. It was
+   re-declared inline in a dozen files with four different letter-spacings. */
+.section-label {
+  font-size: 0.675rem;
+  font-weight: 600;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
 
 /* ─── Scrollbar ──────────────────────────────────────────────────────────────── */
 
-::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
   background: var(--border-default);
   border-radius: var(--radius-full);
+  border: 3px solid transparent;
+  background-clip: content-box;
 }
-::-webkit-scrollbar-thumb:hover { background: var(--border-strong); }
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-strong);
+  background-clip: content-box;
+}
+* { scrollbar-width: thin; scrollbar-color: var(--border-default) transparent; }
 
-/* ─── Utility classes ────────────────────────────────────────────────────────── */
+/* ─── Surfaces ───────────────────────────────────────────────────────────────── */
 
 .glass {
   background: var(--bg-glass);
-  backdrop-filter: blur(12px) saturate(1.5);
-  -webkit-backdrop-filter: blur(12px) saturate(1.5);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
   border: 1px solid var(--border-subtle);
 }
 
 .glass-light {
   background: var(--bg-glass-light);
-  backdrop-filter: blur(8px) saturate(1.3);
-  -webkit-backdrop-filter: blur(8px) saturate(1.3);
+  backdrop-filter: blur(10px) saturate(1.25);
+  -webkit-backdrop-filter: blur(10px) saturate(1.25);
   border: 1px solid var(--border-subtle);
 }
 
 .card {
   background: var(--bg-secondary);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   padding: var(--space-md);
 }
 
 .card-hover {
-  transition: border-color var(--transition-fast), background var(--transition-fast),
-              transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition: border-color var(--transition-fast),
+              background var(--transition-fast),
+              box-shadow var(--transition-fast);
 }
 .card-hover:hover {
   border-color: var(--border-default);
   background: var(--bg-tertiary);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
 }
+
+/* A card whose left edge carries the state colour. Set --rail to any token. */
+.card-rail { border-left: 2px solid var(--rail, var(--border-strong)); }
+
+/* Inline explanatory note — the "this is derived client-side" boxes. Neutral by
+   default; set --rail for a caveat that carries a state. */
+.note {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-left: 2px solid var(--rail, var(--border-strong));
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+/* ── Alerts: the ERROR / WARNING / SUCCESS state ────────────────────────────
+   A message about something that happened, as opposed to .note, which is a
+   standing caveat about the data. Failures were previously hand-rolled at each
+   call site — a red-tinted div here, a bare amber <p> there, a `#f87171`
+   somewhere else — so the same class of event looked like three different
+   things and none of them announced itself to a screen reader. Pair with
+   role="alert" so it is spoken when it appears. */
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--tint-line, var(--border-default));
+  background: var(--tint-soft, var(--bg-tertiary));
+  color: var(--tint, var(--text-secondary));
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+/* The glyph keeps the state colour; the message stays readable body text —
+   long copy set in a saturated hue is tiring and, at these tints, low contrast. */
+.alert > svg { flex-shrink: 0; margin-top: 2px; }
+.alert > .alert-body { color: var(--text-secondary); min-width: 0; }
+.alert > .alert-body > strong { color: var(--text-primary); display: block; margin-bottom: 2px; }
+
+.alert-critical { --tint: var(--critical); --tint-soft: var(--critical-soft); --tint-line: var(--critical-line); }
+.alert-caution  { --tint: var(--caution);  --tint-soft: var(--caution-soft);  --tint-line: var(--caution-line); }
+.alert-positive { --tint: var(--positive); --tint-soft: var(--positive-soft); --tint-line: var(--positive-line); }
+.alert-info     { --tint: var(--accent);   --tint-soft: var(--accent-soft);   --tint-line: var(--accent-line); }
 
 /* ─── Buttons ────────────────────────────────────────────────────────────────── */
 
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-sm);
-  padding: 8px 16px;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 13px;
   border-radius: var(--radius-md);
-  font-family: var(--font-sans);
-  font-size: 0.875rem;
+  font-family: inherit;
+  font-size: 0.8125rem;
   font-weight: 500;
+  line-height: 1.2;
   cursor: pointer;
-  border: none;
-  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+  transition: background var(--transition-fast), border-color var(--transition-fast),
+              color var(--transition-fast), opacity var(--transition-fast);
   white-space: nowrap;
   outline: none;
+  user-select: none;
 }
-.btn:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn:not(:disabled):active { transform: translateY(0.5px); }
+.btn svg { flex-shrink: 0; }
 
 .btn-primary {
-  background: var(--accent-blue);
-  color: white;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 550;
 }
-.btn-primary:not(:disabled):hover {
-  background: #2563eb;
-  box-shadow: var(--shadow-glow-blue);
-}
-
-.btn-danger {
-  background: rgba(239, 68, 68, 0.15);
-  color: var(--accent-red);
-  border: 1px solid rgba(239, 68, 68, 0.25);
-}
-.btn-danger:not(:disabled):hover {
-  background: rgba(239, 68, 68, 0.25);
-  box-shadow: var(--shadow-glow-red);
-}
+.btn-primary:not(:disabled):hover { background: var(--accent-strong); }
 
 .btn-ghost {
   background: transparent;
   color: var(--text-secondary);
-  border: 1px solid var(--border-default);
+  border-color: var(--border-default);
 }
 .btn-ghost:not(:disabled):hover {
   background: var(--bg-hover);
@@ -271,82 +399,336 @@ code, pre {
   border-color: var(--border-strong);
 }
 
-.btn-amber {
-  background: rgba(245, 158, 11, 0.15);
-  color: var(--accent-amber);
-  border: 1px solid rgba(245, 158, 11, 0.25);
+.btn-quiet {
+  background: transparent;
+  color: var(--text-secondary);
+  border-color: transparent;
 }
-.btn-amber:not(:disabled):hover {
-  background: rgba(245, 158, 11, 0.25);
-  box-shadow: var(--shadow-glow-amber);
+.btn-quiet:not(:disabled):hover { background: var(--bg-hover); color: var(--text-primary); }
+
+/* State-tinted buttons. One rule, one variable — there used to be four
+   near-identical blocks (danger / amber / emerald) each with its own glow. */
+.btn-tinted {
+  background: var(--tint-soft);
+  color: var(--tint);
+  border-color: var(--tint-line);
 }
-.btn-emerald {
-  background: rgba(16, 185, 129, 0.15);
-  color: var(--accent-emerald);
-  border: 1px solid rgba(16, 185, 129, 0.3);
-  font-weight: 600;
+.btn-tinted:not(:disabled):hover { background: color-mix(in srgb, var(--tint) 18%, transparent); }
+
+.btn-danger   { --tint: var(--critical); --tint-soft: var(--critical-soft); --tint-line: var(--critical-line);
+                background: var(--tint-soft); color: var(--tint); border-color: var(--tint-line); }
+.btn-danger:not(:disabled):hover   { background: color-mix(in srgb, var(--critical) 18%, transparent); }
+.btn-caution  { --tint: var(--caution);  --tint-soft: var(--caution-soft);  --tint-line: var(--caution-line);
+                background: var(--tint-soft); color: var(--tint); border-color: var(--tint-line); }
+.btn-caution:not(:disabled):hover  { background: color-mix(in srgb, var(--caution) 18%, transparent); }
+.btn-positive { --tint: var(--positive); --tint-soft: var(--positive-soft); --tint-line: var(--positive-line);
+                background: var(--tint-soft); color: var(--tint); border-color: var(--tint-line); }
+.btn-positive:not(:disabled):hover { background: color-mix(in srgb, var(--positive) 18%, transparent); }
+
+.btn-sm  { padding: 5px 10px; font-size: 0.75rem; gap: 5px; }
+.btn-icon { padding: 6px; border-radius: var(--radius-md); }
+.btn-block { width: 100%; }
+
+/* ─── Navigation ─────────────────────────────────────────────────────────────── */
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  font-weight: 480;
+  color: var(--text-tertiary);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color var(--transition-fast), background var(--transition-fast);
 }
-.btn-emerald:not(:disabled):hover {
-  background: rgba(16, 185, 129, 0.25);
+.nav-link:hover { color: var(--text-primary); background: var(--bg-hover); }
+.nav-link[data-active="true"] {
+  color: var(--text-primary);
+  background: var(--bg-hover);
+  font-weight: 550;
 }
 
-.btn-sm {
-  padding: 5px 12px;
-  font-size: 0.8rem;
-}
-
-.btn-icon {
-  padding: 8px;
-  border-radius: var(--radius-sm);
-}
-
-/* ─── Badges ─────────────────────────────────────────────────────────────────── */
+/* ─── Badges & chips ─────────────────────────────────────────────────────────── */
 
 .badge {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 2px 8px;
-  border-radius: var(--radius-full);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+  font-size: 0.6875rem;
+  font-weight: 550;
+  letter-spacing: 0.02em;
+  line-height: 1.45;
+  background: var(--tint-soft, var(--bg-tertiary));
+  color: var(--tint, var(--text-secondary));
+  border: 1px solid var(--tint-line, var(--border-subtle));
+  white-space: nowrap;
 }
 
-.badge-chronic  { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239,68,68,0.25); }
-.badge-emerging { background: rgba(245,158,11, 0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.25); }
-.badge-acute    { background: rgba(249,115,22, 0.15); color: #fb923c; border: 1px solid rgba(249,115,22,0.25); }
-.badge-attributable { background: rgba(16,185,129, 0.12); color: #34d399; border: 1px solid rgba(16,185,129,0.2); }
-.badge-diffuse  { background: rgba(100,116,139, 0.12); color: #94a3b8; border: 1px solid rgba(100,116,139,0.2); }
-.badge-blue     { background: rgba(59,130,246, 0.12); color: #60a5fa; border: 1px solid rgba(59,130,246,0.2); }
+.badge-chronic      { --tint: var(--persist-chronic);  --tint-soft: color-mix(in srgb, var(--persist-chronic) 13%, transparent);  --tint-line: color-mix(in srgb, var(--persist-chronic) 28%, transparent); }
+.badge-emerging     { --tint: var(--persist-emerging); --tint-soft: color-mix(in srgb, var(--persist-emerging) 13%, transparent); --tint-line: color-mix(in srgb, var(--persist-emerging) 28%, transparent); }
+.badge-acute        { --tint: var(--persist-acute);    --tint-soft: color-mix(in srgb, var(--persist-acute) 13%, transparent);    --tint-line: color-mix(in srgb, var(--persist-acute) 28%, transparent); }
+.badge-attributable { --tint: var(--positive); --tint-soft: var(--positive-soft); --tint-line: var(--positive-line); }
+.badge-diffuse      { --tint: var(--text-tertiary); --tint-soft: var(--bg-tertiary); --tint-line: var(--border-subtle); }
+.badge-accent       { --tint: var(--accent);   --tint-soft: var(--accent-soft);   --tint-line: var(--accent-line); }
+.badge-positive     { --tint: var(--positive); --tint-soft: var(--positive-soft); --tint-line: var(--positive-line); }
+.badge-caution      { --tint: var(--caution);  --tint-soft: var(--caution-soft);  --tint-line: var(--caution-line); }
+.badge-critical     { --tint: var(--critical); --tint-soft: var(--critical-soft); --tint-line: var(--critical-line); }
+
+/* Toggleable filter chip. */
+.chip {
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-default);
+  background: transparent;
+  color: var(--text-tertiary);
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 520;
+  cursor: pointer;
+  transition: color var(--transition-fast), border-color var(--transition-fast),
+              background var(--transition-fast);
+}
+.chip:hover { color: var(--text-secondary); border-color: var(--border-strong); }
+.chip[data-active="true"] {
+  color: var(--tint, var(--accent));
+  border-color: color-mix(in srgb, var(--tint, var(--accent)) 45%, transparent);
+  background: color-mix(in srgb, var(--tint, var(--accent)) 12%, transparent);
+}
+
+/* ─── Menus / dropdowns ──────────────────────────────────────────────────────
+   The city switcher and the ward-search results were two separately hand-built
+   popovers — different radii, padding, hover colour, and one of them re-set its
+   background on every mouseenter/mouseleave in JS. Same widget, so: same class.
+   Position it at the call site (that's genuinely local); everything else is
+   here. Always pair with role="listbox"/"menu" and aria-selected on the rows. */
+.menu {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 4px;
+  z-index: var(--z-modal);
+  animation: fadeIn 0.12s var(--ease) both;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 7px 9px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 450;
+  text-align: left;
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+.menu-item:hover { background: var(--bg-hover); color: var(--text-primary); }
+.menu-item[aria-selected="true"] { color: var(--text-primary); font-weight: 550; }
+/* Fixed-width leading slot so labels align whether or not a row is ticked —
+   the old version shifted every unselected label with a 16px margin hack. */
+.menu-item > .menu-mark {
+  width: 13px;
+  flex-shrink: 0;
+  display: inline-flex;
+  color: var(--accent);
+}
+.menu-item > .menu-meta { margin-left: auto; font-size: 0.7rem; color: var(--text-tertiary); }
+
+/* ─── Toasts ─────────────────────────────────────────────────────────────────
+   Transient feedback for something that finished while you were looking
+   elsewhere. Top-centre on purpose: the map's own chrome occupies top-left
+   (controls), bottom-centre (forecast) and bottom-right (legend), and the only
+   uncontested strip is under the header.
+   Shares the .alert tint variables so a failure looks the same whether it lands
+   inline or in a toast. */
+.toast-viewport {
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--z-toast);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  width: min(420px, calc(100vw - 24px));
+  /* The viewport must not eat clicks on the map behind it — only the toasts
+     themselves are interactive. */
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 11px 12px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-elevated);
+  border: 1px solid var(--tint-line, var(--border-default));
+  box-shadow: var(--shadow-lg);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  animation: toastIn 0.24s var(--ease) both;
+}
+.toast > svg { flex-shrink: 0; margin-top: 1px; color: var(--tint, var(--text-tertiary)); }
+.toast-body { min-width: 0; flex: 1; }
+.toast-body > strong { display: block; color: var(--text-primary); margin-bottom: 1px; }
+.toast-close {
+  flex-shrink: 0; border: none; background: transparent; cursor: pointer;
+  color: var(--text-tertiary); padding: 2px; margin: -2px -2px 0 0;
+  border-radius: var(--radius-sm); display: inline-flex;
+  transition: color var(--transition-fast);
+}
+.toast-close:hover { color: var(--text-primary); }
+
+.toast-critical { --tint: var(--critical); --tint-line: var(--critical-line); }
+.toast-caution  { --tint: var(--caution);  --tint-line: var(--caution-line); }
+.toast-positive { --tint: var(--positive); --tint-line: var(--positive-line); }
+.toast-info     { --tint: var(--accent);   --tint-line: var(--accent-line); }
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(-8px) scale(0.98); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ─── Meters ─────────────────────────────────────────────────────────────────── */
+
+.meter {
+  flex: 1;
+  height: 3px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+.meter > i {
+  display: block;
+  height: 100%;
+  background: var(--tint, var(--accent));
+  border-radius: inherit;
+  transition: width var(--transition-slow);
+}
+
+/* ─── Stat tile ──────────────────────────────────────────────────────────────── */
+
+.stat {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 14px var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.stat > .stat-value {
+  font-size: 1.65rem;
+  font-weight: 620;
+  letter-spacing: -0.028em;
+  line-height: 1.05;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+.stat > .stat-label {
+  font-size: 0.78rem;
+  font-weight: 520;
+  color: var(--text-secondary);
+}
+.stat > .stat-sub {
+  font-size: 0.7rem;
+  line-height: 1.45;
+  color: var(--text-tertiary);
+}
+
+/* ─── Tables ─────────────────────────────────────────────────────────────────── */
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+.data-table th {
+  padding: 9px 14px;
+  text-align: left;
+  font-size: 0.675rem;
+  font-weight: 600;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+  border-bottom: 1px solid var(--border-default);
+  background: var(--bg-tertiary);
+}
+.data-table td {
+  padding: 9px 14px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  white-space: nowrap;
+}
+.data-table tbody tr:last-child td { border-bottom: none; }
+.data-table tbody tr { transition: background var(--transition-fast); }
+.data-table tbody tr:hover { background: var(--bg-hover); }
+.data-table .num { text-align: right; font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+/* ─── Empty state ────────────────────────────────────────────────────────────── */
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 180px;
+  padding: var(--space-2xl) var(--space-lg);
+  border: 1px dashed var(--border-default);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: 0.85rem;
+}
+.empty svg { color: var(--text-tertiary); opacity: 0.55; }
+.empty h3 { color: var(--text-secondary); }
+.empty p  { max-width: 44ch; font-size: 0.82rem; }
 
 /* ─── Form elements ──────────────────────────────────────────────────────────── */
 
 input, select, textarea {
-  font-family: var(--font-sans);
-  background: var(--bg-tertiary);
+  font-family: inherit;
+  background: var(--bg-primary);
   color: var(--text-primary);
   border: 1px solid var(--border-default);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   padding: 8px 12px;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   width: 100%;
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
   outline: none;
 }
+input:hover, select:hover, textarea:hover { border-color: var(--border-strong); }
 input:focus, select:focus, textarea:focus {
-  border-color: var(--accent-blue);
-  box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
 }
 input::placeholder, textarea::placeholder { color: var(--text-tertiary); }
 label {
   display: block;
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 520;
   color: var(--text-secondary);
   margin-bottom: 6px;
-  letter-spacing: 0.02em;
 }
 
 /* ─── Divider ────────────────────────────────────────────────────────────────── */
@@ -360,58 +742,71 @@ hr {
 /* ─── Focus ring ─────────────────────────────────────────────────────────────── */
 
 :focus-visible {
-  outline: 2px solid var(--accent-blue);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
+  border-radius: var(--radius-sm);
 }
 
 /* ─── Animations ─────────────────────────────────────────────────────────────── */
 
+/* ⚠ fadeIn animates OPACITY ONLY, on purpose.
+   An element with an animation on `transform` establishes a containing block
+   for its `position: fixed` descendants — permanently, when fill-mode is
+   `both`. When every Action Queue card carried a transform fade-in, the memo
+   modal rendered *inside the 372px queue panel* instead of over the viewport.
+   Keep transform out of any animation applied to a broad container class; use
+   .animate-rise deliberately on leaf elements that own no overlays. */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: none; }
 }
 @keyframes slideInRight {
-  from { opacity: 0; transform: translateX(16px); }
-  to   { opacity: 1; transform: translateX(0); }
+  from { opacity: 0; transform: translateX(10px); }
+  to   { opacity: 1; transform: none; }
 }
-@keyframes pulse-ring {
-  0%   { transform: scale(1);    opacity: 1; }
-  100% { transform: scale(2.2);  opacity: 0; }
-}
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
-@keyframes pulse {
-  0%, 100% { transform: scale(1);   opacity: 1;   }
-  50%      { transform: scale(1.4); opacity: 0.7; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes breathe {
+  0%, 100% { opacity: 1;    }
+  50%      { opacity: 0.45; }
 }
 @keyframes shimmer {
   0%   { background-position: -200% 0; }
   100% { background-position:  200% 0; }
 }
-@keyframes progress-fill {
-  from { width: 0%; }
-  to   { width: 100%; }
-}
 
-.animate-fade-in    { animation: fadeIn 0.3s ease-out both; }
-.animate-slide-in   { animation: slideInRight 0.25s ease-out both; }
-.animate-spin       { animation: spin 1s linear infinite; }
+.animate-fade-in  { animation: fadeIn 0.2s var(--ease) both; }
+.animate-rise     { animation: riseIn 0.22s var(--ease) both; }
+.animate-slide-in { animation: slideInRight 0.22s var(--ease) both; }
+.animate-spin     { animation: spin 0.9s linear infinite; display: inline-flex; }
+.animate-breathe  { animation: breathe 1.6s ease-in-out infinite; }
 
-/* Skeleton shimmer */
 .skeleton {
   background: linear-gradient(90deg,
     var(--bg-secondary) 25%,
-    var(--bg-tertiary) 50%,
+    var(--bg-tertiary)  50%,
     var(--bg-secondary) 75%
   );
   background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
-  border-radius: var(--radius-sm);
+  animation: shimmer 1.4s infinite linear;
+  border-radius: var(--radius-md);
 }
 
-/* ─── Map-specific ───────────────────────────────────────────────────────────── */
+/* Respect the user's motion preference — a "smooth" UI is one that stops moving
+   when asked to. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ─── Map ────────────────────────────────────────────────────────────────────── */
 
 .map-container {
   position: relative;
@@ -419,16 +814,38 @@ hr {
   height: 100%;
 }
 
-/* MapLibre attribution */
 .maplibregl-ctrl-attrib {
   background: var(--bg-glass) !important;
   color: var(--text-tertiary) !important;
   font-size: 10px !important;
 }
-
 .maplibregl-ctrl-attrib a { color: var(--text-tertiary) !important; }
 
+/* A floating control sitting over the map. */
+.map-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+.map-btn:hover { color: var(--accent); border-color: var(--accent-line); }
+
 /* ─── Layout primitives ──────────────────────────────────────────────────────── */
+
+.page {
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+}
+.page-head { margin-bottom: var(--space-xl); }
+.page-head h1 { margin-bottom: 6px; }
+.page-head p  { max-width: 72ch; font-size: 0.875rem; }
 
 .fill { width: 100%; height: 100%; }
 .flex { display: flex; }
@@ -437,49 +854,150 @@ hr {
 .justify-between { justify-content: space-between; }
 .gap-sm { gap: var(--space-sm); }
 .gap-md { gap: var(--space-md); }
-.text-sm  { font-size: 0.875rem; }
+.text-sm  { font-size: 0.8125rem; }
 .text-xs  { font-size: 0.75rem; }
 .text-muted { color: var(--text-secondary); }
 .text-mono { font-family: var(--font-mono); }
 .truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 
-/* ─── Responsive ─────────────────────────────────────────────────────────────────
-   Phone-width tuning. Component-level restructuring (the admin panel becoming a
-   drawer) is done in TS via useIsMobile; this handles the global chrome. */
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--min, 200px), 1fr));
+  gap: var(--space-md);
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────────
+   Breakpoints mirror hooks/useMediaQuery.ts::BP — keep them in sync.
+     ≤768   phone     · 769–1024  tablet · >1024  desktop
+   The app had exactly ONE breakpoint (768px), so it went from a phone sheet
+   straight to the full three-column console with nothing in between. */
+
+/* ── Tablet: 769–1024 ─────────────────────────────────────────────────────────
+   Desktop typography and page padding, but the console's side-by-side layout
+   does not fit — admin/page.tsx switches to the overlay layout via
+   useIsCompact(). What's left here is density: pull the generous desktop
+   gutters in so content isn't a narrow ribbon between two 32px margins. */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .page { padding: var(--space-lg) var(--space-md); }
+
+  /* Two-up grids that assume ~430px minimums collapse to one column rather
+     than overflowing; auto-fit alone would keep two columns and clip. */
+  .grid-auto { --min: 260px; }
+
+  /* The audit page's two panels are 430px minimum each — that needs 900px of
+     content box plus the gap, which a 1024px tablet does not have. */
+  .grid-auto[style*="430px"] { grid-template-columns: 1fr !important; }
+
+  .page-head p, .lede { max-width: 64ch; }
+}
+
+/* ── Phone: ≤768 ─────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
-  html { font-size: 15px; }
-
-  /* Nothing should force the page to scroll sideways. */
+  /* Slightly larger base, not smaller. The old rule shrank the root to 15px on
+     the smallest screens — exactly backwards for readability; the reason to
+     scale down on desktop is information density, and a phone has none to
+     spare. Headings are pulled in separately below so the page still fits. */
+  html { font-size: 16px; }
   body { overflow-x: hidden; }
 
-  /* Comfortable thumb targets. */
-  .btn { min-height: 40px; }
-  .btn-sm { min-height: 34px; }
+  /* Long-form measure: a 16px line running the full width of a 390px phone is
+     ~48 characters, which is fine — but heading sizes tuned for a 1440px
+     canvas are not. */
+  h1 { font-size: 1.375rem; }
+  h2 { font-size: 1.125rem; }
+  h3 { font-size: 1rem; }
+  .display { font-size: 1.875rem; letter-spacing: -0.024em; }
+  .lede { font-size: 0.9375rem; }
 
-  /* Tighten the generous desktop page padding on the content pages (the admin map
-     is full-bleed and opts out with .no-mobile-pad on its own wrapper). */
-  .page-pad { padding: var(--space-md) !important; }
+  .page, .page-pad { padding: var(--space-md) !important; }
+  .page-head { margin-bottom: var(--space-lg); }
 
-  /* Decorative chrome that isn't worth the width on a phone. */
   .hide-mobile { display: none !important; }
 
-  /* Admin header: too much for one 52px row on a phone. Wrap the nav to its own
-     full-width scrollable line below the logo + controls. */
+  /* ── Touch targets ──────────────────────────────────────────────────────
+     Everything tappable gets to ~44px, the size a fingertip actually hits.
+     Chips were 22px tall and menu rows 30px — both were mouse-only sizes
+     shipped to a phone. Padding grows rather than font-size, so the visual
+     density barely changes while the hit area doubles. */
+  .btn { min-height: 44px; padding: 10px 15px; }
+  .btn-sm { min-height: 38px; padding: 8px 12px; }
+  .btn-icon { min-width: 40px; min-height: 40px; }
+
+  .chip { padding: 8px 13px; font-size: 0.78rem; }
+  .menu-item { padding: 11px 10px; font-size: 0.875rem; }
+  .nav-link { padding: 9px 11px; font-size: 0.8125rem; }
+
+  /* Inputs at <16px make iOS Safari zoom the viewport on focus and never zoom
+     back — the classic mobile-form trap. 16px exactly prevents it. */
+  input, select, textarea { font-size: 16px; padding: 11px 12px; }
+
+  /* ── Tables ─────────────────────────────────────────────────────────────
+     Every cell is nowrap, so wide tables scroll. Pin the first column so the
+     row label stays visible while the numbers scroll under your thumb —
+     otherwise you scroll right and lose track of which row you're reading. */
+  .data-table th, .data-table td { padding: 10px 12px; }
+  .data-table th:first-child,
+  .data-table td:first-child {
+    position: sticky;
+    left: 0;
+    background: var(--bg-secondary);
+    z-index: 1;
+  }
+  .data-table th:first-child { background: var(--bg-tertiary); }
+  /* Hairline to show the pinned column is floating above scrolled content. */
+  .data-table td:first-child::after,
+  .data-table th:first-child::after {
+    content: "";
+    position: absolute;
+    inset: 0 -1px 0 auto;
+    width: 1px;
+    background: var(--border-subtle);
+  }
+
+  /* Give the scroll affordance somewhere to live. */
+  .scroll-x { overscroll-behavior-x: contain; }
+
+  /* Stat tiles: full-width rows read better than two cramped columns. */
+  .grid-auto { --min: 100%; gap: var(--space-sm); }
+  .stat { padding: 12px var(--space-md); }
+  .stat > .stat-value { font-size: 1.5rem; }
+
+  .empty { min-height: 150px; padding: var(--space-xl) var(--space-md); }
+
+  /* Modals go near-fullscreen — a centred 660px card inside 16px of scrim is
+     wasted space on a phone. */
+  .menu { max-height: 60vh; }
+
+  /* ── Admin header ───────────────────────────────────────────────────────
+     Too much for one 48px row: wrap the section tabs onto their own
+     full-width scrollable line below the wordmark and controls. */
   .admin-header {
     flex-wrap: wrap;
     height: auto !important;
-    padding: 6px var(--space-md) !important;
-    row-gap: 4px;
+    padding: 4px var(--space-sm) !important;
+    row-gap: 2px;
   }
-  .admin-header > *:first-child { order: 1; }   /* logo */
-  .admin-actions { order: 2; }                   /* city switcher + theme */
+  .admin-header > *:first-child { order: 1; }
+  .admin-actions { order: 2; }
   .admin-nav {
     order: 3;
     flex-basis: 100% !important;
     width: 100%;
     padding-bottom: 2px;
+    /* Edge-to-edge scroll with the fades the padding would otherwise eat. */
+    margin: 0 calc(var(--space-sm) * -1);
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
   }
+  /* A scrollable tab strip must not show a scrollbar over 6px of chrome. */
+  .admin-nav::-webkit-scrollbar { display: none; }
+  .admin-nav { scrollbar-width: none; }
 }
 
-/* Never let a table or wide block push the page sideways. */
-.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+/* Very narrow phones (≤380px): the last things that still overflow. */
+@media (max-width: 380px) {
+  .page, .page-pad { padding: var(--space-sm) !important; }
+  .display { font-size: 1.625rem; }
+  .badge { font-size: 0.65rem; padding: 2px 6px; }
+}

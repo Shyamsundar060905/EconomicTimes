@@ -1,6 +1,16 @@
 /**
- * India NAQI (National Air Quality Index) breakpoints and color palette.
- * Used for all AQI-based coloring across the map layers and UI components.
+ * India NAQI breakpoints and the app's data palette.
+ *
+ * ⚠ THE PALETTE LIVES HERE AND IN globals.css, AND THE TWO MUST AGREE.
+ * WebGL layers (deck.gl) need numeric RGBA and cannot read a CSS custom
+ * property, so the hexes are duplicated once, here, next to the token name they
+ * mirror. Nowhere else. Before this, LegendBar.tsx carried a THIRD, different
+ * AQI palette (#22c55e/#fde047/…) — so the legend and the map it explained were
+ * literally different colours.
+ *
+ * The values are the CPCB hue ORDER at roughly 60% saturation. The published
+ * CPCB swatches (#00b050, #ffff00, #ff0000) are print/signage colours; at full
+ * chroma across a whole choropleth they vibrate and read as a game board.
  */
 
 // ─── AQI Breakpoints ──────────────────────────────────────────────────────────
@@ -12,12 +22,13 @@ export const AQI_BREAKPOINTS = [0, 50, 100, 200, 300, 400, 500] as const;
 // different AQI than the advisory computed for the same ward. Earlier this file
 // used US EPA breakpoints (12/35.4/55.4/…) with Indian labels — a real mismatch.
 export const AQI_CATEGORIES = [
-  { label: "Good", range: "0–50", color: "#00b050", textColor: "#fff", pm25Max: 30 },
-  { label: "Satisfactory", range: "51–100", color: "#92d050", textColor: "#222", pm25Max: 60 },
-  { label: "Moderate", range: "101–200", color: "#ffff00", textColor: "#222", pm25Max: 90 },
-  { label: "Poor", range: "201–300", color: "#ff9900", textColor: "#fff", pm25Max: 120 },
-  { label: "Very Poor", range: "301–400", color: "#ff0000", textColor: "#fff", pm25Max: 250 },
-  { label: "Severe", range: "401–500", color: "#99004c", textColor: "#fff", pm25Max: Infinity },
+  // color ↔ --aqi-N  ·  textColor ↔ --aqi-N-ink
+  { label: "Good",         range: "0–50",    color: "#5a9e72", textColor: "#0d1710", pm25Max: 30 },
+  { label: "Satisfactory", range: "51–100",  color: "#94af63", textColor: "#131707", pm25Max: 60 },
+  { label: "Moderate",     range: "101–200", color: "#d3b155", textColor: "#1a1508", pm25Max: 90 },
+  { label: "Poor",         range: "201–300", color: "#d08e51", textColor: "#1b1006", pm25Max: 120 },
+  { label: "Very Poor",    range: "301–400", color: "#c2635a", textColor: "#ffffff", pm25Max: 250 },
+  { label: "Severe",       range: "401–500", color: "#8e4a67", textColor: "#ffffff", pm25Max: Infinity },
 ] as const;
 
 /** Convert PM2.5 µg/m³ to India NAQI AQI. Mirrors backend memo.py::pm25_to_aqi. */
@@ -62,16 +73,16 @@ export function hexToRgba(hex: string, alpha = 200): [number, number, number, nu
   return [r, g, b, alpha];
 }
 
-/** Continuous PM2.5 → RGBA for H3 choropleth (green → yellow → red → purple) */
+/** Continuous PM2.5 → RGBA for the H3 choropleth. Interpolates the SAME six AQI
+ *  band colours the legend lists, so a cell's fill is always findable in the key. */
 export function pm25ToRgbaArray(pm25: number, alpha = 200): [number, number, number, number] {
-  // Clamp to [0, 300] then map to a 6-stop gradient
-  const stops: Array<{ at: number; r: number; g: number; b: number }> = [
-    { at: 0,   r: 0,   g: 176, b: 80  },  // green
-    { at: 50,  r: 146, g: 208, b: 80  },  // light green
-    { at: 100, r: 255, g: 255, b: 0   },  // yellow
-    { at: 200, r: 255, g: 153, b: 0   },  // orange
-    { at: 300, r: 255, g: 0,   b: 0   },  // red
-    { at: 400, r: 153, g: 0,   b: 76  },  // purple
+  const stops: Array<{ at: number; rgb: [number, number, number] }> = [
+    { at: 0,   rgb: [0x5a, 0x9e, 0x72] },  // Good
+    { at: 50,  rgb: [0x94, 0xaf, 0x63] },  // Satisfactory
+    { at: 100, rgb: [0xd3, 0xb1, 0x55] },  // Moderate
+    { at: 200, rgb: [0xd0, 0x8e, 0x51] },  // Poor
+    { at: 300, rgb: [0xc2, 0x63, 0x5a] },  // Very Poor
+    { at: 400, rgb: [0x8e, 0x4a, 0x67] },  // Severe
   ];
   const v = Math.max(0, Math.min(pm25, 400));
   for (let i = 0; i < stops.length - 1; i++) {
@@ -79,37 +90,59 @@ export function pm25ToRgbaArray(pm25: number, alpha = 200): [number, number, num
     if (v <= hi.at) {
       const t = (v - lo.at) / (hi.at - lo.at);
       return [
-        Math.round(lo.r + t * (hi.r - lo.r)),
-        Math.round(lo.g + t * (hi.g - lo.g)),
-        Math.round(lo.b + t * (hi.b - lo.b)),
+        Math.round(lo.rgb[0] + t * (hi.rgb[0] - lo.rgb[0])),
+        Math.round(lo.rgb[1] + t * (hi.rgb[1] - lo.rgb[1])),
+        Math.round(lo.rgb[2] + t * (hi.rgb[2] - lo.rgb[2])),
         alpha,
       ];
     }
   }
-  return [153, 0, 76, alpha];
+  return [0x8e, 0x4a, 0x67, alpha];
 }
 
-// ─── Severity Colors (for hotspot zones) ─────────────────────────────────────
+// ─── Persistence / severity (hotspot zones) ──────────────────────────────────
+// ↔ --persist-chronic / --persist-emerging / --persist-acute
 
-export const SEVERITY_COLORS = {
-  chronic:  { fill: hexToRgba("#ff0000", 160), border: hexToRgba("#ff0000", 255) },
-  emerging: { fill: hexToRgba("#ff9900", 140), border: hexToRgba("#ff9900", 230) },
-  acute:    { fill: hexToRgba("#ff6600", 120), border: hexToRgba("#ffcc00", 240) },
+export const PERSISTENCE_HEX = {
+  chronic:  "#c05c55",
+  emerging: "#c99a4e",
+  acute:    "#d3813f",
 } as const;
 
-// ─── Source Category Colors ───────────────────────────────────────────────────
+export const SEVERITY_COLORS = {
+  chronic:  { fill: hexToRgba(PERSISTENCE_HEX.chronic,  150), border: hexToRgba(PERSISTENCE_HEX.chronic,  240) },
+  emerging: { fill: hexToRgba(PERSISTENCE_HEX.emerging, 130), border: hexToRgba(PERSISTENCE_HEX.emerging, 225) },
+  acute:    { fill: hexToRgba(PERSISTENCE_HEX.acute,    115), border: hexToRgba(PERSISTENCE_HEX.acute,    235) },
+} as const;
+
+// ─── Source category ─────────────────────────────────────────────────────────
+// ↔ --source-*. Categorical, not a ramp: chosen for separability at small sizes
+// rather than for looking like a paint set.
 
 export const SOURCE_COLORS: Record<string, string> = {
-  industrial:    "#f87171",
-  waste_burning: "#fb923c",
-  construction:  "#facc15",
-  traffic:       "#60a5fa",
+  industrial:    "#c0705b",
+  waste_burning: "#ce9a4a",
+  construction:  "#9a9382",
+  traffic:       "#6e8fc0",
 };
 
-// ─── Satellite Channel Colors ─────────────────────────────────────────────────
+/** Neutral grey for a WebGL layer with no category match. deck.gl needs numeric
+ *  RGBA and cannot read a CSS custom property, so unknown-value fallbacks live
+ *  here rather than as a literal at the call site. */
+export const UNKNOWN_HEX = "#7a7a7a";
+
+// ─── Fire confidence (FIRMS) ─────────────────────────────────────────────────
+
+export const FIRE_HEX = { high: "#d0603f", low: "#c99a4e" } as const;
+
+// ─── Blind spots (network audit) ─────────────────────────────────────────────
+
+export const BLINDSPOT_HEX = "#c9b04e";
+
+// ─── Satellite channel ramps ─────────────────────────────────────────────────
 
 export const SAT_CHANNEL_COLORS: Record<string, [string, string]> = {
-  no2_col: ["#dbeafe", "#1d4ed8"],
-  so2_col: ["#fef3c7", "#b45309"],
-  aai:     ["#ede9fe", "#7c3aed"],
+  no2_col: ["#c9d4ea", "#4a5f8f"],
+  so2_col: ["#e8ddc6", "#8a6a35"],
+  aai:     ["#ddd6e6", "#665a80"],
 };

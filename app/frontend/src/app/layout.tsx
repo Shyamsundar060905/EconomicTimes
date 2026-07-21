@@ -1,6 +1,24 @@
 import type { Metadata } from "next";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { CityProvider } from "@/lib/CityContext";
+import { ToastProvider } from "@/components/Toast";
+
+/* Self-hosted at build time and preloaded. The old stylesheet `@import` from
+   fonts.googleapis.com blocked first paint on a third-party round-trip, so the
+   whole app rendered once in a fallback face and then reflowed — the single
+   most visible "not smooth" moment in the product. */
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono-jb",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "AirCase",
@@ -22,11 +40,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-theme="dark" suppressHydrationWarning>
+    <html
+      lang="en"
+      data-theme="dark"
+      className={`${inter.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Apply the saved/preferred theme BEFORE first paint — no flash of the
             wrong theme. Reads localStorage, falls back to the OS preference. */}
         <script
@@ -36,7 +57,9 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <CityProvider>{children}</CityProvider>
+        <CityProvider>
+          <ToastProvider>{children}</ToastProvider>
+        </CityProvider>
       </body>
     </html>
   );
