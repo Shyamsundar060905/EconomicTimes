@@ -32,15 +32,19 @@ this deploy.
 
 ## Step 2 — environment variables (1 min)
 
-Add these in **Settings → Environment Variables** (or on the import screen):
+Add **one** variable in **Settings → Environment Variables** (or on the import screen):
 
-| Name | Value | Why |
-|---|---|---|
-| `NEXT_PUBLIC_API_URL` | *(leave empty)* | No backend → the app uses the committed static data. An explicit empty value is the "no backend" signal. |
-| `NEXT_PUBLIC_N8N_WEBHOOK_URL` | `https://aq-intel.duckdns.org/webhook/citizen-report` | Where the citizen report form posts. |
+| Name | Value |
+|---|---|
+| `NEXT_PUBLIC_N8N_WEBHOOK_URL` | `https://aq-intel.duckdns.org/webhook/citizen-report` |
 
-> If you later deploy the backend, set `NEXT_PUBLIC_API_URL` to its URL and redeploy —
-> the app will prefer it and fall back to static if it is down.
+**Do NOT add `NEXT_PUBLIC_API_URL`.** Vercel rejects an empty value, and the app
+treats the variable's *absence* as "no backend — use the committed static data",
+which is exactly what we want. If Vercel pre-filled that row, click the **—**
+button to delete it.
+
+> If you later deploy the backend, add `NEXT_PUBLIC_API_URL` with its URL and
+> redeploy — the app will prefer it and fall back to static if it is ever down.
 
 ## Step 3 — deploy
 
