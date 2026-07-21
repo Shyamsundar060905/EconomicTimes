@@ -1,7 +1,7 @@
-<h1 align="center">AirTrace</h1>
+<h1 align="center">AirCase</h1>
 
 <p align="center">
-  <strong>Trace the source. Serve the notice.</strong><br/>
+  <strong>Every hotspot becomes a case file.</strong><br/>
   <em>From AQI dashboards to enforcement dispatch — signal → attribution → action.</em>
 </p>
 

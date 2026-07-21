@@ -4,7 +4,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 import CitySwitcher from "@/components/CitySwitcher";
 
 export const metadata: Metadata = {
-  title: "Admin Console — AirTrace",
+  title: "Admin Console — AirCase",
   description:
     "Interactive map dashboard with H3 hexagonal cells, hotspot detection, " +
     "source attribution, enforcement queue, and agent control.",
@@ -49,7 +49,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           >
             <span style={{ fontSize: "1.3rem" }}>⬡</span>
             <span className="hide-mobile" style={{ fontWeight: 700, fontSize: "0.95rem", letterSpacing: "-0.01em", whiteSpace: "nowrap" }}>
-              AirTrace
+              AirCase
             </span>
           </Link>
           <span

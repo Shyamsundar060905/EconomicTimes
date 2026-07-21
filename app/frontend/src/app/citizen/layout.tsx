@@ -5,7 +5,7 @@ import CitySwitcher from "@/components/CitySwitcher";
 import CityLabel from "@/components/CityLabel";
 
 export const metadata: Metadata = {
-  title: "Citizen View — AirTrace",
+  title: "Citizen View — AirCase",
   description: "Your ward's air quality, 72-hour forecast, health advisory, and pollution reports.",
 };
 

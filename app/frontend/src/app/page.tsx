@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AirTrace — Select Role",
+  title: "AirCase — Select Role",
   description: "AI-powered urban air quality intelligence: signal → attribution → action.",
 };
 
@@ -55,7 +55,7 @@ export default function LandingPage() {
             fontSize: "clamp(2rem, 5vw, 3.2rem)",
           }}
         >
-          AirTrace
+          AirCase
         </h1>
 
         <p style={{ fontSize: "1.1rem", lineHeight: 1.7, color: "var(--text-secondary)" }}>

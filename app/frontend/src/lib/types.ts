@@ -1,4 +1,4 @@
-/** TypeScript interfaces matching all JSON contracts from the AirTrace backend.
+/** TypeScript interfaces matching all JSON contracts from the AirCase backend.
  * Aligned with data contracts defined in docs/architecture.md and agent outputs.
  */
 
