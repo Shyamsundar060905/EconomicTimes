@@ -21,12 +21,49 @@ import urllib.request
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from shared.config import DATA_OUT  # noqa: E402  (loads .env)
+from shared.config import DATA_OUT, H3_RES  # noqa: E402  (loads .env)
 
 TABLES = {
     "citizen_reports": "citizen_reports.json",
     "inspection_status": "inspection_status.json",
 }
+
+
+def _resolve_wards_from_location(reports: list[dict]) -> int:
+    """Give a ward to reports that only carry coordinates.
+
+    A citizen who shares their location arrives with ward_id 'unassigned'. But
+    attribution matches citizen evidence STRICTLY by ward and deliberately
+    rejects 'unassigned' — so those reports were dead weight, never counting as
+    corroboration, even though the bot tells people to share their location as
+    the fallback when a ward name is ambiguous. Resolve lat/lon -> H3 cell ->
+    ward here, where the real ward layer already lives.
+    """
+    wards_p = DATA_OUT / "wards.json"
+    if not wards_p.exists():
+        return 0
+    try:
+        import h3
+        cell_to_ward = {c["cell"]: c["ward_id"]
+                        for c in json.loads(wards_p.read_text(encoding="utf-8"))["cells"]}
+    except Exception:  # noqa: BLE001 — never let this break the sync
+        return 0
+
+    fixed = 0
+    for r in reports:
+        if r.get("ward_id") not in (None, "", "unassigned"):
+            continue
+        lat, lon = r.get("lat"), r.get("lon")
+        if lat is None or lon is None:
+            continue
+        try:
+            ward = cell_to_ward.get(h3.latlng_to_cell(float(lat), float(lon), H3_RES))
+        except (ValueError, TypeError):
+            continue
+        if ward:                      # outside the city grid -> leave unassigned
+            r["ward_id"] = ward
+            fixed += 1
+    return fixed
 
 
 def main() -> None:
@@ -50,9 +87,14 @@ def main() -> None:
         if rows is None:
             print(f"[supabase] {table}: fetch failed after 3 tries ({err}) — skipped")
             continue
+        note = ""
+        if table == "citizen_reports":
+            fixed = _resolve_wards_from_location(rows)
+            if fixed:
+                note = f" ({fixed} located by coordinates)"
         (DATA_OUT / fname).write_text(json.dumps(rows, indent=1, default=str),
                                       encoding="utf-8")
-        print(f"[supabase] {table}: {len(rows)} rows -> data/outputs/{fname}")
+        print(f"[supabase] {table}: {len(rows)} rows -> data/outputs/{fname}{note}")
 
 
 if __name__ == "__main__":
