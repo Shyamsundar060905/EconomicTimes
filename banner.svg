@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" width="1200" height="260">
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B2E59"/>
+      <stop offset="100%" stop-color="#134C87"/>
+    </linearGradient>
+
+    <radialGradient id="glow" cx="15%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="260" fill="url(#bg)"/>
+  <rect width="1200" height="260" fill="url(#glow)"/>
+  <rect x="0" y="256" width="1200" height="4" fill="#43C6F9"/>
+
+  <!-- Tag -->
+  <rect x="1000" y="28" width="170" height="30" rx="4"
+        fill="none"
+        stroke="#43C6F9"
+        stroke-width="1.5"/>
+
+  <text x="1085"
+        y="48"
+        text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="12"
+        font-weight="700"
+        letter-spacing="1.5"
+        fill="#43C6F9">
+    HACKATHON BUILD
+  </text>
+
+  <!-- Logo -->
+  <g transform="translate(88,56) scale(1.32)">
+
+      <!-- Outer circle -->
+      <circle cx="50"
+              cy="50"
+              r="46"
+              fill="none"
+              stroke="#ffffff"
+              stroke-width="2.5"/>
+
+      <!-- Orbit -->
+      <circle cx="50"
+              cy="50"
+              r="37"
+              fill="none"
+              stroke="#A9DDFB"
+              stroke-width="1"
+              stroke-dasharray="2 5"/>
+
+      <!-- Atmosphere -->
+      <path d="M20 62
+               Q34 48 50 62
+               Q66 76 80 62"
+            fill="none"
+            stroke="#43C6F9"
+            stroke-width="3"
+            stroke-linecap="round"/>
+
+      <path d="M24 46
+               Q36 35 50 46
+               Q64 57 76 46"
+            fill="none"
+            stroke="#ffffff"
+            stroke-width="3"
+            stroke-linecap="round"/>
+
+      <circle cx="50"
+              cy="50"
+              r="5"
+              fill="#43C6F9"/>
+
+  </g>
+
+  <!-- Title -->
+  <text x="290"
+        y="132"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="72"
+        font-weight="700"
+        fill="#ffffff">
+      AirCase
+  </text>
+
+  <!-- Subtitle -->
+  <text x="292"
+        y="164"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="16"
+        letter-spacing="2"
+        fill="#43C6F9"
+        font-weight="700">
+      AIR QUALITY INTELLIGENCE
+  </text>
+
+  <!-- Description -->
+  <text x="292"
+        y="200"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="19"
+        fill="#EAF4FB">
+      AI-powered urban air pollution attribution for smarter city intervention.
+  </text>
+
+  <!-- Pipeline -->
+  <text x="292"
+        y="228"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="14"
+        fill="#B9D8EE">
+      Satellite + Sensors + Weather → Evidence Fusion → Source Attribution → Enforcement Intelligence
+  </text>
+
+</svg>
