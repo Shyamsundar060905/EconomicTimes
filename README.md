@@ -448,10 +448,11 @@ per-language verification labels.
 
 | Contributor | Focus areas |
 |---|---|
-| **Shyam** | Backend, Frontend |
-| **Keshav** | Backend, Frontend, Agents |
-| **Suyash** | EPS, Deployment |
 | **Saumya Saraswat** | Intelligence, with inputs on Frontend |
+| **Suyash Mittal** | EPS, Deployment |
+| **Keshav Agarwal** | Backend, Frontend, Agents |
+| **Shyamsundar Paramasivam** | Backend, Frontend |
+
 
 ---
 
