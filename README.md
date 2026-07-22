@@ -3,11 +3,6 @@
 </p>
 
 <p align="center">
-  <strong>Every hotspot becomes a case file.</strong><br/>
-  <em>From AQI dashboards to enforcement dispatch — signal → attribution → action.</em>
-</p>
-
-<p align="center">
   <img alt="status" src="https://img.shields.io/badge/status-hackathon%20prototype-43C6F9?style=flat-square" />
   <img alt="python" src="https://img.shields.io/badge/python-3.11-134C87?style=flat-square" />
   <img alt="models" src="https://img.shields.io/badge/models-LightGBM%20%2B%20robust%20stats-134C87?style=flat-square" />
