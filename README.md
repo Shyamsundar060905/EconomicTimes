@@ -2,8 +2,6 @@
   <img src="banner.svg" alt="AirCase Banner" width="100%" />
 </p>
 
-<h1 align="center">AirCase</h1>
-
 <p align="center">
   <strong>Every hotspot becomes a case file.</strong><br/>
   <em>From AQI dashboards to enforcement dispatch — signal → attribution → action.</em>
