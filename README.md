@@ -440,6 +440,24 @@ per-language verification labels.
 
 ---
 
+## Contributors
+
+<p align="center">
+  <img alt="shyam" src="https://img.shields.io/badge/Shyam-Backend%20%2B%20Frontend-0f6b3f?style=flat-square" />
+  <img alt="keshav" src="https://img.shields.io/badge/Keshav-Backend%20%2B%20Frontend%20%2B%20Agents-0f6b3f?style=flat-square" />
+  <img alt="suyash" src="https://img.shields.io/badge/Suyash-EPS%20%2B%20Deployment-a9760a?style=flat-square" />
+  <img alt="saumya" src="https://img.shields.io/badge/Saumya%20Saraswat-Intelligence%20%2B%20Frontend%20Inputs-a9760a?style=flat-square" />
+</p>
+
+| Contributor | Focus areas |
+|---|---|
+| **Shyam** | Backend, Frontend |
+| **Keshav** | Backend, Frontend, Agents |
+| **Suyash** | EPS, Deployment |
+| **Saumya Saraswat** | Intelligence, with inputs on Frontend |
+
+---
+
 <p align="center">
   <sub>Built for a hackathon. The hardest engineering here wasn't the models — it was
   building an evaluation honest enough to tell us the models were wrong.</sub>
