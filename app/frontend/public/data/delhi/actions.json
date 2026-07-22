@@ -30,33 +30,7 @@
     "source": "waste_burning",
     "confidence": 0.76,
     "n_cells": 9,
-    "pm25_med": 253.4,
-    "status": "pending"
-  },
-  {
-    "action_id": "A04",
-    "zone_id": "Z03",
-    "ward_id": "unassigned",
-    "ward_name": "Outside city limits",
-    "cells": [
-      "883da1050dfffff"
-    ],
-    "centroid": {
-      "lat": 28.4815,
-      "lon": 77.3272
-    },
-    "eps": 80.6,
-    "components": {
-      "severity": 0.602,
-      "attribution_conf": 0.78,
-      "actionability": 1.0,
-      "vulnerability": 1.0
-    },
-    "kind": "acute",
-    "source": "traffic",
-    "confidence": 0.78,
-    "n_cells": 1,
-    "pm25_med": 200.4,
+    "pm25_med": 215.5,
     "status": "pending"
   },
   {
@@ -102,11 +76,11 @@
     "source": "waste_burning",
     "confidence": 0.52,
     "n_cells": 21,
-    "pm25_med": 126.3,
+    "pm25_med": 179.4,
     "status": "pending"
   },
   {
-    "action_id": "A05",
+    "action_id": "A04",
     "zone_id": "Z01",
     "ward_id": "unassigned",
     "ward_name": "Outside city limits",
@@ -140,43 +114,7 @@
     "source": "traffic",
     "confidence": 0.14,
     "n_cells": 13,
-    "pm25_med": 149.5,
-    "status": "pending"
-  },
-  {
-    "action_id": "A06",
-    "zone_id": "Z00",
-    "ward_id": "W248",
-    "ward_name": "KISHANGARH",
-    "cells": [
-      "883da10209fffff",
-      "883da1020dfffff",
-      "883da10241fffff",
-      "883da1024dfffff",
-      "883da10247fffff",
-      "883da10245fffff",
-      "883da1026dfffff",
-      "883da10261fffff",
-      "883da10269fffff",
-      "883da1026bfffff",
-      "883da11193fffff"
-    ],
-    "centroid": {
-      "lat": 28.5213,
-      "lon": 77.1387
-    },
-    "eps": 62.5,
-    "components": {
-      "severity": 0.57,
-      "attribution_conf": 0.1,
-      "actionability": 1.0,
-      "vulnerability": 1.0
-    },
-    "kind": "acute",
-    "source": "traffic",
-    "confidence": 0.1,
-    "n_cells": 11,
-    "pm25_med": 133.6,
+    "pm25_med": 189.6,
     "status": "pending"
   },
   {
@@ -216,7 +154,7 @@
     "source": "traffic",
     "confidence": 0.5,
     "n_cells": 15,
-    "pm25_med": 218.5,
+    "pm25_med": 230.5,
     "status": "pending"
   }
 ]

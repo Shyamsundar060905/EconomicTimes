@@ -2,8 +2,8 @@
   {
     "cell": "883da111dbfffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 227.0,
+    "ward_id": "W223",
+    "pm25_estimate": 222.1,
     "primary_source": "traffic",
     "confidence": 0.5,
     "scores": {
@@ -12,20 +12,21 @@
       "waste_burning": 0.0,
       "traffic": 0.798
     },
-    "reason": "The deterministic category scores identify traffic as the most likely primary source with a score of 0.798. This is supported by a high traffic landuse context (7) and elevated NO2 (67th city percentile) and AAI (67th city percentile) in the pollutant signature, which are characteristic of traffic emissions. Multiple traffic sources are also present as candidates, some relatively close and with good wind alignment, under conditions where air is trapped.",
+    "reason": "Traffic is identified as the most likely primary source, supported by its highest category score of 0.798. This is corroborated by the land use context showing a high presence of traffic (7) and a pollutant signature with elevated NO2 and AAI levels (both at the 67th city percentile), which are characteristic of vehicular emissions. Additionally, multiple nearby traffic sources exhibit strong wind alignment with the hotspot.",
     "evidence_factors": [
-      "Traffic category score (0.798)",
-      "High traffic landuse context (7)",
-      "Elevated NO2 (67th percentile)",
-      "Elevated AAI (67th percentile)",
+      "Highest traffic category score",
+      "Elevated NO2 pollutant signature",
+      "Elevated AAI pollutant signature",
+      "High traffic land use context",
       "Multiple nearby traffic candidates",
-      "Air trapped meteorological condition"
+      "Strong wind alignment from traffic sources",
+      "Trapped air conditions"
     ],
     "evidence": {
       "cell": "883da111dbfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 227.0,
+      "ward_id": "W223",
+      "pm25_estimate": 222.1,
       "candidates": [
         {
           "name": "traffic_25524703",
@@ -123,8 +124,8 @@
   {
     "cell": "883da110e1fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 227.0,
+    "ward_id": "W223",
+    "pm25_estimate": 222.1,
     "primary_source": "traffic",
     "confidence": 0.5,
     "scores": {
@@ -133,20 +134,21 @@
       "waste_burning": 0.0,
       "traffic": 0.798
     },
-    "reason": "The deterministic category scores identify traffic as the most likely primary source with a score of 0.798. This is supported by a high traffic landuse context (7) and elevated NO2 (67th city percentile) and AAI (67th city percentile) in the pollutant signature, which are characteristic of traffic emissions. Multiple traffic sources are also present as candidates, some relatively close and with good wind alignment, under conditions where air is trapped.",
+    "reason": "Traffic is identified as the most likely primary source, supported by its highest category score of 0.798. This is corroborated by the land use context showing a high presence of traffic (7) and a pollutant signature with elevated NO2 and AAI levels (both at the 67th city percentile), which are characteristic of vehicular emissions. Additionally, multiple nearby traffic sources exhibit strong wind alignment with the hotspot.",
     "evidence_factors": [
-      "Traffic category score (0.798)",
-      "High traffic landuse context (7)",
-      "Elevated NO2 (67th percentile)",
-      "Elevated AAI (67th percentile)",
+      "Highest traffic category score",
+      "Elevated NO2 pollutant signature",
+      "Elevated AAI pollutant signature",
+      "High traffic land use context",
       "Multiple nearby traffic candidates",
-      "Air trapped meteorological condition"
+      "Strong wind alignment from traffic sources",
+      "Trapped air conditions"
     ],
     "evidence": {
       "cell": "883da111dbfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 227.0,
+      "ward_id": "W223",
+      "pm25_estimate": 222.1,
       "candidates": [
         {
           "name": "traffic_25524703",
@@ -244,8 +246,8 @@
   {
     "cell": "883da110e5fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 227.0,
+    "ward_id": "W223",
+    "pm25_estimate": 222.1,
     "primary_source": "traffic",
     "confidence": 0.5,
     "scores": {
@@ -254,20 +256,21 @@
       "waste_burning": 0.0,
       "traffic": 0.798
     },
-    "reason": "The deterministic category scores identify traffic as the most likely primary source with a score of 0.798. This is supported by a high traffic landuse context (7) and elevated NO2 (67th city percentile) and AAI (67th city percentile) in the pollutant signature, which are characteristic of traffic emissions. Multiple traffic sources are also present as candidates, some relatively close and with good wind alignment, under conditions where air is trapped.",
+    "reason": "Traffic is identified as the most likely primary source, supported by its highest category score of 0.798. This is corroborated by the land use context showing a high presence of traffic (7) and a pollutant signature with elevated NO2 and AAI levels (both at the 67th city percentile), which are characteristic of vehicular emissions. Additionally, multiple nearby traffic sources exhibit strong wind alignment with the hotspot.",
     "evidence_factors": [
-      "Traffic category score (0.798)",
-      "High traffic landuse context (7)",
-      "Elevated NO2 (67th percentile)",
-      "Elevated AAI (67th percentile)",
+      "Highest traffic category score",
+      "Elevated NO2 pollutant signature",
+      "Elevated AAI pollutant signature",
+      "High traffic land use context",
       "Multiple nearby traffic candidates",
-      "Air trapped meteorological condition"
+      "Strong wind alignment from traffic sources",
+      "Trapped air conditions"
     ],
     "evidence": {
       "cell": "883da111dbfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 227.0,
+      "ward_id": "W223",
+      "pm25_estimate": 222.1,
       "candidates": [
         {
           "name": "traffic_25524703",
@@ -365,8 +368,8 @@
   {
     "cell": "883da110e9fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 227.0,
+    "ward_id": "W223",
+    "pm25_estimate": 222.1,
     "primary_source": "traffic",
     "confidence": 0.5,
     "scores": {
@@ -375,20 +378,21 @@
       "waste_burning": 0.0,
       "traffic": 0.798
     },
-    "reason": "The deterministic category scores identify traffic as the most likely primary source with a score of 0.798. This is supported by a high traffic landuse context (7) and elevated NO2 (67th city percentile) and AAI (67th city percentile) in the pollutant signature, which are characteristic of traffic emissions. Multiple traffic sources are also present as candidates, some relatively close and with good wind alignment, under conditions where air is trapped.",
+    "reason": "Traffic is identified as the most likely primary source, supported by its highest category score of 0.798. This is corroborated by the land use context showing a high presence of traffic (7) and a pollutant signature with elevated NO2 and AAI levels (both at the 67th city percentile), which are characteristic of vehicular emissions. Additionally, multiple nearby traffic sources exhibit strong wind alignment with the hotspot.",
     "evidence_factors": [
-      "Traffic category score (0.798)",
-      "High traffic landuse context (7)",
-      "Elevated NO2 (67th percentile)",
-      "Elevated AAI (67th percentile)",
+      "Highest traffic category score",
+      "Elevated NO2 pollutant signature",
+      "Elevated AAI pollutant signature",
+      "High traffic land use context",
       "Multiple nearby traffic candidates",
-      "Air trapped meteorological condition"
+      "Strong wind alignment from traffic sources",
+      "Trapped air conditions"
     ],
     "evidence": {
       "cell": "883da111dbfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 227.0,
+      "ward_id": "W223",
+      "pm25_estimate": 222.1,
       "candidates": [
         {
           "name": "traffic_25524703",
@@ -486,8 +490,8 @@
   {
     "cell": "883da110edfffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 227.0,
+    "ward_id": "W223",
+    "pm25_estimate": 222.1,
     "primary_source": "traffic",
     "confidence": 0.5,
     "scores": {
@@ -496,20 +500,21 @@
       "waste_burning": 0.0,
       "traffic": 0.798
     },
-    "reason": "The deterministic category scores identify traffic as the most likely primary source with a score of 0.798. This is supported by a high traffic landuse context (7) and elevated NO2 (67th city percentile) and AAI (67th city percentile) in the pollutant signature, which are characteristic of traffic emissions. Multiple traffic sources are also present as candidates, some relatively close and with good wind alignment, under conditions where air is trapped.",
+    "reason": "Traffic is identified as the most likely primary source, supported by its highest category score of 0.798. This is corroborated by the land use context showing a high presence of traffic (7) and a pollutant signature with elevated NO2 and AAI levels (both at the 67th city percentile), which are characteristic of vehicular emissions. Additionally, multiple nearby traffic sources exhibit strong wind alignment with the hotspot.",
     "evidence_factors": [
-      "Traffic category score (0.798)",
-      "High traffic landuse context (7)",
-      "Elevated NO2 (67th percentile)",
-      "Elevated AAI (67th percentile)",
+      "Highest traffic category score",
+      "Elevated NO2 pollutant signature",
+      "Elevated AAI pollutant signature",
+      "High traffic land use context",
       "Multiple nearby traffic candidates",
-      "Air trapped meteorological condition"
+      "Strong wind alignment from traffic sources",
+      "Trapped air conditions"
     ],
     "evidence": {
       "cell": "883da111dbfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 227.0,
+      "ward_id": "W223",
+      "pm25_estimate": 222.1,
       "candidates": [
         {
           "name": "traffic_25524703",
@@ -607,8 +612,8 @@
   {
     "cell": "883da111d3fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 227.0,
+    "ward_id": "W223",
+    "pm25_estimate": 222.1,
     "primary_source": "traffic",
     "confidence": 0.5,
     "scores": {
@@ -617,20 +622,21 @@
       "waste_burning": 0.0,
       "traffic": 0.798
     },
-    "reason": "The deterministic category scores identify traffic as the most likely primary source with a score of 0.798. This is supported by a high traffic landuse context (7) and elevated NO2 (67th city percentile) and AAI (67th city percentile) in the pollutant signature, which are characteristic of traffic emissions. Multiple traffic sources are also present as candidates, some relatively close and with good wind alignment, under conditions where air is trapped.",
+    "reason": "Traffic is identified as the most likely primary source, supported by its highest category score of 0.798. This is corroborated by the land use context showing a high presence of traffic (7) and a pollutant signature with elevated NO2 and AAI levels (both at the 67th city percentile), which are characteristic of vehicular emissions. Additionally, multiple nearby traffic sources exhibit strong wind alignment with the hotspot.",
     "evidence_factors": [
-      "Traffic category score (0.798)",
-      "High traffic landuse context (7)",
-      "Elevated NO2 (67th percentile)",
-      "Elevated AAI (67th percentile)",
+      "Highest traffic category score",
+      "Elevated NO2 pollutant signature",
+      "Elevated AAI pollutant signature",
+      "High traffic land use context",
       "Multiple nearby traffic candidates",
-      "Air trapped meteorological condition"
+      "Strong wind alignment from traffic sources",
+      "Trapped air conditions"
     ],
     "evidence": {
       "cell": "883da111dbfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 227.0,
+      "ward_id": "W223",
+      "pm25_estimate": 222.1,
       "candidates": [
         {
           "name": "traffic_25524703",
@@ -728,8 +734,8 @@
   {
     "cell": "883da111d1fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 227.0,
+    "ward_id": "W223",
+    "pm25_estimate": 222.1,
     "primary_source": "traffic",
     "confidence": 0.5,
     "scores": {
@@ -738,20 +744,21 @@
       "waste_burning": 0.0,
       "traffic": 0.798
     },
-    "reason": "The deterministic category scores identify traffic as the most likely primary source with a score of 0.798. This is supported by a high traffic landuse context (7) and elevated NO2 (67th city percentile) and AAI (67th city percentile) in the pollutant signature, which are characteristic of traffic emissions. Multiple traffic sources are also present as candidates, some relatively close and with good wind alignment, under conditions where air is trapped.",
+    "reason": "Traffic is identified as the most likely primary source, supported by its highest category score of 0.798. This is corroborated by the land use context showing a high presence of traffic (7) and a pollutant signature with elevated NO2 and AAI levels (both at the 67th city percentile), which are characteristic of vehicular emissions. Additionally, multiple nearby traffic sources exhibit strong wind alignment with the hotspot.",
     "evidence_factors": [
-      "Traffic category score (0.798)",
-      "High traffic landuse context (7)",
-      "Elevated NO2 (67th percentile)",
-      "Elevated AAI (67th percentile)",
+      "Highest traffic category score",
+      "Elevated NO2 pollutant signature",
+      "Elevated AAI pollutant signature",
+      "High traffic land use context",
       "Multiple nearby traffic candidates",
-      "Air trapped meteorological condition"
+      "Strong wind alignment from traffic sources",
+      "Trapped air conditions"
     ],
     "evidence": {
       "cell": "883da111dbfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 227.0,
+      "ward_id": "W223",
+      "pm25_estimate": 222.1,
       "candidates": [
         {
           "name": "traffic_25524703",
@@ -849,8 +856,8 @@
   {
     "cell": "883da111d9fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 227.0,
+    "ward_id": "W223",
+    "pm25_estimate": 222.1,
     "primary_source": "traffic",
     "confidence": 0.5,
     "scores": {
@@ -859,20 +866,21 @@
       "waste_burning": 0.0,
       "traffic": 0.798
     },
-    "reason": "The deterministic category scores identify traffic as the most likely primary source with a score of 0.798. This is supported by a high traffic landuse context (7) and elevated NO2 (67th city percentile) and AAI (67th city percentile) in the pollutant signature, which are characteristic of traffic emissions. Multiple traffic sources are also present as candidates, some relatively close and with good wind alignment, under conditions where air is trapped.",
+    "reason": "Traffic is identified as the most likely primary source, supported by its highest category score of 0.798. This is corroborated by the land use context showing a high presence of traffic (7) and a pollutant signature with elevated NO2 and AAI levels (both at the 67th city percentile), which are characteristic of vehicular emissions. Additionally, multiple nearby traffic sources exhibit strong wind alignment with the hotspot.",
     "evidence_factors": [
-      "Traffic category score (0.798)",
-      "High traffic landuse context (7)",
-      "Elevated NO2 (67th percentile)",
-      "Elevated AAI (67th percentile)",
+      "Highest traffic category score",
+      "Elevated NO2 pollutant signature",
+      "Elevated AAI pollutant signature",
+      "High traffic land use context",
       "Multiple nearby traffic candidates",
-      "Air trapped meteorological condition"
+      "Strong wind alignment from traffic sources",
+      "Trapped air conditions"
     ],
     "evidence": {
       "cell": "883da111dbfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 227.0,
+      "ward_id": "W223",
+      "pm25_estimate": 222.1,
       "candidates": [
         {
           "name": "traffic_25524703",
@@ -970,8 +978,8 @@
   {
     "cell": "883da111d7fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 227.0,
+    "ward_id": "W223",
+    "pm25_estimate": 222.1,
     "primary_source": "traffic",
     "confidence": 0.5,
     "scores": {
@@ -980,20 +988,21 @@
       "waste_burning": 0.0,
       "traffic": 0.798
     },
-    "reason": "The deterministic category scores identify traffic as the most likely primary source with a score of 0.798. This is supported by a high traffic landuse context (7) and elevated NO2 (67th city percentile) and AAI (67th city percentile) in the pollutant signature, which are characteristic of traffic emissions. Multiple traffic sources are also present as candidates, some relatively close and with good wind alignment, under conditions where air is trapped.",
+    "reason": "Traffic is identified as the most likely primary source, supported by its highest category score of 0.798. This is corroborated by the land use context showing a high presence of traffic (7) and a pollutant signature with elevated NO2 and AAI levels (both at the 67th city percentile), which are characteristic of vehicular emissions. Additionally, multiple nearby traffic sources exhibit strong wind alignment with the hotspot.",
     "evidence_factors": [
-      "Traffic category score (0.798)",
-      "High traffic landuse context (7)",
-      "Elevated NO2 (67th percentile)",
-      "Elevated AAI (67th percentile)",
+      "Highest traffic category score",
+      "Elevated NO2 pollutant signature",
+      "Elevated AAI pollutant signature",
+      "High traffic land use context",
       "Multiple nearby traffic candidates",
-      "Air trapped meteorological condition"
+      "Strong wind alignment from traffic sources",
+      "Trapped air conditions"
     ],
     "evidence": {
       "cell": "883da111dbfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 227.0,
+      "ward_id": "W223",
+      "pm25_estimate": 222.1,
       "candidates": [
         {
           "name": "traffic_25524703",
@@ -1091,8 +1100,8 @@
   {
     "cell": "883da11013fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 227.0,
+    "ward_id": "W223",
+    "pm25_estimate": 222.1,
     "primary_source": "traffic",
     "confidence": 0.5,
     "scores": {
@@ -1101,20 +1110,21 @@
       "waste_burning": 0.0,
       "traffic": 0.798
     },
-    "reason": "The deterministic category scores identify traffic as the most likely primary source with a score of 0.798. This is supported by a high traffic landuse context (7) and elevated NO2 (67th city percentile) and AAI (67th city percentile) in the pollutant signature, which are characteristic of traffic emissions. Multiple traffic sources are also present as candidates, some relatively close and with good wind alignment, under conditions where air is trapped.",
+    "reason": "Traffic is identified as the most likely primary source, supported by its highest category score of 0.798. This is corroborated by the land use context showing a high presence of traffic (7) and a pollutant signature with elevated NO2 and AAI levels (both at the 67th city percentile), which are characteristic of vehicular emissions. Additionally, multiple nearby traffic sources exhibit strong wind alignment with the hotspot.",
     "evidence_factors": [
-      "Traffic category score (0.798)",
-      "High traffic landuse context (7)",
-      "Elevated NO2 (67th percentile)",
-      "Elevated AAI (67th percentile)",
+      "Highest traffic category score",
+      "Elevated NO2 pollutant signature",
+      "Elevated AAI pollutant signature",
+      "High traffic land use context",
       "Multiple nearby traffic candidates",
-      "Air trapped meteorological condition"
+      "Strong wind alignment from traffic sources",
+      "Trapped air conditions"
     ],
     "evidence": {
       "cell": "883da111dbfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 227.0,
+      "ward_id": "W223",
+      "pm25_estimate": 222.1,
       "candidates": [
         {
           "name": "traffic_25524703",
@@ -1212,8 +1222,8 @@
   {
     "cell": "883da11033fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 227.0,
+    "ward_id": "W223",
+    "pm25_estimate": 222.1,
     "primary_source": "traffic",
     "confidence": 0.5,
     "scores": {
@@ -1222,20 +1232,21 @@
       "waste_burning": 0.0,
       "traffic": 0.798
     },
-    "reason": "The deterministic category scores identify traffic as the most likely primary source with a score of 0.798. This is supported by a high traffic landuse context (7) and elevated NO2 (67th city percentile) and AAI (67th city percentile) in the pollutant signature, which are characteristic of traffic emissions. Multiple traffic sources are also present as candidates, some relatively close and with good wind alignment, under conditions where air is trapped.",
+    "reason": "Traffic is identified as the most likely primary source, supported by its highest category score of 0.798. This is corroborated by the land use context showing a high presence of traffic (7) and a pollutant signature with elevated NO2 and AAI levels (both at the 67th city percentile), which are characteristic of vehicular emissions. Additionally, multiple nearby traffic sources exhibit strong wind alignment with the hotspot.",
     "evidence_factors": [
-      "Traffic category score (0.798)",
-      "High traffic landuse context (7)",
-      "Elevated NO2 (67th percentile)",
-      "Elevated AAI (67th percentile)",
+      "Highest traffic category score",
+      "Elevated NO2 pollutant signature",
+      "Elevated AAI pollutant signature",
+      "High traffic land use context",
       "Multiple nearby traffic candidates",
-      "Air trapped meteorological condition"
+      "Strong wind alignment from traffic sources",
+      "Trapped air conditions"
     ],
     "evidence": {
       "cell": "883da111dbfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 227.0,
+      "ward_id": "W223",
+      "pm25_estimate": 222.1,
       "candidates": [
         {
           "name": "traffic_25524703",
@@ -1333,8 +1344,8 @@
   {
     "cell": "883da1103bfffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 227.0,
+    "ward_id": "W223",
+    "pm25_estimate": 222.1,
     "primary_source": "traffic",
     "confidence": 0.5,
     "scores": {
@@ -1343,20 +1354,21 @@
       "waste_burning": 0.0,
       "traffic": 0.798
     },
-    "reason": "The deterministic category scores identify traffic as the most likely primary source with a score of 0.798. This is supported by a high traffic landuse context (7) and elevated NO2 (67th city percentile) and AAI (67th city percentile) in the pollutant signature, which are characteristic of traffic emissions. Multiple traffic sources are also present as candidates, some relatively close and with good wind alignment, under conditions where air is trapped.",
+    "reason": "Traffic is identified as the most likely primary source, supported by its highest category score of 0.798. This is corroborated by the land use context showing a high presence of traffic (7) and a pollutant signature with elevated NO2 and AAI levels (both at the 67th city percentile), which are characteristic of vehicular emissions. Additionally, multiple nearby traffic sources exhibit strong wind alignment with the hotspot.",
     "evidence_factors": [
-      "Traffic category score (0.798)",
-      "High traffic landuse context (7)",
-      "Elevated NO2 (67th percentile)",
-      "Elevated AAI (67th percentile)",
+      "Highest traffic category score",
+      "Elevated NO2 pollutant signature",
+      "Elevated AAI pollutant signature",
+      "High traffic land use context",
       "Multiple nearby traffic candidates",
-      "Air trapped meteorological condition"
+      "Strong wind alignment from traffic sources",
+      "Trapped air conditions"
     ],
     "evidence": {
       "cell": "883da111dbfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 227.0,
+      "ward_id": "W223",
+      "pm25_estimate": 222.1,
       "candidates": [
         {
           "name": "traffic_25524703",
@@ -1454,8 +1466,8 @@
   {
     "cell": "883da11031fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 227.0,
+    "ward_id": "W223",
+    "pm25_estimate": 222.1,
     "primary_source": "traffic",
     "confidence": 0.5,
     "scores": {
@@ -1464,20 +1476,21 @@
       "waste_burning": 0.0,
       "traffic": 0.798
     },
-    "reason": "The deterministic category scores identify traffic as the most likely primary source with a score of 0.798. This is supported by a high traffic landuse context (7) and elevated NO2 (67th city percentile) and AAI (67th city percentile) in the pollutant signature, which are characteristic of traffic emissions. Multiple traffic sources are also present as candidates, some relatively close and with good wind alignment, under conditions where air is trapped.",
+    "reason": "Traffic is identified as the most likely primary source, supported by its highest category score of 0.798. This is corroborated by the land use context showing a high presence of traffic (7) and a pollutant signature with elevated NO2 and AAI levels (both at the 67th city percentile), which are characteristic of vehicular emissions. Additionally, multiple nearby traffic sources exhibit strong wind alignment with the hotspot.",
     "evidence_factors": [
-      "Traffic category score (0.798)",
-      "High traffic landuse context (7)",
-      "Elevated NO2 (67th percentile)",
-      "Elevated AAI (67th percentile)",
+      "Highest traffic category score",
+      "Elevated NO2 pollutant signature",
+      "Elevated AAI pollutant signature",
+      "High traffic land use context",
       "Multiple nearby traffic candidates",
-      "Air trapped meteorological condition"
+      "Strong wind alignment from traffic sources",
+      "Trapped air conditions"
     ],
     "evidence": {
       "cell": "883da111dbfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 227.0,
+      "ward_id": "W223",
+      "pm25_estimate": 222.1,
       "candidates": [
         {
           "name": "traffic_25524703",
@@ -1575,8 +1588,8 @@
   {
     "cell": "883da11037fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 227.0,
+    "ward_id": "W223",
+    "pm25_estimate": 222.1,
     "primary_source": "traffic",
     "confidence": 0.5,
     "scores": {
@@ -1585,20 +1598,21 @@
       "waste_burning": 0.0,
       "traffic": 0.798
     },
-    "reason": "The deterministic category scores identify traffic as the most likely primary source with a score of 0.798. This is supported by a high traffic landuse context (7) and elevated NO2 (67th city percentile) and AAI (67th city percentile) in the pollutant signature, which are characteristic of traffic emissions. Multiple traffic sources are also present as candidates, some relatively close and with good wind alignment, under conditions where air is trapped.",
+    "reason": "Traffic is identified as the most likely primary source, supported by its highest category score of 0.798. This is corroborated by the land use context showing a high presence of traffic (7) and a pollutant signature with elevated NO2 and AAI levels (both at the 67th city percentile), which are characteristic of vehicular emissions. Additionally, multiple nearby traffic sources exhibit strong wind alignment with the hotspot.",
     "evidence_factors": [
-      "Traffic category score (0.798)",
-      "High traffic landuse context (7)",
-      "Elevated NO2 (67th percentile)",
-      "Elevated AAI (67th percentile)",
+      "Highest traffic category score",
+      "Elevated NO2 pollutant signature",
+      "Elevated AAI pollutant signature",
+      "High traffic land use context",
       "Multiple nearby traffic candidates",
-      "Air trapped meteorological condition"
+      "Strong wind alignment from traffic sources",
+      "Trapped air conditions"
     ],
     "evidence": {
       "cell": "883da111dbfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 227.0,
+      "ward_id": "W223",
+      "pm25_estimate": 222.1,
       "candidates": [
         {
           "name": "traffic_25524703",
@@ -1696,8 +1710,8 @@
   {
     "cell": "883da11017fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 227.0,
+    "ward_id": "W223",
+    "pm25_estimate": 222.1,
     "primary_source": "traffic",
     "confidence": 0.5,
     "scores": {
@@ -1706,20 +1720,21 @@
       "waste_burning": 0.0,
       "traffic": 0.798
     },
-    "reason": "The deterministic category scores identify traffic as the most likely primary source with a score of 0.798. This is supported by a high traffic landuse context (7) and elevated NO2 (67th city percentile) and AAI (67th city percentile) in the pollutant signature, which are characteristic of traffic emissions. Multiple traffic sources are also present as candidates, some relatively close and with good wind alignment, under conditions where air is trapped.",
+    "reason": "Traffic is identified as the most likely primary source, supported by its highest category score of 0.798. This is corroborated by the land use context showing a high presence of traffic (7) and a pollutant signature with elevated NO2 and AAI levels (both at the 67th city percentile), which are characteristic of vehicular emissions. Additionally, multiple nearby traffic sources exhibit strong wind alignment with the hotspot.",
     "evidence_factors": [
-      "Traffic category score (0.798)",
-      "High traffic landuse context (7)",
-      "Elevated NO2 (67th percentile)",
-      "Elevated AAI (67th percentile)",
+      "Highest traffic category score",
+      "Elevated NO2 pollutant signature",
+      "Elevated AAI pollutant signature",
+      "High traffic land use context",
       "Multiple nearby traffic candidates",
-      "Air trapped meteorological condition"
+      "Strong wind alignment from traffic sources",
+      "Trapped air conditions"
     ],
     "evidence": {
       "cell": "883da111dbfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 227.0,
+      "ward_id": "W223",
+      "pm25_estimate": 222.1,
       "candidates": [
         {
           "name": "traffic_25524703",
@@ -1817,8 +1832,8 @@
   {
     "cell": "883da1046dfffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 211.0,
+    "ward_id": "W110",
+    "pm25_estimate": 206.6,
     "primary_source": "waste_burning",
     "confidence": 0.52,
     "scores": {
@@ -1827,16 +1842,18 @@
       "waste_burning": 1.238,
       "traffic": 0.345
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "Waste burning is identified as the most likely primary source due to its highest category score (1.238) among all candidates. This is supported by the presence of 2 hours of fire activity and meteorological conditions indicating trapped air, which would exacerbate the impact of any burning, contributing to the high PM2.5 estimate of 206.6.",
     "evidence_factors": [
-      "satellite fire detections in 2 hours (1% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "Highest category score for waste burning",
+      "Presence of fire activity (2 fire hours)",
+      "Trapped air conditions",
+      "High PM2.5 estimate"
     ],
     "evidence": {
       "cell": "883da1046dfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 211.0,
+      "ward_id": "W110",
+      "pm25_estimate": 206.6,
       "candidates": [
         {
           "name": "construction_1248051449",
@@ -1928,14 +1945,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 21
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z02"
   },
   {
     "cell": "883da10733fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 211.0,
+    "ward_id": "W110",
+    "pm25_estimate": 206.6,
     "primary_source": "waste_burning",
     "confidence": 0.52,
     "scores": {
@@ -1944,16 +1961,18 @@
       "waste_burning": 1.238,
       "traffic": 0.345
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "Waste burning is identified as the most likely primary source due to its highest category score (1.238) among all candidates. This is supported by the presence of 2 hours of fire activity and meteorological conditions indicating trapped air, which would exacerbate the impact of any burning, contributing to the high PM2.5 estimate of 206.6.",
     "evidence_factors": [
-      "satellite fire detections in 2 hours (1% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "Highest category score for waste burning",
+      "Presence of fire activity (2 fire hours)",
+      "Trapped air conditions",
+      "High PM2.5 estimate"
     ],
     "evidence": {
       "cell": "883da1046dfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 211.0,
+      "ward_id": "W110",
+      "pm25_estimate": 206.6,
       "candidates": [
         {
           "name": "construction_1248051449",
@@ -2045,14 +2064,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 21
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z02"
   },
   {
     "cell": "883da10703fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 211.0,
+    "ward_id": "W110",
+    "pm25_estimate": 206.6,
     "primary_source": "waste_burning",
     "confidence": 0.52,
     "scores": {
@@ -2061,16 +2080,18 @@
       "waste_burning": 1.238,
       "traffic": 0.345
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "Waste burning is identified as the most likely primary source due to its highest category score (1.238) among all candidates. This is supported by the presence of 2 hours of fire activity and meteorological conditions indicating trapped air, which would exacerbate the impact of any burning, contributing to the high PM2.5 estimate of 206.6.",
     "evidence_factors": [
-      "satellite fire detections in 2 hours (1% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "Highest category score for waste burning",
+      "Presence of fire activity (2 fire hours)",
+      "Trapped air conditions",
+      "High PM2.5 estimate"
     ],
     "evidence": {
       "cell": "883da1046dfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 211.0,
+      "ward_id": "W110",
+      "pm25_estimate": 206.6,
       "candidates": [
         {
           "name": "construction_1248051449",
@@ -2162,14 +2183,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 21
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z02"
   },
   {
     "cell": "883da10723fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 211.0,
+    "ward_id": "W110",
+    "pm25_estimate": 206.6,
     "primary_source": "waste_burning",
     "confidence": 0.52,
     "scores": {
@@ -2178,16 +2199,18 @@
       "waste_burning": 1.238,
       "traffic": 0.345
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "Waste burning is identified as the most likely primary source due to its highest category score (1.238) among all candidates. This is supported by the presence of 2 hours of fire activity and meteorological conditions indicating trapped air, which would exacerbate the impact of any burning, contributing to the high PM2.5 estimate of 206.6.",
     "evidence_factors": [
-      "satellite fire detections in 2 hours (1% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "Highest category score for waste burning",
+      "Presence of fire activity (2 fire hours)",
+      "Trapped air conditions",
+      "High PM2.5 estimate"
     ],
     "evidence": {
       "cell": "883da1046dfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 211.0,
+      "ward_id": "W110",
+      "pm25_estimate": 206.6,
       "candidates": [
         {
           "name": "construction_1248051449",
@@ -2279,14 +2302,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 21
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z02"
   },
   {
     "cell": "883da1072bfffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 211.0,
+    "ward_id": "W110",
+    "pm25_estimate": 206.6,
     "primary_source": "waste_burning",
     "confidence": 0.52,
     "scores": {
@@ -2295,16 +2318,18 @@
       "waste_burning": 1.238,
       "traffic": 0.345
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "Waste burning is identified as the most likely primary source due to its highest category score (1.238) among all candidates. This is supported by the presence of 2 hours of fire activity and meteorological conditions indicating trapped air, which would exacerbate the impact of any burning, contributing to the high PM2.5 estimate of 206.6.",
     "evidence_factors": [
-      "satellite fire detections in 2 hours (1% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "Highest category score for waste burning",
+      "Presence of fire activity (2 fire hours)",
+      "Trapped air conditions",
+      "High PM2.5 estimate"
     ],
     "evidence": {
       "cell": "883da1046dfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 211.0,
+      "ward_id": "W110",
+      "pm25_estimate": 206.6,
       "candidates": [
         {
           "name": "construction_1248051449",
@@ -2396,14 +2421,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 21
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z02"
   },
   {
     "cell": "883da10717fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 211.0,
+    "ward_id": "W110",
+    "pm25_estimate": 206.6,
     "primary_source": "waste_burning",
     "confidence": 0.52,
     "scores": {
@@ -2412,16 +2437,18 @@
       "waste_burning": 1.238,
       "traffic": 0.345
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "Waste burning is identified as the most likely primary source due to its highest category score (1.238) among all candidates. This is supported by the presence of 2 hours of fire activity and meteorological conditions indicating trapped air, which would exacerbate the impact of any burning, contributing to the high PM2.5 estimate of 206.6.",
     "evidence_factors": [
-      "satellite fire detections in 2 hours (1% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "Highest category score for waste burning",
+      "Presence of fire activity (2 fire hours)",
+      "Trapped air conditions",
+      "High PM2.5 estimate"
     ],
     "evidence": {
       "cell": "883da1046dfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 211.0,
+      "ward_id": "W110",
+      "pm25_estimate": 206.6,
       "candidates": [
         {
           "name": "construction_1248051449",
@@ -2513,14 +2540,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 21
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z02"
   },
   {
     "cell": "883da10707fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 211.0,
+    "ward_id": "W110",
+    "pm25_estimate": 206.6,
     "primary_source": "waste_burning",
     "confidence": 0.52,
     "scores": {
@@ -2529,16 +2556,18 @@
       "waste_burning": 1.238,
       "traffic": 0.345
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "Waste burning is identified as the most likely primary source due to its highest category score (1.238) among all candidates. This is supported by the presence of 2 hours of fire activity and meteorological conditions indicating trapped air, which would exacerbate the impact of any burning, contributing to the high PM2.5 estimate of 206.6.",
     "evidence_factors": [
-      "satellite fire detections in 2 hours (1% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "Highest category score for waste burning",
+      "Presence of fire activity (2 fire hours)",
+      "Trapped air conditions",
+      "High PM2.5 estimate"
     ],
     "evidence": {
       "cell": "883da1046dfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 211.0,
+      "ward_id": "W110",
+      "pm25_estimate": 206.6,
       "candidates": [
         {
           "name": "construction_1248051449",
@@ -2630,14 +2659,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 21
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z02"
   },
   {
     "cell": "883da10739fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 211.0,
+    "ward_id": "W110",
+    "pm25_estimate": 206.6,
     "primary_source": "waste_burning",
     "confidence": 0.52,
     "scores": {
@@ -2646,16 +2675,18 @@
       "waste_burning": 1.238,
       "traffic": 0.345
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "Waste burning is identified as the most likely primary source due to its highest category score (1.238) among all candidates. This is supported by the presence of 2 hours of fire activity and meteorological conditions indicating trapped air, which would exacerbate the impact of any burning, contributing to the high PM2.5 estimate of 206.6.",
     "evidence_factors": [
-      "satellite fire detections in 2 hours (1% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "Highest category score for waste burning",
+      "Presence of fire activity (2 fire hours)",
+      "Trapped air conditions",
+      "High PM2.5 estimate"
     ],
     "evidence": {
       "cell": "883da1046dfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 211.0,
+      "ward_id": "W110",
+      "pm25_estimate": 206.6,
       "candidates": [
         {
           "name": "construction_1248051449",
@@ -2747,14 +2778,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 21
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z02"
   },
   {
     "cell": "883da1073bfffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 211.0,
+    "ward_id": "W110",
+    "pm25_estimate": 206.6,
     "primary_source": "waste_burning",
     "confidence": 0.52,
     "scores": {
@@ -2763,16 +2794,18 @@
       "waste_burning": 1.238,
       "traffic": 0.345
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "Waste burning is identified as the most likely primary source due to its highest category score (1.238) among all candidates. This is supported by the presence of 2 hours of fire activity and meteorological conditions indicating trapped air, which would exacerbate the impact of any burning, contributing to the high PM2.5 estimate of 206.6.",
     "evidence_factors": [
-      "satellite fire detections in 2 hours (1% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "Highest category score for waste burning",
+      "Presence of fire activity (2 fire hours)",
+      "Trapped air conditions",
+      "High PM2.5 estimate"
     ],
     "evidence": {
       "cell": "883da1046dfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 211.0,
+      "ward_id": "W110",
+      "pm25_estimate": 206.6,
       "candidates": [
         {
           "name": "construction_1248051449",
@@ -2864,14 +2897,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 21
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z02"
   },
   {
     "cell": "883da10731fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 211.0,
+    "ward_id": "W110",
+    "pm25_estimate": 206.6,
     "primary_source": "waste_burning",
     "confidence": 0.52,
     "scores": {
@@ -2880,16 +2913,18 @@
       "waste_burning": 1.238,
       "traffic": 0.345
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "Waste burning is identified as the most likely primary source due to its highest category score (1.238) among all candidates. This is supported by the presence of 2 hours of fire activity and meteorological conditions indicating trapped air, which would exacerbate the impact of any burning, contributing to the high PM2.5 estimate of 206.6.",
     "evidence_factors": [
-      "satellite fire detections in 2 hours (1% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "Highest category score for waste burning",
+      "Presence of fire activity (2 fire hours)",
+      "Trapped air conditions",
+      "High PM2.5 estimate"
     ],
     "evidence": {
       "cell": "883da1046dfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 211.0,
+      "ward_id": "W110",
+      "pm25_estimate": 206.6,
       "candidates": [
         {
           "name": "construction_1248051449",
@@ -2981,14 +3016,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 21
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z02"
   },
   {
     "cell": "883da10715fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 211.0,
+    "ward_id": "W110",
+    "pm25_estimate": 206.6,
     "primary_source": "waste_burning",
     "confidence": 0.52,
     "scores": {
@@ -2997,16 +3032,18 @@
       "waste_burning": 1.238,
       "traffic": 0.345
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "Waste burning is identified as the most likely primary source due to its highest category score (1.238) among all candidates. This is supported by the presence of 2 hours of fire activity and meteorological conditions indicating trapped air, which would exacerbate the impact of any burning, contributing to the high PM2.5 estimate of 206.6.",
     "evidence_factors": [
-      "satellite fire detections in 2 hours (1% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "Highest category score for waste burning",
+      "Presence of fire activity (2 fire hours)",
+      "Trapped air conditions",
+      "High PM2.5 estimate"
     ],
     "evidence": {
       "cell": "883da1046dfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 211.0,
+      "ward_id": "W110",
+      "pm25_estimate": 206.6,
       "candidates": [
         {
           "name": "construction_1248051449",
@@ -3098,14 +3135,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 21
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z02"
   },
   {
     "cell": "883da1073dfffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 211.0,
+    "ward_id": "W110",
+    "pm25_estimate": 206.6,
     "primary_source": "waste_burning",
     "confidence": 0.52,
     "scores": {
@@ -3114,16 +3151,18 @@
       "waste_burning": 1.238,
       "traffic": 0.345
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "Waste burning is identified as the most likely primary source due to its highest category score (1.238) among all candidates. This is supported by the presence of 2 hours of fire activity and meteorological conditions indicating trapped air, which would exacerbate the impact of any burning, contributing to the high PM2.5 estimate of 206.6.",
     "evidence_factors": [
-      "satellite fire detections in 2 hours (1% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "Highest category score for waste burning",
+      "Presence of fire activity (2 fire hours)",
+      "Trapped air conditions",
+      "High PM2.5 estimate"
     ],
     "evidence": {
       "cell": "883da1046dfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 211.0,
+      "ward_id": "W110",
+      "pm25_estimate": 206.6,
       "candidates": [
         {
           "name": "construction_1248051449",
@@ -3215,14 +3254,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 21
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z02"
   },
   {
     "cell": "883da10711fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 211.0,
+    "ward_id": "W110",
+    "pm25_estimate": 206.6,
     "primary_source": "waste_burning",
     "confidence": 0.52,
     "scores": {
@@ -3231,16 +3270,18 @@
       "waste_burning": 1.238,
       "traffic": 0.345
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "Waste burning is identified as the most likely primary source due to its highest category score (1.238) among all candidates. This is supported by the presence of 2 hours of fire activity and meteorological conditions indicating trapped air, which would exacerbate the impact of any burning, contributing to the high PM2.5 estimate of 206.6.",
     "evidence_factors": [
-      "satellite fire detections in 2 hours (1% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "Highest category score for waste burning",
+      "Presence of fire activity (2 fire hours)",
+      "Trapped air conditions",
+      "High PM2.5 estimate"
     ],
     "evidence": {
       "cell": "883da1046dfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 211.0,
+      "ward_id": "W110",
+      "pm25_estimate": 206.6,
       "candidates": [
         {
           "name": "construction_1248051449",
@@ -3332,14 +3373,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 21
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z02"
   },
   {
     "cell": "883da10465fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 211.0,
+    "ward_id": "W110",
+    "pm25_estimate": 206.6,
     "primary_source": "waste_burning",
     "confidence": 0.52,
     "scores": {
@@ -3348,16 +3389,18 @@
       "waste_burning": 1.238,
       "traffic": 0.345
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "Waste burning is identified as the most likely primary source due to its highest category score (1.238) among all candidates. This is supported by the presence of 2 hours of fire activity and meteorological conditions indicating trapped air, which would exacerbate the impact of any burning, contributing to the high PM2.5 estimate of 206.6.",
     "evidence_factors": [
-      "satellite fire detections in 2 hours (1% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "Highest category score for waste burning",
+      "Presence of fire activity (2 fire hours)",
+      "Trapped air conditions",
+      "High PM2.5 estimate"
     ],
     "evidence": {
       "cell": "883da1046dfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 211.0,
+      "ward_id": "W110",
+      "pm25_estimate": 206.6,
       "candidates": [
         {
           "name": "construction_1248051449",
@@ -3449,14 +3492,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 21
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z02"
   },
   {
     "cell": "883da1071dfffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 211.0,
+    "ward_id": "W110",
+    "pm25_estimate": 206.6,
     "primary_source": "waste_burning",
     "confidence": 0.52,
     "scores": {
@@ -3465,16 +3508,18 @@
       "waste_burning": 1.238,
       "traffic": 0.345
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "Waste burning is identified as the most likely primary source due to its highest category score (1.238) among all candidates. This is supported by the presence of 2 hours of fire activity and meteorological conditions indicating trapped air, which would exacerbate the impact of any burning, contributing to the high PM2.5 estimate of 206.6.",
     "evidence_factors": [
-      "satellite fire detections in 2 hours (1% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "Highest category score for waste burning",
+      "Presence of fire activity (2 fire hours)",
+      "Trapped air conditions",
+      "High PM2.5 estimate"
     ],
     "evidence": {
       "cell": "883da1046dfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 211.0,
+      "ward_id": "W110",
+      "pm25_estimate": 206.6,
       "candidates": [
         {
           "name": "construction_1248051449",
@@ -3566,14 +3611,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 21
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z02"
   },
   {
     "cell": "883da1070bfffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 211.0,
+    "ward_id": "W110",
+    "pm25_estimate": 206.6,
     "primary_source": "waste_burning",
     "confidence": 0.52,
     "scores": {
@@ -3582,16 +3627,18 @@
       "waste_burning": 1.238,
       "traffic": 0.345
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "Waste burning is identified as the most likely primary source due to its highest category score (1.238) among all candidates. This is supported by the presence of 2 hours of fire activity and meteorological conditions indicating trapped air, which would exacerbate the impact of any burning, contributing to the high PM2.5 estimate of 206.6.",
     "evidence_factors": [
-      "satellite fire detections in 2 hours (1% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "Highest category score for waste burning",
+      "Presence of fire activity (2 fire hours)",
+      "Trapped air conditions",
+      "High PM2.5 estimate"
     ],
     "evidence": {
       "cell": "883da1046dfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 211.0,
+      "ward_id": "W110",
+      "pm25_estimate": 206.6,
       "candidates": [
         {
           "name": "construction_1248051449",
@@ -3683,14 +3730,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 21
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z02"
   },
   {
     "cell": "883da10757fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 211.0,
+    "ward_id": "W110",
+    "pm25_estimate": 206.6,
     "primary_source": "waste_burning",
     "confidence": 0.52,
     "scores": {
@@ -3699,16 +3746,18 @@
       "waste_burning": 1.238,
       "traffic": 0.345
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "Waste burning is identified as the most likely primary source due to its highest category score (1.238) among all candidates. This is supported by the presence of 2 hours of fire activity and meteorological conditions indicating trapped air, which would exacerbate the impact of any burning, contributing to the high PM2.5 estimate of 206.6.",
     "evidence_factors": [
-      "satellite fire detections in 2 hours (1% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "Highest category score for waste burning",
+      "Presence of fire activity (2 fire hours)",
+      "Trapped air conditions",
+      "High PM2.5 estimate"
     ],
     "evidence": {
       "cell": "883da1046dfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 211.0,
+      "ward_id": "W110",
+      "pm25_estimate": 206.6,
       "candidates": [
         {
           "name": "construction_1248051449",
@@ -3800,14 +3849,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 21
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z02"
   },
   {
     "cell": "883da10719fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 211.0,
+    "ward_id": "W110",
+    "pm25_estimate": 206.6,
     "primary_source": "waste_burning",
     "confidence": 0.52,
     "scores": {
@@ -3816,16 +3865,18 @@
       "waste_burning": 1.238,
       "traffic": 0.345
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "Waste burning is identified as the most likely primary source due to its highest category score (1.238) among all candidates. This is supported by the presence of 2 hours of fire activity and meteorological conditions indicating trapped air, which would exacerbate the impact of any burning, contributing to the high PM2.5 estimate of 206.6.",
     "evidence_factors": [
-      "satellite fire detections in 2 hours (1% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "Highest category score for waste burning",
+      "Presence of fire activity (2 fire hours)",
+      "Trapped air conditions",
+      "High PM2.5 estimate"
     ],
     "evidence": {
       "cell": "883da1046dfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 211.0,
+      "ward_id": "W110",
+      "pm25_estimate": 206.6,
       "candidates": [
         {
           "name": "construction_1248051449",
@@ -3917,14 +3968,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 21
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z02"
   },
   {
     "cell": "883da10701fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 211.0,
+    "ward_id": "W110",
+    "pm25_estimate": 206.6,
     "primary_source": "waste_burning",
     "confidence": 0.52,
     "scores": {
@@ -3933,16 +3984,18 @@
       "waste_burning": 1.238,
       "traffic": 0.345
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "Waste burning is identified as the most likely primary source due to its highest category score (1.238) among all candidates. This is supported by the presence of 2 hours of fire activity and meteorological conditions indicating trapped air, which would exacerbate the impact of any burning, contributing to the high PM2.5 estimate of 206.6.",
     "evidence_factors": [
-      "satellite fire detections in 2 hours (1% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "Highest category score for waste burning",
+      "Presence of fire activity (2 fire hours)",
+      "Trapped air conditions",
+      "High PM2.5 estimate"
     ],
     "evidence": {
       "cell": "883da1046dfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 211.0,
+      "ward_id": "W110",
+      "pm25_estimate": 206.6,
       "candidates": [
         {
           "name": "construction_1248051449",
@@ -4034,14 +4087,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 21
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z02"
   },
   {
     "cell": "883da10727fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 211.0,
+    "ward_id": "W110",
+    "pm25_estimate": 206.6,
     "primary_source": "waste_burning",
     "confidence": 0.52,
     "scores": {
@@ -4050,16 +4103,18 @@
       "waste_burning": 1.238,
       "traffic": 0.345
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "Waste burning is identified as the most likely primary source due to its highest category score (1.238) among all candidates. This is supported by the presence of 2 hours of fire activity and meteorological conditions indicating trapped air, which would exacerbate the impact of any burning, contributing to the high PM2.5 estimate of 206.6.",
     "evidence_factors": [
-      "satellite fire detections in 2 hours (1% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "Highest category score for waste burning",
+      "Presence of fire activity (2 fire hours)",
+      "Trapped air conditions",
+      "High PM2.5 estimate"
     ],
     "evidence": {
       "cell": "883da1046dfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 211.0,
+      "ward_id": "W110",
+      "pm25_estimate": 206.6,
       "candidates": [
         {
           "name": "construction_1248051449",
@@ -4151,14 +4206,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 21
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z02"
   },
   {
     "cell": "883da10721fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 211.0,
+    "ward_id": "W110",
+    "pm25_estimate": 206.6,
     "primary_source": "waste_burning",
     "confidence": 0.52,
     "scores": {
@@ -4167,16 +4222,18 @@
       "waste_burning": 1.238,
       "traffic": 0.345
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 2 hours (1% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "Waste burning is identified as the most likely primary source due to its highest category score (1.238) among all candidates. This is supported by the presence of 2 hours of fire activity and meteorological conditions indicating trapped air, which would exacerbate the impact of any burning, contributing to the high PM2.5 estimate of 206.6.",
     "evidence_factors": [
-      "satellite fire detections in 2 hours (1% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "Highest category score for waste burning",
+      "Presence of fire activity (2 fire hours)",
+      "Trapped air conditions",
+      "High PM2.5 estimate"
     ],
     "evidence": {
       "cell": "883da1046dfffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 211.0,
+      "ward_id": "W110",
+      "pm25_estimate": 206.6,
       "candidates": [
         {
           "name": "construction_1248051449",
@@ -4268,14 +4325,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 21
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z02"
   },
   {
     "cell": "883da18cd7fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 234.4,
+    "ward_id": "W219",
+    "pm25_estimate": 196.4,
     "primary_source": "waste_burning",
     "confidence": 0.76,
     "scores": {
@@ -4284,16 +4341,20 @@
       "waste_burning": 3.45,
       "traffic": 0.752
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "The waste_burning category has the highest deterministic score of 3.45, indicating it as the most likely primary source. This is strongly supported by significant fire_activity, with 30 fire hours, and an elevated Aerosol Absorbing Index (AAI) at the 70th percentile, both consistent with burning. Additionally, the landuse_context shows a presence of waste_burning, and air_trapped meteorological conditions would concentrate these emissions.",
     "evidence_factors": [
-      "satellite fire detections in 30 hours (18% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "waste_burning category score (3.45)",
+      "fire_activity (30 fire hours)",
+      "elevated AAI (70th percentile)",
+      "waste_burning landuse context (3)",
+      "air_trapped meteorology",
+      "high PM2.5 estimate (196.4)"
     ],
     "evidence": {
       "cell": "883da18cd7fffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 234.4,
+      "ward_id": "W219",
+      "pm25_estimate": 196.4,
       "candidates": [
         {
           "name": "industrial_1162625780",
@@ -4385,14 +4446,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 9
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z05"
   },
   {
     "cell": "883da18c91fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 234.4,
+    "ward_id": "W219",
+    "pm25_estimate": 196.4,
     "primary_source": "waste_burning",
     "confidence": 0.76,
     "scores": {
@@ -4401,16 +4462,20 @@
       "waste_burning": 3.45,
       "traffic": 0.752
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "The waste_burning category has the highest deterministic score of 3.45, indicating it as the most likely primary source. This is strongly supported by significant fire_activity, with 30 fire hours, and an elevated Aerosol Absorbing Index (AAI) at the 70th percentile, both consistent with burning. Additionally, the landuse_context shows a presence of waste_burning, and air_trapped meteorological conditions would concentrate these emissions.",
     "evidence_factors": [
-      "satellite fire detections in 30 hours (18% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "waste_burning category score (3.45)",
+      "fire_activity (30 fire hours)",
+      "elevated AAI (70th percentile)",
+      "waste_burning landuse context (3)",
+      "air_trapped meteorology",
+      "high PM2.5 estimate (196.4)"
     ],
     "evidence": {
       "cell": "883da18cd7fffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 234.4,
+      "ward_id": "W219",
+      "pm25_estimate": 196.4,
       "candidates": [
         {
           "name": "industrial_1162625780",
@@ -4502,14 +4567,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 9
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z05"
   },
   {
     "cell": "883da18c83fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 234.4,
+    "ward_id": "W219",
+    "pm25_estimate": 196.4,
     "primary_source": "waste_burning",
     "confidence": 0.76,
     "scores": {
@@ -4518,16 +4583,20 @@
       "waste_burning": 3.45,
       "traffic": 0.752
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "The waste_burning category has the highest deterministic score of 3.45, indicating it as the most likely primary source. This is strongly supported by significant fire_activity, with 30 fire hours, and an elevated Aerosol Absorbing Index (AAI) at the 70th percentile, both consistent with burning. Additionally, the landuse_context shows a presence of waste_burning, and air_trapped meteorological conditions would concentrate these emissions.",
     "evidence_factors": [
-      "satellite fire detections in 30 hours (18% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "waste_burning category score (3.45)",
+      "fire_activity (30 fire hours)",
+      "elevated AAI (70th percentile)",
+      "waste_burning landuse context (3)",
+      "air_trapped meteorology",
+      "high PM2.5 estimate (196.4)"
     ],
     "evidence": {
       "cell": "883da18cd7fffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 234.4,
+      "ward_id": "W219",
+      "pm25_estimate": 196.4,
       "candidates": [
         {
           "name": "industrial_1162625780",
@@ -4619,14 +4688,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 9
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z05"
   },
   {
     "cell": "883da18c9dfffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 234.4,
+    "ward_id": "W219",
+    "pm25_estimate": 196.4,
     "primary_source": "waste_burning",
     "confidence": 0.76,
     "scores": {
@@ -4635,16 +4704,20 @@
       "waste_burning": 3.45,
       "traffic": 0.752
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "The waste_burning category has the highest deterministic score of 3.45, indicating it as the most likely primary source. This is strongly supported by significant fire_activity, with 30 fire hours, and an elevated Aerosol Absorbing Index (AAI) at the 70th percentile, both consistent with burning. Additionally, the landuse_context shows a presence of waste_burning, and air_trapped meteorological conditions would concentrate these emissions.",
     "evidence_factors": [
-      "satellite fire detections in 30 hours (18% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "waste_burning category score (3.45)",
+      "fire_activity (30 fire hours)",
+      "elevated AAI (70th percentile)",
+      "waste_burning landuse context (3)",
+      "air_trapped meteorology",
+      "high PM2.5 estimate (196.4)"
     ],
     "evidence": {
       "cell": "883da18cd7fffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 234.4,
+      "ward_id": "W219",
+      "pm25_estimate": 196.4,
       "candidates": [
         {
           "name": "industrial_1162625780",
@@ -4736,14 +4809,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 9
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z05"
   },
   {
     "cell": "883da18c8bfffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 234.4,
+    "ward_id": "W219",
+    "pm25_estimate": 196.4,
     "primary_source": "waste_burning",
     "confidence": 0.76,
     "scores": {
@@ -4752,16 +4825,20 @@
       "waste_burning": 3.45,
       "traffic": 0.752
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "The waste_burning category has the highest deterministic score of 3.45, indicating it as the most likely primary source. This is strongly supported by significant fire_activity, with 30 fire hours, and an elevated Aerosol Absorbing Index (AAI) at the 70th percentile, both consistent with burning. Additionally, the landuse_context shows a presence of waste_burning, and air_trapped meteorological conditions would concentrate these emissions.",
     "evidence_factors": [
-      "satellite fire detections in 30 hours (18% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "waste_burning category score (3.45)",
+      "fire_activity (30 fire hours)",
+      "elevated AAI (70th percentile)",
+      "waste_burning landuse context (3)",
+      "air_trapped meteorology",
+      "high PM2.5 estimate (196.4)"
     ],
     "evidence": {
       "cell": "883da18cd7fffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 234.4,
+      "ward_id": "W219",
+      "pm25_estimate": 196.4,
       "candidates": [
         {
           "name": "industrial_1162625780",
@@ -4853,14 +4930,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 9
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z05"
   },
   {
     "cell": "883da18c95fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 234.4,
+    "ward_id": "W219",
+    "pm25_estimate": 196.4,
     "primary_source": "waste_burning",
     "confidence": 0.76,
     "scores": {
@@ -4869,16 +4946,20 @@
       "waste_burning": 3.45,
       "traffic": 0.752
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "The waste_burning category has the highest deterministic score of 3.45, indicating it as the most likely primary source. This is strongly supported by significant fire_activity, with 30 fire hours, and an elevated Aerosol Absorbing Index (AAI) at the 70th percentile, both consistent with burning. Additionally, the landuse_context shows a presence of waste_burning, and air_trapped meteorological conditions would concentrate these emissions.",
     "evidence_factors": [
-      "satellite fire detections in 30 hours (18% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "waste_burning category score (3.45)",
+      "fire_activity (30 fire hours)",
+      "elevated AAI (70th percentile)",
+      "waste_burning landuse context (3)",
+      "air_trapped meteorology",
+      "high PM2.5 estimate (196.4)"
     ],
     "evidence": {
       "cell": "883da18cd7fffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 234.4,
+      "ward_id": "W219",
+      "pm25_estimate": 196.4,
       "candidates": [
         {
           "name": "industrial_1162625780",
@@ -4970,14 +5051,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 9
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z05"
   },
   {
     "cell": "883da18c99fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 234.4,
+    "ward_id": "W219",
+    "pm25_estimate": 196.4,
     "primary_source": "waste_burning",
     "confidence": 0.76,
     "scores": {
@@ -4986,16 +5067,20 @@
       "waste_burning": 3.45,
       "traffic": 0.752
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "The waste_burning category has the highest deterministic score of 3.45, indicating it as the most likely primary source. This is strongly supported by significant fire_activity, with 30 fire hours, and an elevated Aerosol Absorbing Index (AAI) at the 70th percentile, both consistent with burning. Additionally, the landuse_context shows a presence of waste_burning, and air_trapped meteorological conditions would concentrate these emissions.",
     "evidence_factors": [
-      "satellite fire detections in 30 hours (18% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "waste_burning category score (3.45)",
+      "fire_activity (30 fire hours)",
+      "elevated AAI (70th percentile)",
+      "waste_burning landuse context (3)",
+      "air_trapped meteorology",
+      "high PM2.5 estimate (196.4)"
     ],
     "evidence": {
       "cell": "883da18cd7fffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 234.4,
+      "ward_id": "W219",
+      "pm25_estimate": 196.4,
       "candidates": [
         {
           "name": "industrial_1162625780",
@@ -5087,14 +5172,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 9
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z05"
   },
   {
     "cell": "883da18cd3fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 234.4,
+    "ward_id": "W219",
+    "pm25_estimate": 196.4,
     "primary_source": "waste_burning",
     "confidence": 0.76,
     "scores": {
@@ -5103,16 +5188,20 @@
       "waste_burning": 3.45,
       "traffic": 0.752
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "The waste_burning category has the highest deterministic score of 3.45, indicating it as the most likely primary source. This is strongly supported by significant fire_activity, with 30 fire hours, and an elevated Aerosol Absorbing Index (AAI) at the 70th percentile, both consistent with burning. Additionally, the landuse_context shows a presence of waste_burning, and air_trapped meteorological conditions would concentrate these emissions.",
     "evidence_factors": [
-      "satellite fire detections in 30 hours (18% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "waste_burning category score (3.45)",
+      "fire_activity (30 fire hours)",
+      "elevated AAI (70th percentile)",
+      "waste_burning landuse context (3)",
+      "air_trapped meteorology",
+      "high PM2.5 estimate (196.4)"
     ],
     "evidence": {
       "cell": "883da18cd7fffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 234.4,
+      "ward_id": "W219",
+      "pm25_estimate": 196.4,
       "candidates": [
         {
           "name": "industrial_1162625780",
@@ -5204,14 +5293,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 9
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z05"
   },
   {
     "cell": "883da18cd5fffff",
     "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 234.4,
+    "ward_id": "W219",
+    "pm25_estimate": 196.4,
     "primary_source": "waste_burning",
     "confidence": 0.76,
     "scores": {
@@ -5220,16 +5309,20 @@
       "waste_burning": 3.45,
       "traffic": 0.752
     },
-    "reason": "Deterministic evidence scoring points to waste burning as the primary source. satellite fire detections in 30 hours (18% of the window); shallow boundary layer (120 m) trapping emissions.",
+    "reason": "The waste_burning category has the highest deterministic score of 3.45, indicating it as the most likely primary source. This is strongly supported by significant fire_activity, with 30 fire hours, and an elevated Aerosol Absorbing Index (AAI) at the 70th percentile, both consistent with burning. Additionally, the landuse_context shows a presence of waste_burning, and air_trapped meteorological conditions would concentrate these emissions.",
     "evidence_factors": [
-      "satellite fire detections in 30 hours (18% of the window)",
-      "shallow boundary layer (120 m) trapping emissions"
+      "waste_burning category score (3.45)",
+      "fire_activity (30 fire hours)",
+      "elevated AAI (70th percentile)",
+      "waste_burning landuse context (3)",
+      "air_trapped meteorology",
+      "high PM2.5 estimate (196.4)"
     ],
     "evidence": {
       "cell": "883da18cd7fffff",
       "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 234.4,
+      "ward_id": "W219",
+      "pm25_estimate": 196.4,
       "candidates": [
         {
           "name": "industrial_1162625780",
@@ -5321,132 +5414,14 @@
       "evidence_window_hours": 168,
       "zone_cells": 9
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z05"
-  },
-  {
-    "cell": "883da1050dfffff",
-    "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 118.9,
-    "primary_source": "traffic",
-    "confidence": 0.78,
-    "scores": {
-      "industrial": 0.0,
-      "construction": 0.0,
-      "waste_burning": 0.0,
-      "traffic": 1.011
-    },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. DND KMP Expressway is 0.99 km away, wind alignment 0.92; NO2 column at p93 citywide; shallow boundary layer (150 m) trapping emissions.",
-    "evidence_factors": [
-      "DND KMP Expressway is 0.99 km away, wind alignment 0.92",
-      "NO2 column at p93 citywide",
-      "shallow boundary layer (150 m) trapping emissions"
-    ],
-    "evidence": {
-      "cell": "883da1050dfffff",
-      "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 118.9,
-      "candidates": [
-        {
-          "name": "DND KMP Expressway",
-          "type": "traffic",
-          "distance_km": 0.99,
-          "wind_alignment": 0.92
-        },
-        {
-          "name": "DND KMP Expressway",
-          "type": "traffic",
-          "distance_km": 1.0,
-          "wind_alignment": 0.92
-        },
-        {
-          "name": "DND KMP Expressway",
-          "type": "traffic",
-          "distance_km": 1.43,
-          "wind_alignment": 0.95
-        },
-        {
-          "name": "DND KMP Expressway",
-          "type": "traffic",
-          "distance_km": 1.44,
-          "wind_alignment": 0.95
-        },
-        {
-          "name": "DND KMP Expressway",
-          "type": "traffic",
-          "distance_km": 1.03,
-          "wind_alignment": 0.79
-        },
-        {
-          "name": "DND KMP Expressway",
-          "type": "traffic",
-          "distance_km": 1.02,
-          "wind_alignment": 0.78
-        },
-        {
-          "name": "DND KMP Expressway",
-          "type": "traffic",
-          "distance_km": 1.09,
-          "wind_alignment": 0.69
-        },
-        {
-          "name": "DND KMP Expressway",
-          "type": "traffic",
-          "distance_km": 1.11,
-          "wind_alignment": 0.69
-        }
-      ],
-      "pollutant_signature": {
-        "no2_col": {
-          "value": 225.1,
-          "city_percentile": 93
-        },
-        "so2_col": {
-          "value": -162.8,
-          "city_percentile": 24
-        },
-        "aai": {
-          "value": 0.5,
-          "city_percentile": 65
-        }
-      },
-      "fire_activity": {
-        "fire_hours": 0,
-        "fire_hour_fraction": 0.0,
-        "frp_p90": 0.0
-      },
-      "citizen_corroboration": {
-        "n_reports": 0,
-        "categories": {},
-        "window_hours": 24
-      },
-      "landuse_context": {
-        "industrial": 0,
-        "construction": 0,
-        "waste_burning": 0,
-        "traffic": 10
-      },
-      "meteorology": {
-        "wind_from_deg": 301,
-        "wind_ms": 1.7,
-        "blh_m": 150,
-        "hour_local": 23,
-        "air_trapped": true
-      },
-      "hotspot_kind": "acute",
-      "evidence_window_hours": 24,
-      "zone_cells": 1
-    },
-    "explained_by": "rules",
-    "zone_id": "Z03"
   },
   {
     "cell": "883da11a97fffff",
     "ts": "2025-11-29 23:00:00+00:00",
     "ward_id": "unassigned",
-    "pm25_estimate": 134.9,
+    "pm25_estimate": 152.3,
     "primary_source": "traffic",
     "confidence": 0.14,
     "scores": {
@@ -5455,16 +5430,19 @@
       "waste_burning": 0.0,
       "traffic": 0.303
     },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions.",
+    "reason": "Traffic is the most likely primary source, indicated by its highest category score of 0.303. Multiple traffic candidates, such as Mehrauli Gurgaon Road and Delhi-Gurugram Expressway, are within 2-3 km and exhibit high wind alignment (up to 0.97), suggesting their emissions are carried to the hotspot. Additionally, the pollutant signature shows a NO2 column value of 86.8, consistent with traffic-related pollution, and meteorological conditions indicate trapped air.",
     "evidence_factors": [
-      "Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93",
-      "shallow boundary layer (150 m) trapping emissions"
+      "Traffic category score (0.303)",
+      "Multiple traffic candidates (Mehrauli Gurgaon Road, Delhi-Gurugram Expressway)",
+      "High wind alignment for traffic candidates (up to 0.97)",
+      "NO2 column value (86.8)",
+      "Air trapped (true) and low boundary layer height (150m)"
     ],
     "evidence": {
       "cell": "883da11a97fffff",
       "ts": "2025-11-29 23:00:00+00:00",
       "ward_id": "unassigned",
-      "pm25_estimate": 134.9,
+      "pm25_estimate": 152.3,
       "candidates": [
         {
           "name": "Mehrauli Gurgaon Road",
@@ -5556,14 +5534,14 @@
       "evidence_window_hours": 24,
       "zone_cells": 13
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z01"
   },
   {
     "cell": "883da1036dfffff",
     "ts": "2025-11-29 23:00:00+00:00",
     "ward_id": "unassigned",
-    "pm25_estimate": 134.9,
+    "pm25_estimate": 152.3,
     "primary_source": "traffic",
     "confidence": 0.14,
     "scores": {
@@ -5572,16 +5550,19 @@
       "waste_burning": 0.0,
       "traffic": 0.303
     },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions.",
+    "reason": "Traffic is the most likely primary source, indicated by its highest category score of 0.303. Multiple traffic candidates, such as Mehrauli Gurgaon Road and Delhi-Gurugram Expressway, are within 2-3 km and exhibit high wind alignment (up to 0.97), suggesting their emissions are carried to the hotspot. Additionally, the pollutant signature shows a NO2 column value of 86.8, consistent with traffic-related pollution, and meteorological conditions indicate trapped air.",
     "evidence_factors": [
-      "Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93",
-      "shallow boundary layer (150 m) trapping emissions"
+      "Traffic category score (0.303)",
+      "Multiple traffic candidates (Mehrauli Gurgaon Road, Delhi-Gurugram Expressway)",
+      "High wind alignment for traffic candidates (up to 0.97)",
+      "NO2 column value (86.8)",
+      "Air trapped (true) and low boundary layer height (150m)"
     ],
     "evidence": {
       "cell": "883da11a97fffff",
       "ts": "2025-11-29 23:00:00+00:00",
       "ward_id": "unassigned",
-      "pm25_estimate": 134.9,
+      "pm25_estimate": 152.3,
       "candidates": [
         {
           "name": "Mehrauli Gurgaon Road",
@@ -5673,14 +5654,14 @@
       "evidence_window_hours": 24,
       "zone_cells": 13
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z01"
   },
   {
     "cell": "883da11abbfffff",
     "ts": "2025-11-29 23:00:00+00:00",
     "ward_id": "unassigned",
-    "pm25_estimate": 134.9,
+    "pm25_estimate": 152.3,
     "primary_source": "traffic",
     "confidence": 0.14,
     "scores": {
@@ -5689,16 +5670,19 @@
       "waste_burning": 0.0,
       "traffic": 0.303
     },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions.",
+    "reason": "Traffic is the most likely primary source, indicated by its highest category score of 0.303. Multiple traffic candidates, such as Mehrauli Gurgaon Road and Delhi-Gurugram Expressway, are within 2-3 km and exhibit high wind alignment (up to 0.97), suggesting their emissions are carried to the hotspot. Additionally, the pollutant signature shows a NO2 column value of 86.8, consistent with traffic-related pollution, and meteorological conditions indicate trapped air.",
     "evidence_factors": [
-      "Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93",
-      "shallow boundary layer (150 m) trapping emissions"
+      "Traffic category score (0.303)",
+      "Multiple traffic candidates (Mehrauli Gurgaon Road, Delhi-Gurugram Expressway)",
+      "High wind alignment for traffic candidates (up to 0.97)",
+      "NO2 column value (86.8)",
+      "Air trapped (true) and low boundary layer height (150m)"
     ],
     "evidence": {
       "cell": "883da11a97fffff",
       "ts": "2025-11-29 23:00:00+00:00",
       "ward_id": "unassigned",
-      "pm25_estimate": 134.9,
+      "pm25_estimate": 152.3,
       "candidates": [
         {
           "name": "Mehrauli Gurgaon Road",
@@ -5790,14 +5774,14 @@
       "evidence_window_hours": 24,
       "zone_cells": 13
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z01"
   },
   {
     "cell": "883da10369fffff",
     "ts": "2025-11-29 23:00:00+00:00",
     "ward_id": "unassigned",
-    "pm25_estimate": 134.9,
+    "pm25_estimate": 152.3,
     "primary_source": "traffic",
     "confidence": 0.14,
     "scores": {
@@ -5806,16 +5790,19 @@
       "waste_burning": 0.0,
       "traffic": 0.303
     },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions.",
+    "reason": "Traffic is the most likely primary source, indicated by its highest category score of 0.303. Multiple traffic candidates, such as Mehrauli Gurgaon Road and Delhi-Gurugram Expressway, are within 2-3 km and exhibit high wind alignment (up to 0.97), suggesting their emissions are carried to the hotspot. Additionally, the pollutant signature shows a NO2 column value of 86.8, consistent with traffic-related pollution, and meteorological conditions indicate trapped air.",
     "evidence_factors": [
-      "Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93",
-      "shallow boundary layer (150 m) trapping emissions"
+      "Traffic category score (0.303)",
+      "Multiple traffic candidates (Mehrauli Gurgaon Road, Delhi-Gurugram Expressway)",
+      "High wind alignment for traffic candidates (up to 0.97)",
+      "NO2 column value (86.8)",
+      "Air trapped (true) and low boundary layer height (150m)"
     ],
     "evidence": {
       "cell": "883da11a97fffff",
       "ts": "2025-11-29 23:00:00+00:00",
       "ward_id": "unassigned",
-      "pm25_estimate": 134.9,
+      "pm25_estimate": 152.3,
       "candidates": [
         {
           "name": "Mehrauli Gurgaon Road",
@@ -5907,14 +5894,14 @@
       "evidence_window_hours": 24,
       "zone_cells": 13
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z01"
   },
   {
     "cell": "883da10367fffff",
     "ts": "2025-11-29 23:00:00+00:00",
     "ward_id": "unassigned",
-    "pm25_estimate": 134.9,
+    "pm25_estimate": 152.3,
     "primary_source": "traffic",
     "confidence": 0.14,
     "scores": {
@@ -5923,16 +5910,19 @@
       "waste_burning": 0.0,
       "traffic": 0.303
     },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions.",
+    "reason": "Traffic is the most likely primary source, indicated by its highest category score of 0.303. Multiple traffic candidates, such as Mehrauli Gurgaon Road and Delhi-Gurugram Expressway, are within 2-3 km and exhibit high wind alignment (up to 0.97), suggesting their emissions are carried to the hotspot. Additionally, the pollutant signature shows a NO2 column value of 86.8, consistent with traffic-related pollution, and meteorological conditions indicate trapped air.",
     "evidence_factors": [
-      "Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93",
-      "shallow boundary layer (150 m) trapping emissions"
+      "Traffic category score (0.303)",
+      "Multiple traffic candidates (Mehrauli Gurgaon Road, Delhi-Gurugram Expressway)",
+      "High wind alignment for traffic candidates (up to 0.97)",
+      "NO2 column value (86.8)",
+      "Air trapped (true) and low boundary layer height (150m)"
     ],
     "evidence": {
       "cell": "883da11a97fffff",
       "ts": "2025-11-29 23:00:00+00:00",
       "ward_id": "unassigned",
-      "pm25_estimate": 134.9,
+      "pm25_estimate": 152.3,
       "candidates": [
         {
           "name": "Mehrauli Gurgaon Road",
@@ -6024,14 +6014,14 @@
       "evidence_window_hours": 24,
       "zone_cells": 13
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z01"
   },
   {
     "cell": "883da10329fffff",
     "ts": "2025-11-29 23:00:00+00:00",
     "ward_id": "unassigned",
-    "pm25_estimate": 134.9,
+    "pm25_estimate": 152.3,
     "primary_source": "traffic",
     "confidence": 0.14,
     "scores": {
@@ -6040,16 +6030,19 @@
       "waste_burning": 0.0,
       "traffic": 0.303
     },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions.",
+    "reason": "Traffic is the most likely primary source, indicated by its highest category score of 0.303. Multiple traffic candidates, such as Mehrauli Gurgaon Road and Delhi-Gurugram Expressway, are within 2-3 km and exhibit high wind alignment (up to 0.97), suggesting their emissions are carried to the hotspot. Additionally, the pollutant signature shows a NO2 column value of 86.8, consistent with traffic-related pollution, and meteorological conditions indicate trapped air.",
     "evidence_factors": [
-      "Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93",
-      "shallow boundary layer (150 m) trapping emissions"
+      "Traffic category score (0.303)",
+      "Multiple traffic candidates (Mehrauli Gurgaon Road, Delhi-Gurugram Expressway)",
+      "High wind alignment for traffic candidates (up to 0.97)",
+      "NO2 column value (86.8)",
+      "Air trapped (true) and low boundary layer height (150m)"
     ],
     "evidence": {
       "cell": "883da11a97fffff",
       "ts": "2025-11-29 23:00:00+00:00",
       "ward_id": "unassigned",
-      "pm25_estimate": 134.9,
+      "pm25_estimate": 152.3,
       "candidates": [
         {
           "name": "Mehrauli Gurgaon Road",
@@ -6141,14 +6134,14 @@
       "evidence_window_hours": 24,
       "zone_cells": 13
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z01"
   },
   {
     "cell": "883da10361fffff",
     "ts": "2025-11-29 23:00:00+00:00",
     "ward_id": "unassigned",
-    "pm25_estimate": 134.9,
+    "pm25_estimate": 152.3,
     "primary_source": "traffic",
     "confidence": 0.14,
     "scores": {
@@ -6157,16 +6150,19 @@
       "waste_burning": 0.0,
       "traffic": 0.303
     },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions.",
+    "reason": "Traffic is the most likely primary source, indicated by its highest category score of 0.303. Multiple traffic candidates, such as Mehrauli Gurgaon Road and Delhi-Gurugram Expressway, are within 2-3 km and exhibit high wind alignment (up to 0.97), suggesting their emissions are carried to the hotspot. Additionally, the pollutant signature shows a NO2 column value of 86.8, consistent with traffic-related pollution, and meteorological conditions indicate trapped air.",
     "evidence_factors": [
-      "Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93",
-      "shallow boundary layer (150 m) trapping emissions"
+      "Traffic category score (0.303)",
+      "Multiple traffic candidates (Mehrauli Gurgaon Road, Delhi-Gurugram Expressway)",
+      "High wind alignment for traffic candidates (up to 0.97)",
+      "NO2 column value (86.8)",
+      "Air trapped (true) and low boundary layer height (150m)"
     ],
     "evidence": {
       "cell": "883da11a97fffff",
       "ts": "2025-11-29 23:00:00+00:00",
       "ward_id": "unassigned",
-      "pm25_estimate": 134.9,
+      "pm25_estimate": 152.3,
       "candidates": [
         {
           "name": "Mehrauli Gurgaon Road",
@@ -6258,14 +6254,14 @@
       "evidence_window_hours": 24,
       "zone_cells": 13
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z01"
   },
   {
     "cell": "883da1030dfffff",
     "ts": "2025-11-29 23:00:00+00:00",
     "ward_id": "unassigned",
-    "pm25_estimate": 134.9,
+    "pm25_estimate": 152.3,
     "primary_source": "traffic",
     "confidence": 0.14,
     "scores": {
@@ -6274,16 +6270,19 @@
       "waste_burning": 0.0,
       "traffic": 0.303
     },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions.",
+    "reason": "Traffic is the most likely primary source, indicated by its highest category score of 0.303. Multiple traffic candidates, such as Mehrauli Gurgaon Road and Delhi-Gurugram Expressway, are within 2-3 km and exhibit high wind alignment (up to 0.97), suggesting their emissions are carried to the hotspot. Additionally, the pollutant signature shows a NO2 column value of 86.8, consistent with traffic-related pollution, and meteorological conditions indicate trapped air.",
     "evidence_factors": [
-      "Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93",
-      "shallow boundary layer (150 m) trapping emissions"
+      "Traffic category score (0.303)",
+      "Multiple traffic candidates (Mehrauli Gurgaon Road, Delhi-Gurugram Expressway)",
+      "High wind alignment for traffic candidates (up to 0.97)",
+      "NO2 column value (86.8)",
+      "Air trapped (true) and low boundary layer height (150m)"
     ],
     "evidence": {
       "cell": "883da11a97fffff",
       "ts": "2025-11-29 23:00:00+00:00",
       "ward_id": "unassigned",
-      "pm25_estimate": 134.9,
+      "pm25_estimate": 152.3,
       "candidates": [
         {
           "name": "Mehrauli Gurgaon Road",
@@ -6375,14 +6374,14 @@
       "evidence_window_hours": 24,
       "zone_cells": 13
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z01"
   },
   {
     "cell": "883da1036bfffff",
     "ts": "2025-11-29 23:00:00+00:00",
     "ward_id": "unassigned",
-    "pm25_estimate": 134.9,
+    "pm25_estimate": 152.3,
     "primary_source": "traffic",
     "confidence": 0.14,
     "scores": {
@@ -6391,16 +6390,19 @@
       "waste_burning": 0.0,
       "traffic": 0.303
     },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions.",
+    "reason": "Traffic is the most likely primary source, indicated by its highest category score of 0.303. Multiple traffic candidates, such as Mehrauli Gurgaon Road and Delhi-Gurugram Expressway, are within 2-3 km and exhibit high wind alignment (up to 0.97), suggesting their emissions are carried to the hotspot. Additionally, the pollutant signature shows a NO2 column value of 86.8, consistent with traffic-related pollution, and meteorological conditions indicate trapped air.",
     "evidence_factors": [
-      "Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93",
-      "shallow boundary layer (150 m) trapping emissions"
+      "Traffic category score (0.303)",
+      "Multiple traffic candidates (Mehrauli Gurgaon Road, Delhi-Gurugram Expressway)",
+      "High wind alignment for traffic candidates (up to 0.97)",
+      "NO2 column value (86.8)",
+      "Air trapped (true) and low boundary layer height (150m)"
     ],
     "evidence": {
       "cell": "883da11a97fffff",
       "ts": "2025-11-29 23:00:00+00:00",
       "ward_id": "unassigned",
-      "pm25_estimate": 134.9,
+      "pm25_estimate": 152.3,
       "candidates": [
         {
           "name": "Mehrauli Gurgaon Road",
@@ -6492,14 +6494,14 @@
       "evidence_window_hours": 24,
       "zone_cells": 13
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z01"
   },
   {
     "cell": "883da10363fffff",
     "ts": "2025-11-29 23:00:00+00:00",
     "ward_id": "unassigned",
-    "pm25_estimate": 134.9,
+    "pm25_estimate": 152.3,
     "primary_source": "traffic",
     "confidence": 0.14,
     "scores": {
@@ -6508,16 +6510,19 @@
       "waste_burning": 0.0,
       "traffic": 0.303
     },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions.",
+    "reason": "Traffic is the most likely primary source, indicated by its highest category score of 0.303. Multiple traffic candidates, such as Mehrauli Gurgaon Road and Delhi-Gurugram Expressway, are within 2-3 km and exhibit high wind alignment (up to 0.97), suggesting their emissions are carried to the hotspot. Additionally, the pollutant signature shows a NO2 column value of 86.8, consistent with traffic-related pollution, and meteorological conditions indicate trapped air.",
     "evidence_factors": [
-      "Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93",
-      "shallow boundary layer (150 m) trapping emissions"
+      "Traffic category score (0.303)",
+      "Multiple traffic candidates (Mehrauli Gurgaon Road, Delhi-Gurugram Expressway)",
+      "High wind alignment for traffic candidates (up to 0.97)",
+      "NO2 column value (86.8)",
+      "Air trapped (true) and low boundary layer height (150m)"
     ],
     "evidence": {
       "cell": "883da11a97fffff",
       "ts": "2025-11-29 23:00:00+00:00",
       "ward_id": "unassigned",
-      "pm25_estimate": 134.9,
+      "pm25_estimate": 152.3,
       "candidates": [
         {
           "name": "Mehrauli Gurgaon Road",
@@ -6609,14 +6614,14 @@
       "evidence_window_hours": 24,
       "zone_cells": 13
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z01"
   },
   {
     "cell": "883da10305fffff",
     "ts": "2025-11-29 23:00:00+00:00",
     "ward_id": "unassigned",
-    "pm25_estimate": 134.9,
+    "pm25_estimate": 152.3,
     "primary_source": "traffic",
     "confidence": 0.14,
     "scores": {
@@ -6625,16 +6630,19 @@
       "waste_burning": 0.0,
       "traffic": 0.303
     },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions.",
+    "reason": "Traffic is the most likely primary source, indicated by its highest category score of 0.303. Multiple traffic candidates, such as Mehrauli Gurgaon Road and Delhi-Gurugram Expressway, are within 2-3 km and exhibit high wind alignment (up to 0.97), suggesting their emissions are carried to the hotspot. Additionally, the pollutant signature shows a NO2 column value of 86.8, consistent with traffic-related pollution, and meteorological conditions indicate trapped air.",
     "evidence_factors": [
-      "Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93",
-      "shallow boundary layer (150 m) trapping emissions"
+      "Traffic category score (0.303)",
+      "Multiple traffic candidates (Mehrauli Gurgaon Road, Delhi-Gurugram Expressway)",
+      "High wind alignment for traffic candidates (up to 0.97)",
+      "NO2 column value (86.8)",
+      "Air trapped (true) and low boundary layer height (150m)"
     ],
     "evidence": {
       "cell": "883da11a97fffff",
       "ts": "2025-11-29 23:00:00+00:00",
       "ward_id": "unassigned",
-      "pm25_estimate": 134.9,
+      "pm25_estimate": 152.3,
       "candidates": [
         {
           "name": "Mehrauli Gurgaon Road",
@@ -6726,14 +6734,14 @@
       "evidence_window_hours": 24,
       "zone_cells": 13
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z01"
   },
   {
     "cell": "883da10365fffff",
     "ts": "2025-11-29 23:00:00+00:00",
     "ward_id": "unassigned",
-    "pm25_estimate": 134.9,
+    "pm25_estimate": 152.3,
     "primary_source": "traffic",
     "confidence": 0.14,
     "scores": {
@@ -6742,16 +6750,19 @@
       "waste_burning": 0.0,
       "traffic": 0.303
     },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions.",
+    "reason": "Traffic is the most likely primary source, indicated by its highest category score of 0.303. Multiple traffic candidates, such as Mehrauli Gurgaon Road and Delhi-Gurugram Expressway, are within 2-3 km and exhibit high wind alignment (up to 0.97), suggesting their emissions are carried to the hotspot. Additionally, the pollutant signature shows a NO2 column value of 86.8, consistent with traffic-related pollution, and meteorological conditions indicate trapped air.",
     "evidence_factors": [
-      "Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93",
-      "shallow boundary layer (150 m) trapping emissions"
+      "Traffic category score (0.303)",
+      "Multiple traffic candidates (Mehrauli Gurgaon Road, Delhi-Gurugram Expressway)",
+      "High wind alignment for traffic candidates (up to 0.97)",
+      "NO2 column value (86.8)",
+      "Air trapped (true) and low boundary layer height (150m)"
     ],
     "evidence": {
       "cell": "883da11a97fffff",
       "ts": "2025-11-29 23:00:00+00:00",
       "ward_id": "unassigned",
-      "pm25_estimate": 134.9,
+      "pm25_estimate": 152.3,
       "candidates": [
         {
           "name": "Mehrauli Gurgaon Road",
@@ -6843,14 +6854,14 @@
       "evidence_window_hours": 24,
       "zone_cells": 13
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z01"
   },
   {
     "cell": "883da10347fffff",
     "ts": "2025-11-29 23:00:00+00:00",
     "ward_id": "unassigned",
-    "pm25_estimate": 134.9,
+    "pm25_estimate": 152.3,
     "primary_source": "traffic",
     "confidence": 0.14,
     "scores": {
@@ -6859,16 +6870,19 @@
       "waste_burning": 0.0,
       "traffic": 0.303
     },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93; shallow boundary layer (150 m) trapping emissions.",
+    "reason": "Traffic is the most likely primary source, indicated by its highest category score of 0.303. Multiple traffic candidates, such as Mehrauli Gurgaon Road and Delhi-Gurugram Expressway, are within 2-3 km and exhibit high wind alignment (up to 0.97), suggesting their emissions are carried to the hotspot. Additionally, the pollutant signature shows a NO2 column value of 86.8, consistent with traffic-related pollution, and meteorological conditions indicate trapped air.",
     "evidence_factors": [
-      "Mehrauli Gurgaon Road is 2.24 km away, wind alignment 0.93",
-      "shallow boundary layer (150 m) trapping emissions"
+      "Traffic category score (0.303)",
+      "Multiple traffic candidates (Mehrauli Gurgaon Road, Delhi-Gurugram Expressway)",
+      "High wind alignment for traffic candidates (up to 0.97)",
+      "NO2 column value (86.8)",
+      "Air trapped (true) and low boundary layer height (150m)"
     ],
     "evidence": {
       "cell": "883da11a97fffff",
       "ts": "2025-11-29 23:00:00+00:00",
       "ward_id": "unassigned",
-      "pm25_estimate": 134.9,
+      "pm25_estimate": 152.3,
       "candidates": [
         {
           "name": "Mehrauli Gurgaon Road",
@@ -6960,1294 +6974,7 @@
       "evidence_window_hours": 24,
       "zone_cells": 13
     },
-    "explained_by": "rules",
+    "explained_by": "gemini",
     "zone_id": "Z01"
-  },
-  {
-    "cell": "883da10209fffff",
-    "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 103.2,
-    "primary_source": "traffic",
-    "confidence": 0.1,
-    "scores": {
-      "industrial": 0.0,
-      "construction": 0.065,
-      "waste_burning": 0.0,
-      "traffic": 0.141
-    },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions.",
-    "evidence_factors": [
-      "Mahipalpur Flyover is 3.85 km away, wind alignment 0.97",
-      "shallow boundary layer (150 m) trapping emissions"
-    ],
-    "evidence": {
-      "cell": "883da10209fffff",
-      "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 103.2,
-      "candidates": [
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.85,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.89,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.79,
-          "wind_alignment": 0.94
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.81,
-          "wind_alignment": 0.93
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.81,
-          "wind_alignment": 0.93
-        },
-        {
-          "name": "construction_1182580864",
-          "type": "construction",
-          "distance_km": 3.96,
-          "wind_alignment": 0.94
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 4.12,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 4.1,
-          "wind_alignment": 0.96
-        }
-      ],
-      "pollutant_signature": {
-        "no2_col": {
-          "value": 79.9,
-          "city_percentile": 38
-        },
-        "so2_col": {
-          "value": -348.2,
-          "city_percentile": 11
-        },
-        "aai": {
-          "value": 0.4,
-          "city_percentile": 58
-        }
-      },
-      "fire_activity": {
-        "fire_hours": 0,
-        "fire_hour_fraction": 0.0,
-        "frp_p90": 0.0
-      },
-      "citizen_corroboration": {
-        "n_reports": 0,
-        "categories": {},
-        "window_hours": 24
-      },
-      "landuse_context": {
-        "industrial": 0,
-        "construction": 0,
-        "waste_burning": 0,
-        "traffic": 0
-      },
-      "meteorology": {
-        "wind_from_deg": 301,
-        "wind_ms": 1.7,
-        "blh_m": 150,
-        "hour_local": 23,
-        "air_trapped": true
-      },
-      "hotspot_kind": "acute",
-      "evidence_window_hours": 24,
-      "zone_cells": 11
-    },
-    "explained_by": "rules",
-    "zone_id": "Z00"
-  },
-  {
-    "cell": "883da1020dfffff",
-    "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 103.2,
-    "primary_source": "traffic",
-    "confidence": 0.1,
-    "scores": {
-      "industrial": 0.0,
-      "construction": 0.065,
-      "waste_burning": 0.0,
-      "traffic": 0.141
-    },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions.",
-    "evidence_factors": [
-      "Mahipalpur Flyover is 3.85 km away, wind alignment 0.97",
-      "shallow boundary layer (150 m) trapping emissions"
-    ],
-    "evidence": {
-      "cell": "883da10209fffff",
-      "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 103.2,
-      "candidates": [
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.85,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.89,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.79,
-          "wind_alignment": 0.94
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.81,
-          "wind_alignment": 0.93
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.81,
-          "wind_alignment": 0.93
-        },
-        {
-          "name": "construction_1182580864",
-          "type": "construction",
-          "distance_km": 3.96,
-          "wind_alignment": 0.94
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 4.12,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 4.1,
-          "wind_alignment": 0.96
-        }
-      ],
-      "pollutant_signature": {
-        "no2_col": {
-          "value": 79.9,
-          "city_percentile": 38
-        },
-        "so2_col": {
-          "value": -348.2,
-          "city_percentile": 11
-        },
-        "aai": {
-          "value": 0.4,
-          "city_percentile": 58
-        }
-      },
-      "fire_activity": {
-        "fire_hours": 0,
-        "fire_hour_fraction": 0.0,
-        "frp_p90": 0.0
-      },
-      "citizen_corroboration": {
-        "n_reports": 0,
-        "categories": {},
-        "window_hours": 24
-      },
-      "landuse_context": {
-        "industrial": 0,
-        "construction": 0,
-        "waste_burning": 0,
-        "traffic": 0
-      },
-      "meteorology": {
-        "wind_from_deg": 301,
-        "wind_ms": 1.7,
-        "blh_m": 150,
-        "hour_local": 23,
-        "air_trapped": true
-      },
-      "hotspot_kind": "acute",
-      "evidence_window_hours": 24,
-      "zone_cells": 11
-    },
-    "explained_by": "rules",
-    "zone_id": "Z00"
-  },
-  {
-    "cell": "883da10241fffff",
-    "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 103.2,
-    "primary_source": "traffic",
-    "confidence": 0.1,
-    "scores": {
-      "industrial": 0.0,
-      "construction": 0.065,
-      "waste_burning": 0.0,
-      "traffic": 0.141
-    },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions.",
-    "evidence_factors": [
-      "Mahipalpur Flyover is 3.85 km away, wind alignment 0.97",
-      "shallow boundary layer (150 m) trapping emissions"
-    ],
-    "evidence": {
-      "cell": "883da10209fffff",
-      "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 103.2,
-      "candidates": [
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.85,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.89,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.79,
-          "wind_alignment": 0.94
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.81,
-          "wind_alignment": 0.93
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.81,
-          "wind_alignment": 0.93
-        },
-        {
-          "name": "construction_1182580864",
-          "type": "construction",
-          "distance_km": 3.96,
-          "wind_alignment": 0.94
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 4.12,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 4.1,
-          "wind_alignment": 0.96
-        }
-      ],
-      "pollutant_signature": {
-        "no2_col": {
-          "value": 79.9,
-          "city_percentile": 38
-        },
-        "so2_col": {
-          "value": -348.2,
-          "city_percentile": 11
-        },
-        "aai": {
-          "value": 0.4,
-          "city_percentile": 58
-        }
-      },
-      "fire_activity": {
-        "fire_hours": 0,
-        "fire_hour_fraction": 0.0,
-        "frp_p90": 0.0
-      },
-      "citizen_corroboration": {
-        "n_reports": 0,
-        "categories": {},
-        "window_hours": 24
-      },
-      "landuse_context": {
-        "industrial": 0,
-        "construction": 0,
-        "waste_burning": 0,
-        "traffic": 0
-      },
-      "meteorology": {
-        "wind_from_deg": 301,
-        "wind_ms": 1.7,
-        "blh_m": 150,
-        "hour_local": 23,
-        "air_trapped": true
-      },
-      "hotspot_kind": "acute",
-      "evidence_window_hours": 24,
-      "zone_cells": 11
-    },
-    "explained_by": "rules",
-    "zone_id": "Z00"
-  },
-  {
-    "cell": "883da1024dfffff",
-    "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 103.2,
-    "primary_source": "traffic",
-    "confidence": 0.1,
-    "scores": {
-      "industrial": 0.0,
-      "construction": 0.065,
-      "waste_burning": 0.0,
-      "traffic": 0.141
-    },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions.",
-    "evidence_factors": [
-      "Mahipalpur Flyover is 3.85 km away, wind alignment 0.97",
-      "shallow boundary layer (150 m) trapping emissions"
-    ],
-    "evidence": {
-      "cell": "883da10209fffff",
-      "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 103.2,
-      "candidates": [
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.85,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.89,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.79,
-          "wind_alignment": 0.94
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.81,
-          "wind_alignment": 0.93
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.81,
-          "wind_alignment": 0.93
-        },
-        {
-          "name": "construction_1182580864",
-          "type": "construction",
-          "distance_km": 3.96,
-          "wind_alignment": 0.94
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 4.12,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 4.1,
-          "wind_alignment": 0.96
-        }
-      ],
-      "pollutant_signature": {
-        "no2_col": {
-          "value": 79.9,
-          "city_percentile": 38
-        },
-        "so2_col": {
-          "value": -348.2,
-          "city_percentile": 11
-        },
-        "aai": {
-          "value": 0.4,
-          "city_percentile": 58
-        }
-      },
-      "fire_activity": {
-        "fire_hours": 0,
-        "fire_hour_fraction": 0.0,
-        "frp_p90": 0.0
-      },
-      "citizen_corroboration": {
-        "n_reports": 0,
-        "categories": {},
-        "window_hours": 24
-      },
-      "landuse_context": {
-        "industrial": 0,
-        "construction": 0,
-        "waste_burning": 0,
-        "traffic": 0
-      },
-      "meteorology": {
-        "wind_from_deg": 301,
-        "wind_ms": 1.7,
-        "blh_m": 150,
-        "hour_local": 23,
-        "air_trapped": true
-      },
-      "hotspot_kind": "acute",
-      "evidence_window_hours": 24,
-      "zone_cells": 11
-    },
-    "explained_by": "rules",
-    "zone_id": "Z00"
-  },
-  {
-    "cell": "883da10247fffff",
-    "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 103.2,
-    "primary_source": "traffic",
-    "confidence": 0.1,
-    "scores": {
-      "industrial": 0.0,
-      "construction": 0.065,
-      "waste_burning": 0.0,
-      "traffic": 0.141
-    },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions.",
-    "evidence_factors": [
-      "Mahipalpur Flyover is 3.85 km away, wind alignment 0.97",
-      "shallow boundary layer (150 m) trapping emissions"
-    ],
-    "evidence": {
-      "cell": "883da10209fffff",
-      "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 103.2,
-      "candidates": [
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.85,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.89,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.79,
-          "wind_alignment": 0.94
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.81,
-          "wind_alignment": 0.93
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.81,
-          "wind_alignment": 0.93
-        },
-        {
-          "name": "construction_1182580864",
-          "type": "construction",
-          "distance_km": 3.96,
-          "wind_alignment": 0.94
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 4.12,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 4.1,
-          "wind_alignment": 0.96
-        }
-      ],
-      "pollutant_signature": {
-        "no2_col": {
-          "value": 79.9,
-          "city_percentile": 38
-        },
-        "so2_col": {
-          "value": -348.2,
-          "city_percentile": 11
-        },
-        "aai": {
-          "value": 0.4,
-          "city_percentile": 58
-        }
-      },
-      "fire_activity": {
-        "fire_hours": 0,
-        "fire_hour_fraction": 0.0,
-        "frp_p90": 0.0
-      },
-      "citizen_corroboration": {
-        "n_reports": 0,
-        "categories": {},
-        "window_hours": 24
-      },
-      "landuse_context": {
-        "industrial": 0,
-        "construction": 0,
-        "waste_burning": 0,
-        "traffic": 0
-      },
-      "meteorology": {
-        "wind_from_deg": 301,
-        "wind_ms": 1.7,
-        "blh_m": 150,
-        "hour_local": 23,
-        "air_trapped": true
-      },
-      "hotspot_kind": "acute",
-      "evidence_window_hours": 24,
-      "zone_cells": 11
-    },
-    "explained_by": "rules",
-    "zone_id": "Z00"
-  },
-  {
-    "cell": "883da10245fffff",
-    "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 103.2,
-    "primary_source": "traffic",
-    "confidence": 0.1,
-    "scores": {
-      "industrial": 0.0,
-      "construction": 0.065,
-      "waste_burning": 0.0,
-      "traffic": 0.141
-    },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions.",
-    "evidence_factors": [
-      "Mahipalpur Flyover is 3.85 km away, wind alignment 0.97",
-      "shallow boundary layer (150 m) trapping emissions"
-    ],
-    "evidence": {
-      "cell": "883da10209fffff",
-      "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 103.2,
-      "candidates": [
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.85,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.89,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.79,
-          "wind_alignment": 0.94
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.81,
-          "wind_alignment": 0.93
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.81,
-          "wind_alignment": 0.93
-        },
-        {
-          "name": "construction_1182580864",
-          "type": "construction",
-          "distance_km": 3.96,
-          "wind_alignment": 0.94
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 4.12,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 4.1,
-          "wind_alignment": 0.96
-        }
-      ],
-      "pollutant_signature": {
-        "no2_col": {
-          "value": 79.9,
-          "city_percentile": 38
-        },
-        "so2_col": {
-          "value": -348.2,
-          "city_percentile": 11
-        },
-        "aai": {
-          "value": 0.4,
-          "city_percentile": 58
-        }
-      },
-      "fire_activity": {
-        "fire_hours": 0,
-        "fire_hour_fraction": 0.0,
-        "frp_p90": 0.0
-      },
-      "citizen_corroboration": {
-        "n_reports": 0,
-        "categories": {},
-        "window_hours": 24
-      },
-      "landuse_context": {
-        "industrial": 0,
-        "construction": 0,
-        "waste_burning": 0,
-        "traffic": 0
-      },
-      "meteorology": {
-        "wind_from_deg": 301,
-        "wind_ms": 1.7,
-        "blh_m": 150,
-        "hour_local": 23,
-        "air_trapped": true
-      },
-      "hotspot_kind": "acute",
-      "evidence_window_hours": 24,
-      "zone_cells": 11
-    },
-    "explained_by": "rules",
-    "zone_id": "Z00"
-  },
-  {
-    "cell": "883da1026dfffff",
-    "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 103.2,
-    "primary_source": "traffic",
-    "confidence": 0.1,
-    "scores": {
-      "industrial": 0.0,
-      "construction": 0.065,
-      "waste_burning": 0.0,
-      "traffic": 0.141
-    },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions.",
-    "evidence_factors": [
-      "Mahipalpur Flyover is 3.85 km away, wind alignment 0.97",
-      "shallow boundary layer (150 m) trapping emissions"
-    ],
-    "evidence": {
-      "cell": "883da10209fffff",
-      "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 103.2,
-      "candidates": [
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.85,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.89,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.79,
-          "wind_alignment": 0.94
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.81,
-          "wind_alignment": 0.93
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.81,
-          "wind_alignment": 0.93
-        },
-        {
-          "name": "construction_1182580864",
-          "type": "construction",
-          "distance_km": 3.96,
-          "wind_alignment": 0.94
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 4.12,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 4.1,
-          "wind_alignment": 0.96
-        }
-      ],
-      "pollutant_signature": {
-        "no2_col": {
-          "value": 79.9,
-          "city_percentile": 38
-        },
-        "so2_col": {
-          "value": -348.2,
-          "city_percentile": 11
-        },
-        "aai": {
-          "value": 0.4,
-          "city_percentile": 58
-        }
-      },
-      "fire_activity": {
-        "fire_hours": 0,
-        "fire_hour_fraction": 0.0,
-        "frp_p90": 0.0
-      },
-      "citizen_corroboration": {
-        "n_reports": 0,
-        "categories": {},
-        "window_hours": 24
-      },
-      "landuse_context": {
-        "industrial": 0,
-        "construction": 0,
-        "waste_burning": 0,
-        "traffic": 0
-      },
-      "meteorology": {
-        "wind_from_deg": 301,
-        "wind_ms": 1.7,
-        "blh_m": 150,
-        "hour_local": 23,
-        "air_trapped": true
-      },
-      "hotspot_kind": "acute",
-      "evidence_window_hours": 24,
-      "zone_cells": 11
-    },
-    "explained_by": "rules",
-    "zone_id": "Z00"
-  },
-  {
-    "cell": "883da10261fffff",
-    "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 103.2,
-    "primary_source": "traffic",
-    "confidence": 0.1,
-    "scores": {
-      "industrial": 0.0,
-      "construction": 0.065,
-      "waste_burning": 0.0,
-      "traffic": 0.141
-    },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions.",
-    "evidence_factors": [
-      "Mahipalpur Flyover is 3.85 km away, wind alignment 0.97",
-      "shallow boundary layer (150 m) trapping emissions"
-    ],
-    "evidence": {
-      "cell": "883da10209fffff",
-      "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 103.2,
-      "candidates": [
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.85,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.89,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.79,
-          "wind_alignment": 0.94
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.81,
-          "wind_alignment": 0.93
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.81,
-          "wind_alignment": 0.93
-        },
-        {
-          "name": "construction_1182580864",
-          "type": "construction",
-          "distance_km": 3.96,
-          "wind_alignment": 0.94
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 4.12,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 4.1,
-          "wind_alignment": 0.96
-        }
-      ],
-      "pollutant_signature": {
-        "no2_col": {
-          "value": 79.9,
-          "city_percentile": 38
-        },
-        "so2_col": {
-          "value": -348.2,
-          "city_percentile": 11
-        },
-        "aai": {
-          "value": 0.4,
-          "city_percentile": 58
-        }
-      },
-      "fire_activity": {
-        "fire_hours": 0,
-        "fire_hour_fraction": 0.0,
-        "frp_p90": 0.0
-      },
-      "citizen_corroboration": {
-        "n_reports": 0,
-        "categories": {},
-        "window_hours": 24
-      },
-      "landuse_context": {
-        "industrial": 0,
-        "construction": 0,
-        "waste_burning": 0,
-        "traffic": 0
-      },
-      "meteorology": {
-        "wind_from_deg": 301,
-        "wind_ms": 1.7,
-        "blh_m": 150,
-        "hour_local": 23,
-        "air_trapped": true
-      },
-      "hotspot_kind": "acute",
-      "evidence_window_hours": 24,
-      "zone_cells": 11
-    },
-    "explained_by": "rules",
-    "zone_id": "Z00"
-  },
-  {
-    "cell": "883da10269fffff",
-    "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 103.2,
-    "primary_source": "traffic",
-    "confidence": 0.1,
-    "scores": {
-      "industrial": 0.0,
-      "construction": 0.065,
-      "waste_burning": 0.0,
-      "traffic": 0.141
-    },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions.",
-    "evidence_factors": [
-      "Mahipalpur Flyover is 3.85 km away, wind alignment 0.97",
-      "shallow boundary layer (150 m) trapping emissions"
-    ],
-    "evidence": {
-      "cell": "883da10209fffff",
-      "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 103.2,
-      "candidates": [
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.85,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.89,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.79,
-          "wind_alignment": 0.94
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.81,
-          "wind_alignment": 0.93
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.81,
-          "wind_alignment": 0.93
-        },
-        {
-          "name": "construction_1182580864",
-          "type": "construction",
-          "distance_km": 3.96,
-          "wind_alignment": 0.94
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 4.12,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 4.1,
-          "wind_alignment": 0.96
-        }
-      ],
-      "pollutant_signature": {
-        "no2_col": {
-          "value": 79.9,
-          "city_percentile": 38
-        },
-        "so2_col": {
-          "value": -348.2,
-          "city_percentile": 11
-        },
-        "aai": {
-          "value": 0.4,
-          "city_percentile": 58
-        }
-      },
-      "fire_activity": {
-        "fire_hours": 0,
-        "fire_hour_fraction": 0.0,
-        "frp_p90": 0.0
-      },
-      "citizen_corroboration": {
-        "n_reports": 0,
-        "categories": {},
-        "window_hours": 24
-      },
-      "landuse_context": {
-        "industrial": 0,
-        "construction": 0,
-        "waste_burning": 0,
-        "traffic": 0
-      },
-      "meteorology": {
-        "wind_from_deg": 301,
-        "wind_ms": 1.7,
-        "blh_m": 150,
-        "hour_local": 23,
-        "air_trapped": true
-      },
-      "hotspot_kind": "acute",
-      "evidence_window_hours": 24,
-      "zone_cells": 11
-    },
-    "explained_by": "rules",
-    "zone_id": "Z00"
-  },
-  {
-    "cell": "883da1026bfffff",
-    "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 103.2,
-    "primary_source": "traffic",
-    "confidence": 0.1,
-    "scores": {
-      "industrial": 0.0,
-      "construction": 0.065,
-      "waste_burning": 0.0,
-      "traffic": 0.141
-    },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions.",
-    "evidence_factors": [
-      "Mahipalpur Flyover is 3.85 km away, wind alignment 0.97",
-      "shallow boundary layer (150 m) trapping emissions"
-    ],
-    "evidence": {
-      "cell": "883da10209fffff",
-      "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 103.2,
-      "candidates": [
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.85,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.89,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.79,
-          "wind_alignment": 0.94
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.81,
-          "wind_alignment": 0.93
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.81,
-          "wind_alignment": 0.93
-        },
-        {
-          "name": "construction_1182580864",
-          "type": "construction",
-          "distance_km": 3.96,
-          "wind_alignment": 0.94
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 4.12,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 4.1,
-          "wind_alignment": 0.96
-        }
-      ],
-      "pollutant_signature": {
-        "no2_col": {
-          "value": 79.9,
-          "city_percentile": 38
-        },
-        "so2_col": {
-          "value": -348.2,
-          "city_percentile": 11
-        },
-        "aai": {
-          "value": 0.4,
-          "city_percentile": 58
-        }
-      },
-      "fire_activity": {
-        "fire_hours": 0,
-        "fire_hour_fraction": 0.0,
-        "frp_p90": 0.0
-      },
-      "citizen_corroboration": {
-        "n_reports": 0,
-        "categories": {},
-        "window_hours": 24
-      },
-      "landuse_context": {
-        "industrial": 0,
-        "construction": 0,
-        "waste_burning": 0,
-        "traffic": 0
-      },
-      "meteorology": {
-        "wind_from_deg": 301,
-        "wind_ms": 1.7,
-        "blh_m": 150,
-        "hour_local": 23,
-        "air_trapped": true
-      },
-      "hotspot_kind": "acute",
-      "evidence_window_hours": 24,
-      "zone_cells": 11
-    },
-    "explained_by": "rules",
-    "zone_id": "Z00"
-  },
-  {
-    "cell": "883da11193fffff",
-    "ts": "2025-11-29 23:00:00+00:00",
-    "ward_id": "unassigned",
-    "pm25_estimate": 103.2,
-    "primary_source": "traffic",
-    "confidence": 0.1,
-    "scores": {
-      "industrial": 0.0,
-      "construction": 0.065,
-      "waste_burning": 0.0,
-      "traffic": 0.141
-    },
-    "reason": "Deterministic evidence scoring points to traffic as the primary source. Mahipalpur Flyover is 3.85 km away, wind alignment 0.97; shallow boundary layer (150 m) trapping emissions.",
-    "evidence_factors": [
-      "Mahipalpur Flyover is 3.85 km away, wind alignment 0.97",
-      "shallow boundary layer (150 m) trapping emissions"
-    ],
-    "evidence": {
-      "cell": "883da10209fffff",
-      "ts": "2025-11-29 23:00:00+00:00",
-      "ward_id": "unassigned",
-      "pm25_estimate": 103.2,
-      "candidates": [
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.85,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.89,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.79,
-          "wind_alignment": 0.94
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.81,
-          "wind_alignment": 0.93
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 3.81,
-          "wind_alignment": 0.93
-        },
-        {
-          "name": "construction_1182580864",
-          "type": "construction",
-          "distance_km": 3.96,
-          "wind_alignment": 0.94
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 4.12,
-          "wind_alignment": 0.97
-        },
-        {
-          "name": "Mahipalpur Flyover",
-          "type": "traffic",
-          "distance_km": 4.1,
-          "wind_alignment": 0.96
-        }
-      ],
-      "pollutant_signature": {
-        "no2_col": {
-          "value": 79.9,
-          "city_percentile": 38
-        },
-        "so2_col": {
-          "value": -348.2,
-          "city_percentile": 11
-        },
-        "aai": {
-          "value": 0.4,
-          "city_percentile": 58
-        }
-      },
-      "fire_activity": {
-        "fire_hours": 0,
-        "fire_hour_fraction": 0.0,
-        "frp_p90": 0.0
-      },
-      "citizen_corroboration": {
-        "n_reports": 0,
-        "categories": {},
-        "window_hours": 24
-      },
-      "landuse_context": {
-        "industrial": 0,
-        "construction": 0,
-        "waste_burning": 0,
-        "traffic": 0
-      },
-      "meteorology": {
-        "wind_from_deg": 301,
-        "wind_ms": 1.7,
-        "blh_m": 150,
-        "hour_local": 23,
-        "air_trapped": true
-      },
-      "hotspot_kind": "acute",
-      "evidence_window_hours": 24,
-      "zone_cells": 11
-    },
-    "explained_by": "rules",
-    "zone_id": "Z00"
   }
 ]

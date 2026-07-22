@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T13:08:43.321802+00:00",
+  "generated_at": "2026-07-22T07:53:41.537757+00:00",
   "response_time_claim": "Signal-to-memo is automated and deterministic: a cited enforcement memo and dispatch route are produced in seconds. The manual baseline — correlating a satellite signal to a served notice across agencies — is measured in weeks. This is the response-time reduction.",
   "effectiveness_claim": "NOT yet measured. Intervention effectiveness requires a real intervention between the frozen counterfactual and a realized outcome. The ledger freezes the counterfactual and awaits actioned outcomes from the inspector loop; it does not attribute natural change to itself.",
   "n_actions": 2,
@@ -7,23 +7,23 @@
   "counterfactual_horizon_h": 48,
   "entries": [
     {
-      "action_id": "A02",
-      "zone_id": "Z01",
-      "ward_id": "W181",
-      "ward_name": "Ward 151 (Valasaravakkam)",
+      "action_id": "A01",
+      "zone_id": "Z00",
+      "ward_id": "W100",
+      "ward_name": "Ward 102 (Annanagar)",
       "source": "industrial",
-      "eps": 72.7,
+      "eps": 75.5,
       "response": {
         "signal_at": "2025-11-29 23:00:00+00:00",
-        "memo_drafted_at": "2026-07-20T13:06:12.863014+00:00",
+        "memo_drafted_at": "2026-07-22T07:51:43.297667+00:00",
         "manual_baseline": "weeks (manual cross-agency signal->notice correlation, CAG 2024)",
         "automated": "one batch run: satellite signal -> attribution -> cited memo -> dispatch route, no human correlation step"
       },
       "counterfactual": {
         "horizon_h": 48,
-        "pm25_counterfactual": 19.3,
-        "aqi_counterfactual": 32,
-        "band_counterfactual": "Good",
+        "pm25_counterfactual": 31.6,
+        "aqi_counterfactual": 54,
+        "band_counterfactual": "Satisfactory",
         "frozen_at": "2025-11-29 23:00:00+00:00"
       },
       "observed_change": null,
@@ -31,23 +31,23 @@
       "status": "awaiting_outcome"
     },
     {
-      "action_id": "A01",
-      "zone_id": "Z00",
-      "ward_id": "W104",
-      "ward_name": "Ward 112 (Teynampet)",
-      "source": "industrial",
-      "eps": 71.0,
+      "action_id": "A02",
+      "zone_id": "Z01",
+      "ward_id": "W175",
+      "ward_name": "Ward 150 (Valasaravakkam)",
+      "source": "traffic",
+      "eps": 72.9,
       "response": {
         "signal_at": "2025-11-29 23:00:00+00:00",
-        "memo_drafted_at": "2026-07-20T13:06:13.501579+00:00",
+        "memo_drafted_at": "2026-07-22T07:51:43.936706+00:00",
         "manual_baseline": "weeks (manual cross-agency signal->notice correlation, CAG 2024)",
         "automated": "one batch run: satellite signal -> attribution -> cited memo -> dispatch route, no human correlation step"
       },
       "counterfactual": {
         "horizon_h": 48,
-        "pm25_counterfactual": 28.3,
-        "aqi_counterfactual": 47,
-        "band_counterfactual": "Good",
+        "pm25_counterfactual": 32.3,
+        "aqi_counterfactual": 55,
+        "band_counterfactual": "Satisfactory",
         "frozen_at": "2025-11-29 23:00:00+00:00"
       },
       "observed_change": null,

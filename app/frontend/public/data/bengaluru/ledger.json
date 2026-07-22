@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T13:17:47.381421+00:00",
+  "generated_at": "2026-07-22T07:56:14.670879+00:00",
   "response_time_claim": "Signal-to-memo is automated and deterministic: a cited enforcement memo and dispatch route are produced in seconds. The manual baseline — correlating a satellite signal to a served notice across agencies — is measured in weeks. This is the response-time reduction.",
   "effectiveness_claim": "NOT yet measured. Intervention effectiveness requires a real intervention between the frozen counterfactual and a realized outcome. The ledger freezes the counterfactual and awaits actioned outcomes from the inspector loop; it does not attribute natural change to itself.",
   "n_actions": 6,
@@ -7,22 +7,22 @@
   "counterfactual_horizon_h": 48,
   "entries": [
     {
-      "action_id": "A02",
+      "action_id": "A01",
       "zone_id": "Z00",
       "ward_id": "unassigned",
       "ward_name": "Outside city limits",
       "source": "industrial",
-      "eps": 71.4,
+      "eps": 71.8,
       "response": {
         "signal_at": "2025-11-29 23:00:00+00:00",
-        "memo_drafted_at": "2026-07-20T13:16:27.830841+00:00",
+        "memo_drafted_at": "2026-07-22T07:54:10.854686+00:00",
         "manual_baseline": "weeks (manual cross-agency signal->notice correlation, CAG 2024)",
         "automated": "one batch run: satellite signal -> attribution -> cited memo -> dispatch route, no human correlation step"
       },
       "counterfactual": {
         "horizon_h": 48,
-        "pm25_counterfactual": 45.1,
-        "aqi_counterfactual": 76,
+        "pm25_counterfactual": 41.1,
+        "aqi_counterfactual": 69,
         "band_counterfactual": "Satisfactory",
         "frozen_at": "2025-11-29 23:00:00+00:00"
       },
@@ -31,46 +31,22 @@
       "status": "awaiting_outcome"
     },
     {
-      "action_id": "A03",
-      "zone_id": "Z05",
-      "ward_id": "W216",
-      "ward_name": "K R Puram",
-      "source": "industrial",
-      "eps": 64.9,
-      "response": {
-        "signal_at": "2025-11-29 23:00:00+00:00",
-        "memo_drafted_at": "2026-07-20T13:16:28.728101+00:00",
-        "manual_baseline": "weeks (manual cross-agency signal->notice correlation, CAG 2024)",
-        "automated": "one batch run: satellite signal -> attribution -> cited memo -> dispatch route, no human correlation step"
-      },
-      "counterfactual": {
-        "horizon_h": 48,
-        "pm25_counterfactual": 39.1,
-        "aqi_counterfactual": 66,
-        "band_counterfactual": "Satisfactory",
-        "frozen_at": "2025-11-29 23:00:00+00:00"
-      },
-      "observed_change": null,
-      "our_impact": null,
-      "status": "awaiting_outcome"
-    },
-    {
-      "action_id": "A01",
+      "action_id": "A02",
       "zone_id": "Z04",
       "ward_id": "unassigned",
       "ward_name": "Outside city limits",
       "source": "industrial",
-      "eps": 63.9,
+      "eps": 66.8,
       "response": {
         "signal_at": "2025-11-29 23:00:00+00:00",
-        "memo_drafted_at": "2026-07-20T13:16:29.427554+00:00",
+        "memo_drafted_at": "2026-07-22T07:54:11.582659+00:00",
         "manual_baseline": "weeks (manual cross-agency signal->notice correlation, CAG 2024)",
         "automated": "one batch run: satellite signal -> attribution -> cited memo -> dispatch route, no human correlation step"
       },
       "counterfactual": {
         "horizon_h": 48,
-        "pm25_counterfactual": 37.1,
-        "aqi_counterfactual": 63,
+        "pm25_counterfactual": 37.7,
+        "aqi_counterfactual": 64,
         "band_counterfactual": "Satisfactory",
         "frozen_at": "2025-11-29 23:00:00+00:00"
       },
@@ -80,14 +56,38 @@
     },
     {
       "action_id": "A04",
+      "zone_id": "Z05",
+      "ward_id": "W216",
+      "ward_name": "K R Puram",
+      "source": "industrial",
+      "eps": 64.1,
+      "response": {
+        "signal_at": "2025-11-29 23:00:00+00:00",
+        "memo_drafted_at": "2026-07-22T07:54:12.253508+00:00",
+        "manual_baseline": "weeks (manual cross-agency signal->notice correlation, CAG 2024)",
+        "automated": "one batch run: satellite signal -> attribution -> cited memo -> dispatch route, no human correlation step"
+      },
+      "counterfactual": {
+        "horizon_h": 48,
+        "pm25_counterfactual": 40.3,
+        "aqi_counterfactual": 68,
+        "band_counterfactual": "Satisfactory",
+        "frozen_at": "2025-11-29 23:00:00+00:00"
+      },
+      "observed_change": null,
+      "our_impact": null,
+      "status": "awaiting_outcome"
+    },
+    {
+      "action_id": "A03",
       "zone_id": "Z03",
       "ward_id": "W167",
       "ward_name": "Avalahalli",
       "source": "industrial",
-      "eps": 60.8,
+      "eps": 60.3,
       "response": {
         "signal_at": "2025-11-29 23:00:00+00:00",
-        "memo_drafted_at": "2026-07-20T13:16:30.026946+00:00",
+        "memo_drafted_at": "2026-07-22T07:54:12.907323+00:00",
         "manual_baseline": "weeks (manual cross-agency signal->notice correlation, CAG 2024)",
         "automated": "one batch run: satellite signal -> attribution -> cited memo -> dispatch route, no human correlation step"
       },
@@ -108,17 +108,17 @@
       "ward_id": "W231",
       "ward_name": "Govindaraja Nagar",
       "source": "industrial",
-      "eps": 60.1,
+      "eps": 59.7,
       "response": {
         "signal_at": "2025-11-29 23:00:00+00:00",
-        "memo_drafted_at": "2026-07-20T13:16:30.367988+00:00",
+        "memo_drafted_at": "2026-07-22T07:54:13.810385+00:00",
         "manual_baseline": "weeks (manual cross-agency signal->notice correlation, CAG 2024)",
         "automated": "one batch run: satellite signal -> attribution -> cited memo -> dispatch route, no human correlation step"
       },
       "counterfactual": {
         "horizon_h": 48,
-        "pm25_counterfactual": 44.9,
-        "aqi_counterfactual": 75,
+        "pm25_counterfactual": 46.3,
+        "aqi_counterfactual": 78,
         "band_counterfactual": "Satisfactory",
         "frozen_at": "2025-11-29 23:00:00+00:00"
       },
@@ -132,17 +132,17 @@
       "ward_id": "unassigned",
       "ward_name": "Outside city limits",
       "source": "traffic",
-      "eps": 50.0,
+      "eps": 50.1,
       "response": {
         "signal_at": "2025-11-29 23:00:00+00:00",
-        "memo_drafted_at": "2026-07-20T13:16:30.979442+00:00",
+        "memo_drafted_at": "2026-07-22T07:54:14.289036+00:00",
         "manual_baseline": "weeks (manual cross-agency signal->notice correlation, CAG 2024)",
         "automated": "one batch run: satellite signal -> attribution -> cited memo -> dispatch route, no human correlation step"
       },
       "counterfactual": {
         "horizon_h": 48,
-        "pm25_counterfactual": 48.6,
-        "aqi_counterfactual": 81,
+        "pm25_counterfactual": 31.5,
+        "aqi_counterfactual": 53,
         "band_counterfactual": "Satisfactory",
         "frozen_at": "2025-11-29 23:00:00+00:00"
       },

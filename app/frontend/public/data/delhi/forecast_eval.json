@@ -1,26 +1,26 @@
 {
   "h24": {
-    "n_test": 6802,
-    "rmse_model": 92.36,
-    "rmse_persistence": 84.95,
-    "rmse_diurnal": 119.89,
-    "skill_vs_persistence_pct": -8.7,
-    "skill_vs_diurnal_pct": 23.0
+    "n_test": 5861,
+    "rmse_model": 89.87,
+    "rmse_persistence": 76.17,
+    "rmse_diurnal": 109.49,
+    "skill_vs_persistence_pct": -18.0,
+    "skill_vs_diurnal_pct": 17.9
   },
   "h48": {
-    "n_test": 6250,
-    "rmse_model": 87.8,
-    "rmse_persistence": 102.98,
-    "rmse_diurnal": 125.3,
-    "skill_vs_persistence_pct": 14.7,
-    "skill_vs_diurnal_pct": 29.9
+    "n_test": 5381,
+    "rmse_model": 81.21,
+    "rmse_persistence": 92.68,
+    "rmse_diurnal": 114.53,
+    "skill_vs_persistence_pct": 12.4,
+    "skill_vs_diurnal_pct": 29.1
   },
   "h72": {
-    "n_test": 5698,
-    "rmse_model": 86.93,
-    "rmse_persistence": 97.69,
-    "rmse_diurnal": 122.54,
-    "skill_vs_persistence_pct": 11.0,
-    "skill_vs_diurnal_pct": 29.1
+    "n_test": 4901,
+    "rmse_model": 82.66,
+    "rmse_persistence": 87.45,
+    "rmse_diurnal": 111.44,
+    "skill_vs_persistence_pct": 5.5,
+    "skill_vs_diurnal_pct": 25.8
   }
 }

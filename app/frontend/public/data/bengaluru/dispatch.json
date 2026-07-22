@@ -7,78 +7,78 @@
         "action_id": "A05",
         "zone_id": "Z01",
         "ward_id": "W231",
-        "eps": 60.1,
+        "eps": 59.7,
         "lat": 12.9787,
         "lon": 77.5314
       },
       {
         "seq": 2,
-        "action_id": "A02",
+        "action_id": "A01",
         "zone_id": "Z00",
         "ward_id": "unassigned",
-        "eps": 71.4,
+        "eps": 71.8,
         "lat": 12.897,
         "lon": 77.4618
       }
     ],
     "route_km": 19.3,
-    "coverage_pct": 79.5
+    "coverage_pct": 79.9
   },
   {
     "team_id": "T2",
     "stops": [
       {
         "seq": 1,
-        "action_id": "A03",
-        "zone_id": "Z05",
-        "ward_id": "W216",
-        "eps": 64.9,
-        "lat": 13.005,
-        "lon": 77.6734
-      },
-      {
-        "seq": 2,
         "action_id": "A06",
         "zone_id": "Z02",
         "ward_id": "unassigned",
-        "eps": 50.0,
+        "eps": 50.1,
         "lat": 13.0138,
         "lon": 77.4647
+      },
+      {
+        "seq": 2,
+        "action_id": "A02",
+        "zone_id": "Z04",
+        "ward_id": "unassigned",
+        "eps": 66.8,
+        "lat": 13.0933,
+        "lon": 77.7231
       }
     ],
-    "route_km": 31.3,
-    "coverage_pct": 79.5
+    "route_km": 44.6,
+    "coverage_pct": 79.9
   },
   {
     "team_id": "T3",
     "stops": [
       {
         "seq": 1,
-        "action_id": "A01",
-        "zone_id": "Z04",
-        "ward_id": "unassigned",
-        "eps": 63.9,
-        "lat": 13.0933,
-        "lon": 77.7231
+        "action_id": "A04",
+        "zone_id": "Z05",
+        "ward_id": "W216",
+        "eps": 64.1,
+        "lat": 13.005,
+        "lon": 77.6734
       }
     ],
-    "route_km": 18.7,
-    "coverage_pct": 79.5
+    "route_km": 8.6,
+    "coverage_pct": 79.9
   },
   {
     "team_id": "T4",
     "stops": [
       {
         "seq": 1,
-        "action_id": "A04",
+        "action_id": "A03",
         "zone_id": "Z03",
         "ward_id": "W167",
-        "eps": 60.8,
+        "eps": 60.3,
         "lat": 12.9462,
         "lon": 77.552
       }
     ],
     "route_km": 6.1,
-    "coverage_pct": 79.5
+    "coverage_pct": 79.9
   }
 ]

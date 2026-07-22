@@ -4,43 +4,43 @@
     "stops": [
       {
         "seq": 1,
-        "action_id": "A02",
-        "zone_id": "Z01",
-        "ward_id": "W181",
-        "eps": 72.7,
-        "lat": 13.0264,
-        "lon": 80.1514
+        "action_id": "A01",
+        "zone_id": "Z00",
+        "ward_id": "W100",
+        "eps": 75.5,
+        "lat": 13.1233,
+        "lon": 80.246
       }
     ],
-    "route_km": 9.2,
-    "coverage_pct": 20.2
+    "route_km": 6.1,
+    "coverage_pct": 20.0
   },
   {
     "team_id": "T2",
     "stops": [
       {
         "seq": 1,
-        "action_id": "A01",
-        "zone_id": "Z00",
-        "ward_id": "W104",
-        "eps": 71.0,
-        "lat": 13.1233,
-        "lon": 80.246
+        "action_id": "A02",
+        "zone_id": "Z01",
+        "ward_id": "W175",
+        "eps": 72.9,
+        "lat": 13.0264,
+        "lon": 80.1514
       }
     ],
-    "route_km": 6.1,
-    "coverage_pct": 20.2
+    "route_km": 9.2,
+    "coverage_pct": 20.0
   },
   {
     "team_id": "T3",
     "stops": [],
     "route_km": 0.0,
-    "coverage_pct": 20.2
+    "coverage_pct": 20.0
   },
   {
     "team_id": "T4",
     "stops": [],
     "route_km": 0.0,
-    "coverage_pct": 20.2
+    "coverage_pct": 20.0
   }
 ]
