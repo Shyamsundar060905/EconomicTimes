@@ -206,7 +206,7 @@ export const api = {
   runAgent: async (agent: AgentName | "all", dispatchConfig?: DispatchConfig): Promise<PipelineRunResult> => {
     const body: Record<string, unknown> = { agent };
     if (dispatchConfig) body.dispatch_config = dispatchConfig;
-    const res = await apiFetch<PipelineRunResult>("/run/agent", {
+    return apiFetch<PipelineRunResult>("/run/agent", {
       method: "POST",
       body: JSON.stringify(body),
     });
